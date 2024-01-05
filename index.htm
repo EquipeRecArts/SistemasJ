@@ -667,68 +667,87 @@
                </section>
             </div> <!--Final Pessoas mais relevantes - container princiapal -->
 
-            <div class="main-card" style="break-inside: avoid-region !important;"> <!--Começo score de credito - container princiapal -->
+            <div class="main-card-score_credito" style="break-inside: avoid-region !important;"> <!--Começo score de credito - container princiapal -->
+               
                <!-- Score de Crédito -->
-               <section class="w-100 w-md-25 p-relative is-printable" data-section-info id="Score" >
-                  <div class=" card-small-info ">
-                     <div class="card-body">
-                        <h4 class="fs12 block text-center lh10" title="Score de Cr&#233;dito (D00)">Score de Cr&#233;dito (D00)</h4>
-                        <div class="main-card-info " style="">
-                           <div class="fs30 mb10 child-v-align-middle lh0 pt10">
-                              <i class="fa fa-thermometer-4 fs20 text-success mr10"></i>
-                              <strong class="d-inline-block">85</strong>
+               <section data-section-info id="Score" >  
+
+                  <div class="card_main-score">
+
+                     <div class="card-body-score">
+
+                        <h4 class="" title="Score de Cr&#233;dito (D00)">
+                           Score de Cr&#233;dito (D00)
+                        </h4>
+
+                        <div class="main-card-info-score">
+
+                           <div class="thermometer-score">
+                              <i class="bi bi-thermometer-high"></i>
+                              <strong>85</strong>
                            </div>
-                           <div class="pull-left" title="Análise dos últimos 60 dias">
-                              <small class="fs10 block text-left ">D60</small>
-                              <strong class="fs13  block text-left">85</strong>
+
+                           <div class="content-left-score" title="Análise dos últimos 60 dias">
+                              <small>D60</small>
+                              <strong>85</strong>
                            </div>
-                           <div class="pull-right" title="Análise dos últimos 30 dias">
-                              <small class="fs10 block text-left ">D30</small>
-                              <strong class="fs13  block text-left">85</strong>
+
+                           <div class="content-right-score" title="Análise dos últimos 30 dias">
+                              <small>D30</small>
+                              <strong>85</strong>
                            </div>
+
                         </div>
                      </div>
                   </div>
                </section>
+
                <!-- Score de Marketing -->
-               <section class="w-100 w-md-25 p-relative is-printable" data-section-info id="MarketingScore" >
-                  <div class=" card-small-info ">
-                     <div class="card-body">
-                        <h4 class="fs12 block text-center lh10" title="Score de Marketing (D00)">Score de Marketing (D00)</h4>
-                        <div class="main-card-info " style="">
-                           <div class="fs30 mb10 child-v-align-middle lh0 pt10">
-                              <i class="fa fa-thermometer-4 fs20 text-success mr10"></i>
-                              <strong class="d-inline-block">85</strong>
+               <section class="Score" data-section-info id="MarketingScore" >
+                  <div class="card_main-score">
+                     <div class="card-body-score">
+                        <h4 class="" title="Score de Marketing (D00)">Score de Marketing (D00)</h4>
+                        <div class="main-card-info-score">
+                           <div class="thermometer-score">
+                              <i class="bi bi-thermometer-high"></i>
+                              <strong class="">85</strong>
                            </div>
-                           <div class="pull-left" title="Análise dos últimos 60 dias">
-                              <small class="fs10 block text-left ">D60</small>
-                              <strong class="fs13  block text-left">85</strong>
+                           <div class="content-left-score" title="Análise dos últimos 60 dias">
+                              <small>D60</small>
+                              <strong>85</strong>
                            </div>
-                           <div class="pull-right" title="Análise dos últimos 30 dias">
-                              <small class="fs10 block text-left ">D30</small>
-                              <strong class="fs13  block text-left">85</strong>
+                           <div class="content-right-score" title="Análise dos últimos 30 dias">
+                              <small>D30</small>
+                              <strong>85</strong>
                            </div>
                         </div>
                      </div>
                   </div>
                </section>
+
                <!-- Resumo de processos Judiciais -->
-               <section class="w-100 w-md-25 p-relative is-printable" data-section-info id="LawProcessSummary" >
-                  <div class=" card-small-info ">
-                     <div class="card-body">
-                        <button type="button" class="btn btn-xs btn-default pull-right mt1"
-                           title="Clique para atualizar o dado a partir da fonte online"
-                           data-block="LawProcessSummary"
-                           data-spider="processojudicial"
-                           data-asaction="False"
-                           data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
-                           data-contact="100003613081164"
-                           data-timeout="60000"
-                           data-info="{&#39;ApiType&#39;:1}"
-                           data-line="false">
-                        <i class="fa fa-refresh"></i>
-                        </button>
-                        <h4 class="fs12 block text-center lh10" title="Processos Judiciais">Processos Judiciais</h4>
+               <section class="score" data-section-info id="LawProcessSummary" >
+                  <div class="card_main-score">
+                     <div class="card-body-score">
+
+                        <div class="card-head-score">`
+                           <h4 class="fs12 block text-center lh10" title="Processos Judiciais">Processos Judiciais</h4>
+                           
+                           <button type="button-score-refresh" class=""
+                              title="Clique para atualizar o dado a partir da fonte online"
+                              data-block="RegistrationStatus"
+                              data-spider="situacaofiscal"
+                              data-asaction="False"
+                              data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
+                              data-contact="100003613081164"
+                              data-timeout="120000"
+                              data-info=""
+                              data-line="false">
+                              <i class="bi bi-arrow-clockwise"></i>
+                           </button>
+
+                        </div>
+
                         <div class="main-card-info " style="">
                            <div data-pinpoint="#LawProcesses">
                               <div class="fs30 mb10 child-v-align-middle lh0 pt10" title="Total de Processos Judiciais vinculados ao documento">
@@ -753,7 +772,7 @@
                   </div>
                </section>
             </div> <!--Final score de credito - container princiapal -->
-            
+
             <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
                <!-- Renda + Classe social / Faturamento-->
                <section class="w-100 p-relative is-printable" data-section-info id="Income" >
