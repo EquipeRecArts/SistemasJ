@@ -10,8 +10,9 @@
       <title>036.130.811-64 - JOAO PEDRO BAZA GARCIA RODRIGUES</title>
       <link rel="SHORTCUT ICON" href="https://www.ph3a.com.br/DataBusca/Content/Images/icon.ico">
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <link rel='stylesheet' type='text/css' href='style.css'>
-
+ 
    </head>
    <body class="dashboard-page sb-l-m admin-form theme-default theme-primary " data-spy="scroll" data-offset="190">
       <!-- Fim: Cabeçalho da página -->
@@ -409,7 +410,8 @@
                                  </div>
                               </div>
 
-                            <section>
+                           <section>
+
                                  <!-- Lista de e-mails-->
                                  <div id="hot-email-1-list" class="hot-email-1-list">
 
@@ -417,44 +419,61 @@
 
                                        <div class="list">
 
-                                          <div class="email-list"
-                                             >
+                                          <div class="email-list">
                                              <div class="">
                                                 <div class="email-list-body">
 
-                                                    <div>
-                                                        <span class="material-symbols-outlined icon-send-email_list">
-                                                            send
-                                                            <span class="material-symbols-outlined icon-trophy-email_list">
-                                                                emoji_events
-                                                            </span>
-                                                        </span>    
-                                                    </div>
-
-                                                   <div class="email-list-text">
-                                                      <small>
-                                                          E-mail
-                                                      </small>
-                                                      <strong class="">joaopedrobazagarcia@gmail.com</strong>
+                                                   <div class="email-group-info">
+                                                      <div class="email-list-icon_email_open">
+                                                         <span class="material-symbols-outlined icon-send-email_list">
+                                                             send
+                                                             <span class="material-symbols-outlined icon-trophy-email_list">
+                                                                 emoji_events
+                                                             </span>
+                                                         </span>    
+                                                      </div>
+ 
+                                                      <div class="email-list-text">
+                                                         <small>
+                                                              E-mail
+                                                         </small>
+                                                         <strong class="">joaopedrobazagarcia@gmail.com</strong>
+                                                      </div>
+ 
                                                    </div>
+
 
                                                    <div class="email_list-group_box">
-                                                      <div class=" d-md-flex justify-center align-items-center ">
-                                                        <span class="d-inline-block label lhn label-primary" data-toggle="tooltip" data-placement="top" title="Validado no provedor">
-                                                            <span class="material-symbols-outlined">
-                                                                done
-                                                            </span>
-                                                            <span class="d-none d-sm-inline-block">validado</span>
-                                                        </span>
-                                                         <span class="d-inline-block ml-md-5 label lhn  label-primary " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook"><i class="fa fa-facebook "></i> <span class="d-none d-md-inline-block">facebook</span></span>
-                                                         <span class="d-inline-block ml-md-5 label lhn  label-default op3 " data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn"><i class="fa fa-linkedin "></i> <span class="d-none d-md-inline-block">linkedin</span></span>
-                                                         <span class="d-inline-block ml-md-5 label lhn  label-default op3 " data-toggle="tooltip" data-placement="top" title="Tem comportamento digital"><i class="fa fa-globe "></i> <span class="d-none d-sm-inline-block">digital</span></span>
+                                                      <div class="sub_container-group_box ">
+
+                                                         <span class="valided-box" data-toggle="tooltip" data-placement="top" title="Validado no provedor">
+                                                            <i class="bi bi-check-circle-fill"></i>
+                                                            <span class="">validado</span>
+                                                         </span>
+                                                         
+                                                         <span class="facebook-box " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                            <i class="bi bi-facebook"></i>
+                                                            <span class="">facebook</span>
+                                                         </span>
+                                                         
+                                                         <span class="linkedin-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn">
+                                                            <i class="bi bi-linkedin"></i>
+                                                            <span class="">linkedin</span>
+                                                         </span>
+                                                        
+                                                         <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Tem comportamento digital">
+                                                            <i class="bi bi-globe"></i>
+                                                            <span class=" ">digital</span>
+                                                         </span>
+                                                      
                                                       </div>
                                                    </div>
-                                                   <div class="pl-sm-15 mt-5 mt-md-0 w-30 w-sm-20 w-lg-15  w-xl-10">
+
+                                                   <div class="textBox">
                                                       <small>RANK</small>
                                                       <strong>20231001</strong>
                                                    </div>
+
                                                 </div>
                                              </div>
                                           </div>
@@ -520,7 +539,7 @@
                                  </div>
 
                                  <!-- Lista de telefones fixos-->
-                                 <div id="hot-phone-1" class="disbaled list-model-1 panel panel-tile mbn ">
+                                 <div id="hot-phone-1" class="disabled list-model-1 panel panel-tile mbn ">
                                     <div class="panel-body">
                                        <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
                                     </div>
@@ -533,71 +552,111 @@
                   </div>
                </section>
             </div> <!-- final top dados de contato - container princiapal -->
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+
+            <div class="container_pai-pessoas_relevantes">  <!--Começo Pessoas mais relevantes - container princiapal -->
                <!-- Pessoas mais relevantes-->
-               <section class="w-100 p-relative is-printable" data-section-info id="MostRelevantPeople" >
-                  <div class="bg-dark pastel card-info list-model-1 ">
+
+               <section data-section-info id="MostRelevantPeople" >
+
+                  <div>
+
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Pessoas mais relevantes"><i class="fa fa-user-plus fs16"></i> Pessoas mais relevantes</h4>
+
+                        <div id="card-head-most_people">
+                           <i class="bi bi-person-plus-fill"></i>
+                           <h4 data-section-title title="Pessoas mais relevantes">
+                              Pessoas mais relevantes
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class="responsive d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap align-items-center row-line">
-                                       <div class="d-none d-lg-block w-10 w-lg-5">
-                                          <div class="person-photo br64" data-initials="JR">
+
+                        <div class="main-card-info-most_people">
+
+                           <div class="list-most_people">
+
+                              <div class="responsive">
+
+                                 <div class="responsive-body">
+
+                                    <div class="col_1-most_people">
+                                       <div class="box_photo">
+                                          <div class="person-photo-most_people" data-initials="JR">
                                           </div>
                                        </div>
-                                       <div class="w-100 w-md-50 w-lg-40">
+
+                                       <div class="textBox name_box-most_people">
                                           <small>Nome</small>
                                           <strong class="text-with-dots">JACQUECISLENE CRIS BAZA RODRIGUES</strong>
                                        </div>
-                                       <div class="mt-5 mt-md-0 w-60 w-sm-40 w-md-25 w-lg-20">
+
+                                       <div class="textBox vinculo_box-most_people">
                                           <small>Vínculo</small>
                                           <strong>M&#227;e</strong>
                                        </div>
-                                       <div class="mt-5 mt-md-0 w-30 w-sm-20 w-md-15 w-lg-10">
+
+                                       <div class="textBox status_box-most_people" id="">
                                           <small>Status</small>
-                                          <span class="label label-default op4 fs10" title="Politicamente exposto" data-toggle="tooltip" data-placement="top">PPE</span>
-                                          <span class="label label-default op4 fs10" title="Pessoa VIP" data-toggle="tooltip" data-placement="top">VIP</span>
+                                          <div class="icon-box-most_people">
+                                             <span class="box-status-most_people" title="Politicamente exposto" data-toggle="tooltip" data-placement="top">
+                                                PPE
+                                             </span>
+                                             <span class="box-status-most_people" title="Pessoa VIP" data-toggle="tooltip" data-placement="top">
+                                                VIP
+                                             </span>   
+                                          </div>
+                                          
                                        </div>
-                                       <div class="d-none d-sm-block d-md-none d-lg-block w-sm-30 w-lg-15">
+
+                                       <div class="textBox" id="cpf_box-most_people">
                                           <small>CPF</small>
                                           <strong>--</strong>
                                        </div>
-                                       <div class="text-right mt-5 mt-md-0 w-10 w-sm-10 w-md-5 d-none d-md-block">
-                                          <a class="btn btn-sm btn-default fa fa-chevron-right disabled" title="Clique para ver os detalhes"></a>
+
+                                       <div class="box_arrow-most_people">
+                                          <a title="Clique para ver os detalhes"></a>
                                        </div>
+
                                     </div>
-                                    <div class="d-flex flex-wrap align-items-center row-line">
-                                       <div class="d-none d-lg-block w-10 w-lg-5">
-                                          <div class="person-photo br64" data-initials="CR">
+
+                                    <div class="col_2-most_people">
+
+                                       <div class="box_photo">
+                                          <div class="person-photo-most_people" data-initials="CR">
                                           </div>
                                        </div>
-                                       <div class="w-100 w-md-50 w-lg-40">
+
+                                       <div class="textBox name_box-most_people">
                                           <small>Nome</small>
-                                          <strong class="text-with-dots">CASSIANO GARCIA RODRIGUES</strong>
+                                          <strong class="">CASSIANO GARCIA RODRIGUES</strong>
                                        </div>
-                                       <div class="mt-5 mt-md-0 w-60 w-sm-40 w-md-25 w-lg-20">
+
+                                       <div class="textBox vinculo_box-most_people">
                                           <small>Vínculo</small>
                                           <strong>Pai</strong>
                                        </div>
-                                       <div class="mt-5 mt-md-0 w-30 w-sm-20 w-md-15 w-lg-10">
+
+                                       <div class="textBox status_box-most_people" id="">
                                           <small>Status</small>
-                                          <span class="label label-default op4 fs10" title="Politicamente exposto" data-toggle="tooltip" data-placement="top">PPE</span>
-                                          <span class="label label-default op4 fs10" title="Pessoa VIP" data-toggle="tooltip" data-placement="top">VIP</span>
+                                          <div class="icon-box-most_people">
+                                             <span class="box-status-most_people" title="Politicamente exposto" data-toggle="tooltip" data-placement="top">
+                                                PPE
+                                             </span>
+                                             <span class="box-status-most_people" title="Pessoa VIP" data-toggle="tooltip" data-placement="top">
+                                                VIP
+                                             </span>   
+                                          </div>
+                                          
                                        </div>
-                                       <div class="d-none d-sm-block d-md-none d-lg-block w-sm-30 w-lg-15">
+
+                                       <div class="textBox">
                                           <small>CPF</small>
                                           <strong>--</strong>
                                        </div>
-                                       <div class="text-right mt-5 mt-md-0 w-10 w-sm-10 w-md-5 d-none d-md-block">
-                                          <a class="btn btn-sm btn-default fa fa-chevron-right disabled" title="Clique para ver os detalhes"></a>
+
+
+                                       <div class="box_arrow-most_people">
+                                          <a title="Clique para ver os detalhes"></a>
                                        </div>
+
                                     </div>
                                  </div>
                               </div>
@@ -606,8 +665,9 @@
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start small-cards" style="break-inside: avoid-region !important;">
+            </div> <!--Final Pessoas mais relevantes - container princiapal -->
+
+            <div class="main-card" style="break-inside: avoid-region !important;"> <!--Começo score de credito - container princiapal -->
                <!-- Score de Crédito -->
                <section class="w-100 w-md-25 p-relative is-printable" data-section-info id="Score" >
                   <div class=" card-small-info ">
@@ -692,7 +752,8 @@
                      </div>
                   </div>
                </section>
-            </div>
+            </div> <!--Final score de credito - container princiapal -->
+            
             <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
                <!-- Renda + Classe social / Faturamento-->
                <section class="w-100 p-relative is-printable" data-section-info id="Income" >
