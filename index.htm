@@ -1030,14 +1030,25 @@
                   <div class="">
                      <div class="card-body">
                         <div class="card-heade-relacionamento">
-                           <h4 data-section-title title="Relacionamentos"><i class="fa fa-random fs16"></i> Relacionamentos</h4>
-                           <div>
-                              <button type="button" class="btn btn-xs btn-default btn-load op3 c-default"><i class="fa fa-refresh"></i></button>
-                              <button type="button" class="btn btn-xs btn-default btn-print"><i class="fa fa-camera"></i></button>
-                              <button type="button" class="btn btn-xs btn-default btn-full"><i class="fa fa-expand"></i></button>
+                           <i class="bi bi-shuffle"></i>
+                           <h4 data-section-title title="Relacionamentos">
+                              Relacionamentos
+                           </h4>
+                           
+                           <div class="group-buttons-relacionamento">
+                              <button type="button" id="button-refresh-relacionamento" class="button-box">
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                              <button type="button" class="button-box">
+                                 <i class="bi bi-camera-fill"></i>
+                              </button>
+                              <button type="button" class="button-box">
+                                 <i class="bi bi-arrows-angle-expand"></i>
+                              </button>
                            </div>
                         </div>
-                        <div class="main-card-info " style="">
+
+                        <div class="main-card-info-relacionamento">
                            <div class="incommon-content" data-value="03613081164">
                            </div>
                         </div>
@@ -1046,142 +1057,191 @@
                </section>
             </div> <!-- Final container de relacionamento  -->
 
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            <div class="main-card-lista_enderecos"> <!-- Começo container lista endereços -->
+
                <!-- Lista de endereços-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Addresses" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="Addresses" >
+
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Endere&#231;os"><i class="fa fa-map-marker fs16"></i> Endere&#231;os</h4>
-                           <div class="addresses-view btn-group btn-group-sm ignore change-view-control" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
-                              <label class="btn btn-sm btn-default fa fa-list active"
+                        <div class="card-heade-lista_enderecos">
+                           <i class="bi bi-geo-alt-fill"></i>
+                           <h4 data-section-title title="Endere&#231;os">
+                              Endere&#231;os
+                           </h4>
+                           <div class="button-group-lista_enderecos" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
+                              <label class="label-left-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização da lista">
-                              <input type="radio" name="addresses-view" autocomplete="off" data-type="0" checked>
+                                 <i class="bi bi-list-task"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="0" checked>
                               </label>
-                              <label class="btn btn-sm btn-default fa fa-street-view"
+
+                              <label class="label-right-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização no mapa">
-                              <input type="radio" name="addresses-view" autocomplete="off" data-type="1">
+                                 <i class="bi bi-map-fill"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="1">
                               </label>
                            </div>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class="responsive d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap align-items-center row-line" data-lat="" data-long="">
-                                       <div class="d-none d-md-block mb-5 d-md-10 mb-xl-0 w-xl-5 text-center">
-                                          <strong class="icon">
-                                          <i class="fa fa-home best-info fs18">
-                                          <i class="fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </i>
-                                          </strong>
-                                       </div>
-                                       <div class="mb-10 mb-xl-0 w-85 w-md-90 w-lg-95 w-xl-40">
-                                          <small>
-                                          Logradouro
-                                          <i class="best-info-small d-inline-block d-md-none fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </small>
-                                          <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                       </div>
-                                       <div class="mb-5 mb-md-0 w-35 w-md-20 w-xl-10">
-                                          <small>CEP</small>
-                                          <strong>79002-550</strong>
-                                       </div>
-                                       <div class="mb-5 mb-md-0 w-65 w-md-40 w-xl-15">
-                                          <small title="">
-                                          Cidade
-                                          </small>
-                                          <strong>MS - CAMPO GRANDE</strong>
-                                       </div>
-                                       <div class="w-30 w-md-15 w-xl-10">
-                                          <small>RANK</small>
-                                          <strong>20231201</strong>
-                                       </div>
-                                       <div class="mb-5 mb-sm-0 w-60 w-md-25 w-xl-15">
-                                          <small>Telefone</small>
-                                          <strong>
-                                          --
-                                          </strong>
-                                       </div>
-                                       <div class="mt-5 mt-md-0 text-right w-10 w-sm-5">
-                                          <div class="dropdown-neighbor btn-group dropup">
-                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             <span class="fa fa-ellipsis-v"></span>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li class="show-neighbor"
-                                                   data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
-                                                   data-hasComplement="False"
-                                                   data-addressid="3401058614">
-                                                   <a>Ver vizinhos</a>
-                                                </li>
-                                                <li class="show-censu-sector disabled"
-                                                   data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
-                                                   data-addressid="3401058614">
-                                                   <a>Setor censitario</a>
-                                                </li>
-                                             </ul>
+
+                        <div class=" main-card-info-lista_enderecos">
+                           <div>
+                              <div class="responsive d-inline-block w-100">
+                                 <div class="textBox">
+
+                                    <div class="col-1-lista_enderecos" data-lat="" data-long="">
+
+                                       <div class="top_container-lista_enderecos ">
+                                          <div class="box-icon-lista_enderecos">
+                                             <strong class="icon">
+                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                </i>
+                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                             </strong>
                                           </div>
+   
+                                          <div class="logradouro_box-lista_enderecos">
+                                             <small>
+                                                Logradouro
+                                                <i class="disabled bi bi-geo-alt"></i>
+                                             </small>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
+                                          </div>   
                                        </div>
+
+                                       <div class="bottom_container-lista_endereços ">
+
+                                          <div class="div_top-bottom_container ">
+
+                                             <div class="cep-container-lista_enderecos textBox ">
+                                                <small>CEP</small>
+                                                <strong>79002-550</strong>
+                                             </div>
+
+                                             <div class="cidade-container-lista_enderecos textBox ">
+                                                <small title="">
+                                                   Cidade
+                                                </small>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </div>
+
+                                             <div class="rank-container-lista_enderecos textBox ">
+                                                <small>RANK</small>
+                                                <strong>20231201</strong>
+                                             </div>
+
+                                             <div class="telefone-container-lista_enderecos textBox ">
+                                                <small>Telefone</small>
+                                                <strong>
+                                                --
+                                                </strong>
+                                             </div>
+
+                                             <div class="menu_dropdown_icon">
+                                                <div class="dropdown-neighbor">
+                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+
+                                          </div>
+                                          
+
+                                       </div>
+
+
                                     </div>
-                                    <div class="d-flex flex-wrap align-items-center row-line" data-lat="-20,420577" data-long="-54,558117">
-                                       <div class="d-none d-md-block mb-5 d-md-10 mb-xl-0 w-xl-5 text-center">
-                                          <strong class="icon">
-                                          <i class="fa fa-home best-info fs18">
-                                          <i class="fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </i>
-                                          </strong>
-                                       </div>
-                                       <div class="mb-10 mb-xl-0 w-85 w-md-90 w-lg-95 w-xl-40">
-                                          <small>
-                                          Logradouro
-                                          <i class="best-info-small d-inline-block d-md-none fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          <i class="best-info-small fa fa-map-marker" title="Tem geolocalização" data-toggle="tooltip" data-placement="top"></i>
-                                          </small>
-                                          <strong class="address-name ignore-text-with-dots" title="R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS">R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS</strong>
-                                       </div>
-                                       <div class="mb-5 mb-md-0 w-35 w-md-20 w-xl-10">
-                                          <small>CEP</small>
-                                          <strong>79034-430</strong>
-                                       </div>
-                                       <div class="mb-5 mb-md-0 w-65 w-md-40 w-xl-15">
-                                          <small title="">
-                                          Cidade
-                                          </small>
-                                          <strong>MS - CAMPO GRANDE</strong>
-                                       </div>
-                                       <div class="w-30 w-md-15 w-xl-10">
-                                          <small>RANK</small>
-                                          <strong>20170801</strong>
-                                       </div>
-                                       <div class="mb-5 mb-sm-0 w-60 w-md-25 w-xl-15">
-                                          <small>Telefone</small>
-                                          <strong>
-                                          --
-                                          </strong>
-                                       </div>
-                                       <div class="mt-5 mt-md-0 text-right w-10 w-sm-5">
-                                          <div class="dropdown-neighbor btn-group dropup">
-                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             <span class="fa fa-ellipsis-v"></span>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li class="show-neighbor"
-                                                   data-title="Vizinhos - R PORTO FRANCO, 167, CAMPO GRANDE - MS (CEP: 79034-430)"
-                                                   data-hasComplement="False"
-                                                   data-addressid="3120469703">
-                                                   <a>Ver vizinhos</a>
-                                                </li>
-                                                <li class="show-censu-sector disabled"
-                                                   data-title="Setor censitario - R PORTO FRANCO, 167, CAMPO GRANDE - MS (CEP: 79034-430)"
-                                                   data-addressid="3120469703">
-                                                   <a>Setor censitario</a>
-                                                </li>
-                                             </ul>
+
+                                    <div class="col-2-lista_enderecos" data-lat="" data-long="">
+
+                                       <div class="top_container-lista_enderecos ">
+                                          <div class="box-icon-lista_enderecos">
+                                             <strong class="icon">
+                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                </i>
+                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                             </strong>
                                           </div>
+   
+                                          <div class="logradouro_box-lista_enderecos">
+                                             <small>
+                                                Logradouro
+                                                <i class="icon-gps-logradouro_box bi bi-geo-alt"></i>
+                                             </small>
+                                             <strong class="" title="R PORTO FRANCO, 167, PARQUE NOVOS ESTADOS">R PORTO FRANCO, 167, PARQUE NOVOS ESTADOS</strong>
+                                          </div>   
                                        </div>
+
+                                       <div class="bottom_container-lista_endereços ">
+
+                                          <div class="div_top-bottom_container ">
+
+                                             <div class="cep-container-lista_enderecos textBox ">
+                                                <small>CEP</small>
+                                                <strong>89034-430</strong>
+                                             </div>
+
+                                             <div class="cidade-container-lista_enderecos textBox ">
+                                                <small title="">
+                                                   Cidade
+                                                </small>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </div>
+
+                                             <div class="rank-container-lista_enderecos textBox ">
+                                                <small>RANK</small>
+                                                <strong>20170801</strong>
+                                             </div>
+
+                                             <div class="telefone-container-lista_enderecos textBox ">
+                                                <small>Telefone</small>
+                                                <strong>
+                                                --
+                                                </strong>
+                                             </div>
+
+                                             <div class=" menu_dropdown_icon">
+                                                <div class="dropdown-neighbor">
+                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbor"
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector disabled"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+
+                                          </div>
+
+                                       </div>
+
+
                                     </div>
                                  </div>
                               </div>
@@ -1193,74 +1253,98 @@
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final container lista endereços -->
+
+            <div class="main-card-lista_enderecos_comerciais ">  <!-- Começo container lista endereços comerciais-->
                <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
                <!-- Lista de endereços comerciais-->
-               <section class="w-100 p-relative is-printable" data-section-info id="BusinessAddresses" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="BusinessAddresses" >
+                  <div class="">
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Endere&#231;os comerciais"><i class="fa fa-map-marker fs16"></i> Endere&#231;os comerciais</h4>
-                           <div class="addresses-view btn-group btn-group-sm ignore change-view-control" data-toggle="buttons" data-source="[]">
-                              <label class="btn btn-sm btn-default fa fa-list active"
+
+                        <div class="card-heade-lista_enderecos">
+                           <i class="bi bi-geo-alt-fill"></i>
+                           <h4 data-section-title title="Endere&#231;os">
+                              Endere&#231;os
+                           </h4>
+
+                           <div class="button-group-lista_enderecos" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
+                              <label class="label-left-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização da lista">
-                              <input type="radio" name="businessAddresses-view" autocomplete="off" data-type="0" checked>
+                                 <i class="bi bi-list-task"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="0" checked>
                               </label>
-                              <label class="btn btn-sm btn-default fa fa-street-view"
+
+                              <label class="label-right-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização no mapa">
-                              <input type="radio" name="businessAddresses-view" autocomplete="off" data-type="1">
+                                 <i class="bi bi-map-fill"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="1">
                               </label>
                            </div>
-                        </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class=" d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap align-items-center row-line" data-lat="" data-long="">
-                                       <div class="d-none d-md-block mb-5 d-md-10 mb-xl-0 w-xl-5 text-center">
-                                          <strong class="icon">
-                                          <i class="fa fa-home best-info fs18">
-                                          <i class="fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </i>
-                                          </strong>
+                        </div> 
+
+                        <div class="main-card-info-lista_enderecos">
+                           <div>
+                              <div class="">
+                                 <div class="textBox">
+                                    <div class="col-1-lista_enderecos-business" data-lat="" data-long="">
+
+                                       <div class="top_container-lista_enderecos-business">
+                                          <div class="box-icon-lista_enderecos-business">
+                                             <strong class="icon">
+                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                </i>
+                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                             </strong>
+                                          </div>
+
+                                          <div class="logradouro_box-lista_enderecos-business">
+                                             <small class="">
+                                                Logradouro
+                                                <i class="" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                             </small>
+                                             <!--CONTACT ID-->
+                                             <a href="" target="_blank">
+                                                <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
+                                             </a>
+                                             <!--CONTACT ID-->
+                                             <a href="" target="_blank">
+                                                <sub  sub class="ignore-text-with-dots" title="JOAO PEDRO BAZA GARCIA RODRIGUES">JOAO PEDRO BAZA GARCIA RODRIGUES</sub>
+                                             </a>
+                                          </div>
                                        </div>
-                                       <div class="mb-10 mb-xl-0 w-85 w-md-90 w-lg-95 w-xl-40">
-                                          <small>
-                                          Logradouro
-                                          <i class="best-info-small d-inline-block d-md-none fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </small>
-                                          <!--CONTACT ID-->
-                                          <a href="" target="_blank">
-                                          <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                          </a>
-                                          <!--CONTACT ID-->
-                                          <a href="" target="_blank">
-                                          <sub class="ignore-text-with-dots" title="JOAO PEDRO BAZA GARCIA RODRIGUES">JOAO PEDRO BAZA GARCIA RODRIGUES</sub>
-                                          </a>
+
+
+                                       <div class="bottom_container-lista_endereços ">
+                                          <div class="div_top-bottom_container ">
+
+                                             <div class="cep-container-lista_enderecos texBox">
+                                                <small>CEP</small>
+                                                <strong>79002-550</strong>
+                                             </div>
+
+                                             <div class="cidade-container-lista_enderecos texBox">
+                                                <small title="">
+                                                Cidade
+                                                </small>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </div>
+
+                                             <div class="rank-container-lista_enderecos textBox">
+                                                <small>RANK</small>
+                                                <strong>20231101</strong>
+                                             </div>
+
+                                             <div class="telefone-container-lista_enderecos textBox">
+                                                <small>Telefone</small>
+                                                <strong>
+                                                --
+                                                </strong>
+                                             </div>   
+
+                                          </div>
                                        </div>
-                                       <div class="mb-5 mb-md-0 w-35 w-md-20 w-xl-10">
-                                          <small>CEP</small>
-                                          <strong>79002-550</strong>
-                                       </div>
-                                       <div class="mb-5 mb-md-0 w-65 w-md-40 w-xl-15">
-                                          <small title="">
-                                          Cidade
-                                          </small>
-                                          <strong>MS - CAMPO GRANDE</strong>
-                                       </div>
-                                       <div class="w-30 w-md-15 w-xl-10">
-                                          <small>RANK</small>
-                                          <strong>20231101</strong>
-                                       </div>
-                                       <div class="mb-5 mb-sm-0 w-60 w-md-25 w-xl-15">
-                                          <small>Telefone</small>
-                                          <strong>
-                                          --
-                                          </strong>
-                                       </div>
+
                                     </div>
                                  </div>
                               </div>
@@ -1272,28 +1356,41 @@
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final container lista endereços comerciais-->
+
+            <div class="main-card-lista_telefones"> <!-- começo Lista de telefones-->
                <!-- Lista de telefones-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Phones" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="Phones" >
+
+                  <div>
+
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Telefones"><i class="fa fa-volume-control-phone fs16"></i> Telefones</h4>
+
+                        <div class="card-heade-lista_telefones">
+                           <i class="bi bi-telephone-fill"></i>
+                           <h4 data-section-title title="Telefones">
+                              Telefones
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list history disabled">
-                              <span class="title">hist&#243;rico</span>
-                              <div class=" d-inline-block w-100">
-                                 <div class="responsive-body" >
-                                    <div class="d-flex flex-wrap align-items-center row-line">
-                                       <div class="d-none d-md-block w-20 w-sm-10 w-md-5 mb-5 mb-md-0 text-center">
+
+                        <div class="main-card-info-lista_telefones">
+
+                           <div>
+                              <div class="top-box-historico">
+                                 <span class="title">hist&#243;rico</span>
+                              </div>
+
+                              <div class="bottom-box-telefones">
+                                 <div class="responsive-body">
+
+                                    <div class="main-container-lista_telefones">
+                                       <div class="icon-box-lista_telefones">
                                           <strong class="icon">
-                                          <i class="glyphicon glyphicon-phone-alt best-info fs18 lh17">
-                                          </i>
+                                             <i class="bi bi-telephone-forward-fill"></i>   
                                           </strong>
                                        </div>
-                                       <div class="mb-5 mb-md-0 w-40 w-sm-30 w-md-25 w-lg-40">
+
+                                       <div class="textBox telefone-box">
                                           <small>
                                           Telefone
                                           </small>
@@ -1301,18 +1398,35 @@
                                           (67) 3028-1571
                                           </strong>
                                        </div>
-                                       <div class="w-40 w-sm-30 w-md-50 w-lg-45">
-                                          <div class=" d-flex justify-center align-items-center ">
-                                             <div class="operator operator-55215 d-block" title="TELECOMUNICACOES DE SAO PAULO S.A - TELESP - REGIOES I E II"></div>
-                                             <span class="info-icon label lhn label-default op3 ml-5" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON"><i class="fa fa-exclamation "></i> <span class="d-none d-md-inline-block">Procon</span></span>
-                                             <span class="info-icon label lhn label-default op3 ml-5" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook"><i class="fa fa-facebook "></i> <span class="d-none d-md-inline-block">Facebook</span></span>
-                                             <span class="info-icon label lhn label-default op3 ml-5" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp"><i class="fa fa-whatsapp "></i> <span class="d-none d-md-inline-block">Whatsapp</span></span>
+
+                                       <div class="telefone_list-group_box">
+                                          <div class="sub_container-group_box-telefone-list">
+
+                                             <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                             
+                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                <i class="bi bi-exclamation-circle-fill"></i>
+                                                <span class="">Procon</span>
+                                             </span>
+                                             
+                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                <i class="bi bi-facebook"></i>
+                                                <span class="">facebook</span>
+                                             </span>
+                                            
+                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                <i class="bi bi-whatsapp"></i>
+                                                <span class=" ">Whatsap</span>
+                                             </span>
+                                          
                                           </div>
                                        </div>
-                                       <div class="w-25 w-sm-20 w-md-15 w-lg-10">
+
+                                       <div class="textBox rank-box">
                                           <small>RANK</small>
                                           <strong>20170801</strong>
                                        </div>
+
                                     </div>
                                  </div>
                               </div>
@@ -1321,45 +1435,70 @@
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final Lista de telefones-->
+
+            <div class="main-card-lista_telefones"> <!-- Lista de e-mails começo -->
                <!-- Lista de e-mails-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Emails" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="Emails" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="E-mails"><i class="fa fa-paper-plane-o fs16"></i> E-mails</h4>
+
+                        <div class="card-heade-lista_telefones">
+                           <i class="bi bi-envelope-at-fill"></i>
+                           <h4 data-section-title title="E-mails">
+                              E-mails
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class=" d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap align-items-center row-line">
-                                       <div class="d-none d-md-block text-center w-15 w-sm-5">
+
+                        <div class="main-card-info-lista_telefones">
+                           
+                           <div>
+                              <div class="bottom-box-telefones">
+                                 <div class="responsive-body">
+
+                                    <div class="main-container-lista_telefones">
+                                       <div class="icon-box-lista_emails">
                                           <strong class="icon">
-                                          <i class="fa fa-paper-plane-o best-info fs18">
-                                          <i class="fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                          </i>
+                                             <i style="font-size: 25px;" class="bi bi-send"></i>
+                                             <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
                                           </strong>
                                        </div>
-                                       <div class="w-100  w-sm-90 w-lg-35">
+
+                                       <div class="textBox telefone-box">
                                           <small>
                                           E-mail
-                                          <i class="best-info-small d-inline-block d-md-none fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
                                           </small>
-                                          <strong class="ignore-text-with-dots">joaopedrobazagarcia@gmail.com</strong>
+                                          <strong>joaopedrobazagarcia@gmail.com</strong>
                                        </div>
-                                       <div class="w-70 w-sm-70 w-lg-40 w-xl-50 mt-5 mt-md-0">
-                                          <div class=" d-md-flex justify-center align-items-center ">
-                                             <span class="d-inline-block label lhn          label-primary" data-toggle="tooltip" data-placement="top" title="Validado no provedor"><i class="fa fa-check "></i> <span class="d-none d-sm-inline-block">validado</span></span>
-                                             <span class="d-inline-block ml-md-5 label lhn  label-primary " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook"><i class="fa fa-facebook "></i> <span class="d-none d-md-inline-block">facebook</span></span>
-                                             <span class="d-inline-block ml-md-5 label lhn  label-default op3 " data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn"><i class="fa fa-linkedin "></i> <span class="d-none d-md-inline-block">linkedin</span></span>
-                                             <span class="d-inline-block ml-md-5 label lhn  label-default op3 " data-toggle="tooltip" data-placement="top" title="Tem comportamento digital"><i class="fa fa-globe "></i> <span class="d-none d-sm-inline-block">digital</span></span>
+
+                                       <div class="lista_email-group_box">
+                                          <div class="sub_container-group_box ">
+
+                                             <span class="valided-box" data-toggle="tooltip" data-placement="top" title="Validado no provedor">
+                                                <i class="bi bi-check-circle-fill"></i>
+                                                <span class="">validado</span>
+                                             </span>
+                                             
+                                             <span class="facebook-box " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                <i class="bi bi-facebook"></i>
+                                                <span class="">facebook</span>
+                                             </span>
+                                             
+                                             <span class="linkedin-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn">
+                                                <i class="bi bi-linkedin"></i>
+                                                <span class="">linkedin</span>
+                                             </span>
+                                            
+                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Tem comportamento digital">
+                                                <i class="bi bi-globe"></i>
+                                                <span class=" ">digital</span>
+                                             </span>
+                                          
                                           </div>
                                        </div>
-                                       <div class="pl-sm-15 mt-5 mt-md-0 w-30 w-sm-20 w-lg-15  w-xl-10">
+
+
+                                       <div class="textBox rank-box">
                                           <small>RANK</small>
                                           <strong>20231001</strong>
                                        </div>
@@ -1371,7 +1510,8 @@
                      </div>
                   </div>
                </section>
-            </div>
+            </div> <!-- Lista de e-mails final -->
+
             <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
                <!-- Lista de veículos -->
                <section class="w-100 p-relative is-printable" data-section-info id="Vehicles" >
@@ -1468,23 +1608,26 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Restituição IRPF-->
-               <section class="w-100 p-relative is-printable" data-section-info id="IRPFRefund" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Lista de Veículos começo -->
+
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Restituição de IRPF -->
+
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Restitui&#231;&#227;o de IRPF"><i class="fa fa-university fs16"></i> Restitui&#231;&#227;o de IRPF</h4>
-                        </div>
-                        <div class="main-card-info " style="">
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-bank"></i>
+                           <h4 data-section-title title="Restitui&#231;&#227;o de IRPF"><i class="fa fa-university fs16"></i> Restitui&#231;&#227;o de IRPF</h4>                        </div>
+                        <div class="main-card-info-professional_data">
                            <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final Restituição de IRPF -->
+ 
+            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;"> <!-- Começo Container Sociedades-->
                <section class="w-100 p-relative is-printable" data-section-info id="Companies" >
                   <div class=" card-info list-model-1 ">
                      <div class="card-body">
@@ -1549,92 +1692,104 @@
                      </div>
                   </div>
                </section>
-               <div id="companies-socio-template" class="hide" style="display:none">
-                  <div class="d-flex flex-wrap row-line align-items-center">
-                     <div class="w-100 w-sm-40 w-xl-50 {DisplayUser}">
-                        <!--CONTACT ID-->
-                        <a href="" target="_blank">
-                        <small>Nome</small>
-                        <strong class="ignore-text-with-dots">{Name}</strong>
-                        <sub>{DocumentFormatted}</sub>
-                        </a>
-                     </div>
-                     <div class="w-100 w-sm-40 w-xl-50 {DisplayUserExchange}">
-                        <small>Nome</small>
-                        <strong class="ignore-text-with-dots">{Name}</strong>
-                        <sub>{DocumentFormatted}</sub>
-                     </div>
-                     <div class="mt-5 mt-sm-0 w-35 w-sm-20 w-lg-15 pl-lg-10 pl-xl-0 w-xl-9">
-                        <small>Entrada</small>
-                        <strong>{EntryDate}</strong>
-                     </div>
-                     <div class="mt-5 mt-sm-0 w-25 w-sm-10 w-lg-10 w-xl-6">
-                        <small>Porc.</small>
-                        <strong>{Quote}</strong>
-                     </div>
-                     <div class="mt-5 mt-sm-0 w-30 w-sm-25 pl-5 pl-md-0 w-lg-15" title="{Role}">
-                        <small>Participação</small>
-                        <strong>{Role}</strong>
-                     </div>
-                     <div class="mt-5 mt-sm-0 text-right w-10 w-sm-5 d-none d-sm-block">
-                        <!--CONTACT ID-->
-                           <a href="" target="_blank" class="btn btn-sm btn-default fa fa-chevron-right {DisplayUser}" title="Clique para ver os detalhes"></a>
-                        </div>
+            </div>  <!-- Final Container Sociedades-->  
+
+            <div id="companies-socio-template" class="hide" style="display:none"> <!-- ???????????????????? -->
+               <div class="d-flex flex-wrap row-line align-items-center">
+                  <div class="w-100 w-sm-40 w-xl-50 {DisplayUser}">
+                     <!--CONTACT ID-->
+                     <a href="" target="_blank">
+                     <small>Nome</small>
+                     <strong class="ignore-text-with-dots">{Name}</strong>
+                     <sub>{DocumentFormatted}</sub>
+                     </a>
+                  </div>
+                  <div class="w-100 w-sm-40 w-xl-50 {DisplayUserExchange}">
+                     <small>Nome</small>
+                     <strong class="ignore-text-with-dots">{Name}</strong>
+                     <sub>{DocumentFormatted}</sub>
+                  </div>
+                  <div class="mt-5 mt-sm-0 w-35 w-sm-20 w-lg-15 pl-lg-10 pl-xl-0 w-xl-9">
+                     <small>Entrada</small>
+                     <strong>{EntryDate}</strong>
+                  </div>
+                  <div class="mt-5 mt-sm-0 w-25 w-sm-10 w-lg-10 w-xl-6">
+                     <small>Porc.</small>
+                     <strong>{Quote}</strong>
+                  </div>
+                  <div class="mt-5 mt-sm-0 w-30 w-sm-25 pl-5 pl-md-0 w-lg-15" title="{Role}">
+                     <small>Participação</small>
+                     <strong>{Role}</strong>
+                  </div>
+                  <div class="mt-5 mt-sm-0 text-right w-10 w-sm-5 d-none d-sm-block">
+                     <!--CONTACT ID-->
+                        <a href="" target="_blank" class="btn btn-sm btn-default fa fa-chevron-right {DisplayUser}" title="Clique para ver os detalhes"></a>
                      </div>
                   </div>
                </div>
-               <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-                  <!-- Relacionamento de sociedade-->
-                  <section class="w-100 p-relative is-printable" data-section-info id="CompanyRelationship" >
-                     <div class=" card-info list-model-1 ">
-                        <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
+            </div> <!-- ???????????????????? -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Empresas relacionadas -->
+
+               <section data-section-info id="ProfessionalData" >
+                  <div>
+                     <div class="card-body">
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-building-fill"></i>
                            <h4 data-section-title title="Empresas relacionadas"><i class="fa fa-building-o fs16"></i> Empresas relacionadas</h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Imóveis-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Properties" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final Empresas relacionadas -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo imoveis  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Im&#243;veis"><i class="fa fa-home fs16"></i> Im&#243;veis</h4>
-                           <div class="addresses-view btn-group btn-group-sm ignore change-view-control" data-toggle="buttons" data-source="null">
-                              <label class="btn btn-sm btn-default fa fa-list active"
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-building-fill"></i>
+                           <h4 data-section-title title="Imoveis">
+                              IMOVEIS
+                           </h4>
+                           <div class="button-group-lista_enderecos" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
+                              <label class="label-left-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização da lista">
-                              <input type="radio" name="properties-view" autocomplete="off" data-type="0" checked>
+                                 <i class="bi bi-list-task"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="0" checked>
                               </label>
-                              <label class="btn btn-sm btn-default fa fa-street-view"
+
+                              <label class="label-right-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização no mapa">
-                              <input type="radio" name="properties-view" autocomplete="off" data-type="1">
+                                 <i class="bi bi-map-fill"></i>
+                                 <input type="radio" name="addresses-view" autocomplete="off" data-type="1">
                               </label>
                            </div>
+                       
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
-                        </div>
-                        <div class="other-card-info">
-                           <div id="properties-map" class="addresses-map"></div>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- lista de protestos-->
-               <section class="w-100 p-relative is-printable" data-section-info id="TitleProtest" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final Imoveis -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Lista de protestos  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Protesto de t&#237;tulos"><i class="fa fa-gavel fs16"></i> Protesto de t&#237;tulos</h4>
-                           <button type="button" class="btn btn-xs btn-default"
-                                 title="Clique para atualizar o dado a partir da fonte online"
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-bank2"></i>
+                           <h4 data-section-title title="Imoveis">
+                              PROTESTO DE TÍTULOS
+                           </h4>
+
+                           <div class="group-buttons-protestos_titulos">
+                              <button type="button" id="button-refresh-lista_protestos" class="button-box"
                                  data-block="TitleProtest"
                                  data-spider="ProtestoNacional"
                                  data-asaction="False"
@@ -1643,97 +1798,119 @@
                                  data-timeout="180000"
                                  data-info=""
                                  data-line="false">
-                              <i class="fa fa-refresh"></i>
-                           </button>
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                           </div>
+
+
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Situação de cobrança-->
-               <section class="w-100 p-relative is-printable" data-section-info id="BillingSituation" >
-                  <div class=" card-info list-model-1 ">
-                     <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Situa&#231;&#227;o de cobran&#231;a"><i class="fa fa-gavel fs16"></i> Situa&#231;&#227;o de cobran&#231;a</h4>
-                        </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
-               <!-- SAÚDE-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Health" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final lista de protestos -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo situaçã de cobrança  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="SA&#218;DE"><i class="fa fa-heartbeat fs16"></i> SA&#218;DE</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-bank2"></i>
+                           <h4 data-section-title title="Imoveis">
+                              SITUAÇÃO DE COBRANÇA
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- CCF-->
-               <section class="w-100 p-relative is-printable" data-section-info id="HistoricalCCF" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final situaçã de cobrança -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo situaçã de Saúde  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="CCF"><i class="fa fa-list-alt fs16"></i> CCF</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-clipboard2-pulse"></i>
+                           <h4 data-section-title title="Imoveis">
+                              SAÚDE
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- lista de processos -->
-               <section class="w-100 p-relative is-printable" data-section-info id="LawProcesses" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final situaçã de Saúde -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo CPF  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Processos Judiciais"><i class="fa fa-balance-scale fs16"></i> Processos Judiciais</h4>
-                           <button type="button" class="btn btn-xs btn-default"
-                                 title="Clique para atualizar o dado a partir da fonte online"
-                                 data-block="LawProcesses"
-                                 data-spider="processojudicial"
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-card-text"></i>
+                           <h4 data-section-title title="Imoveis">
+                              CPF
+                           </h4>
+                        </div>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div> <!-- Final CPF -->
+            
+            <div class="main-card-dados_profissionais"> <!-- Começo Lista de processos  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
+                     <div class="card-body">
+                        <div class="card-header" id="professional_data-id">
+                           <span id="balance_list_process" class="material-symbols-outlined">
+                              balance
+                           </span>
+                           <h4 data-section-title title="Imoveis">
+                              PROCESSOS JUDICIAIS
+                           </h4>
+
+                           <div class="group-buttons-protestos_titulos">
+                              <button type="button" id="button-refresh-lista_protestos" class="button-box"
+                                 data-block="TitleProtest"
+                                 data-spider="ProtestoNacional"
                                  data-asaction="False"
                                  data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
                                  data-contact="100003613081164"
-                                 data-timeout="60000"
-                                 data-info="{&#39;ApiType&#39;:2}"
+                                 data-timeout="180000"
+                                 data-info=""
                                  data-line="false">
-                              <i class="fa fa-refresh"></i>
-                           </button>
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                           </div>
+
+
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final lista de processos -->
+
+
+            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;"> <!-- começo container de mandato de prisão -->
                <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
                <!-- Mandados-->
                <section class="w-100 p-relative is-printable" data-section-info id="Sentences" >
                   <div class=" card-info list-model-1 ">
                      <div class="card-body">
                         <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Mandados"><i class="fa fa-user-secret fs16"></i> Mandados</h4>
+                           <h4 data-section-title title="Mandados"><i class="fa fa-user-secret fs16"></i> Mandatos</h4>
                         </div>
                         <div class="main-card-info " style="">
                            <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
@@ -1884,47 +2061,58 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Lista de Restrições (ex: OAF, Interpol) -->
-               <section class="w-100 p-relative is-printable" data-section-info id="Restrictions" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final container de mandato de prisão -->
+
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Restrições  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Restri&#231;&#245;es"><i class="fa fa-exclamation-triangle fs16"></i> Restri&#231;&#245;es</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-exclamation-triangle-fill"></i>
+                           <h4 data-section-title title="Imoveis">
+                              RESTRIÇÕES
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
-               <!-- Benefícios-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Benefits" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final Restrições  -->
+
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Assistências  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Assist&#234;ncias"><i class="fa fa-money fs16"></i> Assist&#234;ncias</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-cash"></i>
+                           <h4 data-section-title title="Imoveis">
+                              ASSISTÊNCIAS
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Domínios .BR-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Domains" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final Assistências  -->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo Lista de dominios  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Dom&#237;nios"><i class="fa fa-at fs16"></i> Dom&#237;nios</h4>
-                           <button type="button" class="btn btn-xs btn-default"
-                                 title="Clique para atualizar o dado a partir da fonte online"
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-globe2"></i>
+                           <h4 data-section-title title="Imoveis">
+                              DOMINIOS
+                           </h4>
+
+                           <div class="group-buttons-protestos_titulos">
+                              <button type="button" id="button-refresh-lista_protestos" class="button-box"
                                  data-block="Domains"
                                  data-spider="similarweb"
                                  data-asaction="False"
@@ -1933,16 +2121,20 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                              <i class="fa fa-refresh"></i>
-                           </button>
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                           </div>
+
+
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
+            </div> <!-- Final lista de dominios -->
+
             <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
                <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
                <!-- Comportamento Digital -->
