@@ -1512,103 +1512,121 @@
                </section>
             </div> <!-- Lista de e-mails final -->
 
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Lista de veículos -->
-               <section class="w-100 p-relative is-printable" data-section-info id="Vehicles" >
-                  <div class=" card-info list-model-1 ">
+            <div class="main-card-dados_profissionais"> <!-- Começo lista de veículos -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Ve&#237;culos"><i class="fa fa-car fs16"></i> Ve&#237;culos</h4>
-                        </div>
-                        <div class="main-card-info " style="">
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-car-front"></i>
+                           <h4 data-section-title title="LISTA DE VEÍCULOS">
+                              VEÍCULOS
+                           </h4>
+                           </div>
+                        <div class="main-card-info-professional_data">
                            <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                           
+                           <div id="vehicle-detail-template" class="disabled">
+                              <div class="vehicle-detail-modal">
+
+                                 <div class="pertencente-veiculo {ownerClass}">
+                                    <div class="">
+                                       <span class="dono_veiculo-span textBox">Este veículo pertence à <b>{OwnerName}</b></span>
+                                       <a class="ver-perfil-button" href="{OwnerUrl}" target="_blank">VER PERFIL <i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                 </div>
+
+                                 <div class="detalhes-veiculo">
+
+                                    <div class="textBox renavam-box">
+                                       <small>Renavam</small>
+                                       <strong>{Renavam}</strong>
+                                    </div>
+
+                                    <div class="textBox ipva-box">
+                                       <small>IPVA pendente</small>
+                                       <strong>{CurrentIpva}</strong>
+                                    </div>
+
+                                    <div class="multa-box textBox">
+                                       <small>Multa</small>
+                                       <strong>{CurrentFines}</strong>
+                                    </div>
+
+                                    <div class="fipe-box textBox">
+                                       <small>FIPE</small>
+                                       <strong>{FipePrice}</strong>
+                                    </div>
+
+                                    <div class="textBox inspecao-veicular-box">
+                                       <small>Últ. inspeção veicular</small>
+                                       <strong>{InspectionYear}</strong>
+                                    </div>
+                                 </div>
+            
+                                 <div class="restrictions">
+                                    <ul class="list-group-restrictions">
+                                       <li class="list-group-item">
+                                          <small>RESTRIÇÃO FINANCEIRA</small>
+                                          <h5 class="mn">{FinancialRestriction}</h5>
+                                       </li>
+                                       <li class="list-group-item">
+                                          <small>TaxRestriction</small>
+                                          <h5 class="mn">{TaxRestriction}</h5>
+                                       </li>
+                                       <li class="list-group-item">
+                                          <small>RESTRIÇÃO ADMINISTRATIVA</small>
+                                          <h5 class="mn">{AdministrativeRestriction}</h5>
+                                       </li>
+                                       <li class="list-group-item">
+                                          <small>RESTRIÇÃO JURÍDICA</small>
+                                          <h5 class="mn">{JuridicalRestriction}</h5>
+                                       </li>
+                                       <li class="list-group-item {theftClass}">
+                                          <small>RESTRIÇÃO DE FURTO</small>
+                                          <h5 class="mn">{TheftRestriction}</h5>
+                                       </li>
+                                    </ul>
+
+                                    <div id="vehicle-dpvat-template" class="" >
+                                       <h3>DPVAT <small>MAIS RECENTE</small></h3>
+
+                                       <div class="DPVAT">
+
+                                          <div class="textBox dpvat-situacao">
+                                             <small>SITUAÇÃO</small>
+                                             <strong>{Situation}</strong>
+                                          </div>
+
+                                          <div class="textBox dpvat-pagamento">
+                                             <small>
+                                                <span class="d-none d-md-inline-block">DATA </span>
+                                                PAGAMENTO
+                                             </small>
+                                             <strong>{DataPayment}</strong>
+                                          </div>
+
+                                          <div class="dpvat-valor">
+                                             <small>VALOR</small>
+                                             <strong>{Price}</strong>
+                                          </div>
+
+                                          <div class="dpvat-ano">
+                                             <small>ANO</small>
+                                             <strong>{Year}</strong>
+                                          </div>
+
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+         
                         </div>
                      </div>
                   </div>
                </section>
-               <div id="vehicle-detail-template" class="hide" style="display:none">
-                  <div class="vehicle-detail-modal">
-                     <div class="{ownerClass}">
-                        <div class="d-flex align-center bg-light mb-20 no-border well-sm ">
-                           <span>Este veículo pertence à <b>{OwnerName}</b></span>
-                           <a class="btn btn-xs btn-primary" href="{OwnerUrl}" target="_blank">VER PERFIL <i class="fa fa-chevron-right"></i></a>
-                        </div>
-                     </div>
-                     <div class="d-flex flex-wrap main-values mb-20">
-                        <div class="w-50 w-sm-33 w-md-20">
-                           <small>Renavam</small>
-                           <strong>{Renavam}</strong>
-                        </div>
-                        <div class="w-50 w-sm-33 w-md-20">
-                           <small>IPVA pendente</small>
-                           <strong>{CurrentIpva}</strong>
-                        </div>
-                        <div class="w-50 w-sm-33 w-md-15 w-lg-20 mb-10 mb-sm-0 mt-10 mt-sm-0 ">
-                           <small>Multa</small>
-                           <strong>{CurrentFines}</strong>
-                        </div>
-                        <div class="w-50 w-md-20 mb-10 mb-sm-0 mt-10 mt-md-0 ">
-                           <small>FIPE</small>
-                           <strong>{FipePrice}</strong>
-                        </div>
-                        <div class="w-50 w-md-25 w-lg-20 mt-md-0 mt-sm-10 ">
-                           <small>Últ. inspeção veicular</small>
-                           <strong>{InspectionYear}</strong>
-                        </div>
-                     </div>
-                     <div class="restrictions">
-                        <ul class="list-group">
-                           <li class="list-group-item">
-                              <small>RESTRIÇÃO FINANCEIRA</small>
-                              <h5 class="mn">{FinancialRestriction}</h5>
-                           </li>
-                           <li class="list-group-item">
-                              <small>TaxRestriction</small>
-                              <h5 class="mn">{TaxRestriction}</h5>
-                           </li>
-                           <li class="list-group-item">
-                              <small>RESTRIÇÃO ADMINISTRATIVA</small>
-                              <h5 class="mn">{AdministrativeRestriction}</h5>
-                           </li>
-                           <li class="list-group-item">
-                              <small>RESTRIÇÃO JURÍDICA</small>
-                              <h5 class="mn">{JuridicalRestriction}</h5>
-                           </li>
-                           <li class="list-group-item {theftClass}">
-                              <small>RESTRIÇÃO DE FURTO</small>
-                              <h5 class="mn">{TheftRestriction}</h5>
-                           </li>
-                        </ul>
-                     </div>
-                     <hr class="mt-15 mb-15" />
-                     <div>
-                        <h3>DPVAT <small>MAIS RECENTE</small></h3>
-                        <div class="DPVAT">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div id="vehicle-dpvat-template" class="hide" style="display:none">
-                  <div class="d-flex flex-wrap  p-10">
-                     <div class="w-100 w-sm-35">
-                        <small>SITUAÇÃO</small>
-                        <strong>{Situation}</strong>
-                     </div>
-                     <div class="w-40 w-sm-25 mt-10 mt-sm-0 ">
-                        <small><span class="d-none d-md-inline-block">DATA </span>PAGAMENTO</small>
-                        <strong>{DataPayment}</strong>
-                     </div>
-                     <div class="w-40 w-sm-25 mt-10 mt-sm-0 ">
-                        <small>VALOR</small>
-                        <strong>{Price}</strong>
-                     </div>
-                     <div class="w-20 w-sm-10 mt-10 mt-sm-0">
-                        <small>ANO</small>
-                        <strong>{Year}</strong>
-                     </div>
-                  </div>
-               </div>
-            </div> <!-- Lista de Veículos começo -->
+
+            </div> <!-- Final lista de veículos -->
 
 
             <div class="main-card-dados_profissionais"> <!-- Começo Restituição de IRPF -->
@@ -1627,74 +1645,94 @@
                </section>
             </div> <!-- Final Restituição de IRPF -->
  
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;"> <!-- Começo Container Sociedades-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Companies" >
-                  <div class=" card-info list-model-1 ">
+            <div class="main-card-lista_enderecos_comerciais"> <!-- Começo Container Sociedades-->
+               <section data-section-info id="Companies" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Sociedades"><i class="fa fa-building-o fs16"></i> Sociedades</h4>
+
+                        <div class="card-heade-lista_enderecos">
+                           <i class="bi bi-building-fill"></i>   
+                           <h4 data-section-title title="Sociedades">
+                              Sociedades
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class=" d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap row-line align-items-center">
-                                       <div class="w-100 w-lg-40 w-xl-50 mb-10 mb-md-5">
-                                          <!--CONTACT ID-->
-                                          <a href="" target="_blank">
-                                          <small>Empresa</small>
-                                          <strong class="ignore-text-with-dots" title="JOAO PEDRO BAZA GARCIA RODRIGUES">JOAO PEDRO BAZA GARCIA RODRIGUES</strong>
-                                          </a>
-                                          <!--CONTACT ID-->
-                                          <a href="" target="_blank">
-                                          <sub class="">52.048.648/0001-31</sub>
-                                          </a>
-                                       </div>
-                                       <div class="w-20 w-sm-10 w-lg-5">
-                                          <small>Sócios</small>
-                                          <strong>1</strong>
-                                       </div>
-                                       <div class="w-40 w-sm-25 w-lg-15 pl-lg-10 pl-xl-0 w-xl-10">
-                                          <small>Entrada</small>
-                                          <strong>01/09/2023</strong>
-                                       </div>
-                                       <div class="w-40 w-sm-15 w-lg-10">
-                                          <span class="label label-default fs10 op2">INDIRETO</span>
-                                       </div>
-                                       <div class="w-50 w-sm-30 pl-5 pl-md-0 w-lg-15">
-                                          <small>Participação</small>
-                                          <strong>EMPRESARIO INDIVIDUAL</strong>
-                                       </div>
-                                       <div class="w-25 w-sm-15 w-lg-10 w-xl-5">
-                                          <small>Porc.</small>
-                                          <strong>100,00</strong>
-                                       </div>
-                                       <div class="text-right w-25 w-sm-5">
-                                          <div class="btn-group dropup">
-                                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                             <span class="fa fa-ellipsis-v"></span>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <!--CONTACT ID-->
-                                                <li><a href="" target="_blank">Ir para empresa</a></li>
-                                                <li role="separator" class="divider"></li>
-                                                <li><a class="btn-socios" data-title="JOAO PEDRO BAZA GARCIA RODRIGUES" data-source="[{&quot;initial&quot;:&quot;JR&quot;,&quot;Name&quot;:&quot;JOAO PEDRO BAZA GARCIA RODRIGUES&quot;,&quot;Document&quot;:3613081164,&quot;DocumentFormatted&quot;:&quot;036.130.811-64&quot;,&quot;ContactId&quot;:100003613081164,&quot;EntryDate&quot;:&quot;01/09/2023&quot;,&quot;Quote&quot;:&quot;100,00&quot;,&quot;History&quot;:false,&quot;Role&quot;:&quot;EMPRESARIO INDIVIDUAL&quot;,&quot;DisplayUser&quot;:&quot;show&quot;,&quot;DisplayUserExchange&quot;:&quot;hide&quot;}]">Lista de sócios</a></li>
-                                             </ul>
+
+                        <div class="main-card-info-lista_enderecos">
+                           <div>
+                              <div>
+                                 <div class="responsive-body textBox">
+
+                                    <div class="col-1-lista_sociedades" data-lat="" data-long="">
+
+                                       <div class="top_container-lista_sociedades">
+                                          <div class="textBox empresa-container-lista_sociedades">
+                                             <!--CONTACT ID-->
+                                             <a class="link-top" href="" target="_blank">
+                                                <small>Empresa</small>
+                                                <strong class="ignore-text-with-dots" title="JOAO PEDRO BAZA GARCIA RODRIGUES">JOAO PEDRO BAZA GARCIA RODRIGUES</strong>
+                                             </a>
+                                             <!--CONTACT ID-->
+                                             <a class="link-bottom" href="" target="_blank">
+                                                <sub class="">52.048.648/0001-31</sub>
+                                             </a>
                                           </div>
+
+                                          <div class="textBox socio-container">
+                                             <small>Sócios</small>
+                                             <strong>1</strong>
+                                          </div>
+
+                                          <div class="textBox entrada-container">
+                                             <small>Entrada</small>
+                                             <strong>01/09/2023</strong>
+                                          </div>
+
+                                          <div class="indireto-box">
+                                             <span class="label label-default fs10 op2">INDIRETO</span>
+                                          </div>
+
+                                          <div class="participacao-box textBox">
+                                             <small>Participação</small>
+                                             <strong>EMPRESARIO INDIVIDUAL</strong>
+                                          </div>
+
+                                          <div class="texBox porc-box">
+                                             <small>Porc.</small>
+                                             <strong>100,00</strong>
+                                          </div>
+
+                                          <div class="menu_dropdown_icon">
+                                             <div class="dropdown-neighbor">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu dropdown-menu-right">
+                                                   <!--CONTACT ID-->
+                                                   <li><a href="" target="_blank">Ir para empresa</a></li>
+                                                   <li role="separator" class="divider"></li>
+                                                   <li><a class="btn-socios" data-title="JOAO PEDRO BAZA GARCIA RODRIGUES" data-source="[{&quot;initial&quot;:&quot;JR&quot;,&quot;Name&quot;:&quot;JOAO PEDRO BAZA GARCIA RODRIGUES&quot;,&quot;Document&quot;:3613081164,&quot;DocumentFormatted&quot;:&quot;036.130.811-64&quot;,&quot;ContactId&quot;:100003613081164,&quot;EntryDate&quot;:&quot;01/09/2023&quot;,&quot;Quote&quot;:&quot;100,00&quot;,&quot;History&quot;:false,&quot;Role&quot;:&quot;EMPRESARIO INDIVIDUAL&quot;,&quot;DisplayUser&quot;:&quot;show&quot;,&quot;DisplayUserExchange&quot;:&quot;hide&quot;}]">Lista de sócios</a></li>
+                                                </ul>                                                </div>
+                                          </div>
+
+
                                        </div>
+
+
+                                       </div>
+                                    
                                     </div>
+
                                  </div>
                               </div>
                            </div>
-                        </div>
+                     
                      </div>
                   </div>
                </section>
             </div>  <!-- Final Container Sociedades-->  
 
-            <div id="companies-socio-template" class="hide" style="display:none"> <!-- ???????????????????? -->
+            <div id="companies-socio-template" class="disabled"> <!-- ???????????????????? -->
                <div class="d-flex flex-wrap row-line align-items-center">
                   <div class="w-100 w-sm-40 w-xl-50 {DisplayUser}">
                      <!--CONTACT ID-->
@@ -1726,7 +1764,7 @@
                         <a href="" target="_blank" class="btn btn-sm btn-default fa fa-chevron-right {DisplayUser}" title="Clique para ver os detalhes"></a>
                      </div>
                   </div>
-               </div>
+               
             </div> <!-- ???????????????????? -->
 
             <div class="main-card-dados_profissionais"> <!-- Começo Empresas relacionadas -->
@@ -1903,165 +1941,23 @@
             </div> <!-- Final lista de processos -->
 
 
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;"> <!-- começo container de mandato de prisão -->
-               <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
-               <!-- Mandados-->
-               <section class="w-100 p-relative is-printable" data-section-info id="Sentences" >
-                  <div class=" card-info list-model-1 ">
+            <div class="main-card-dados_profissionais"> <!-- Começo Mandatos de prisão  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Mandados"><i class="fa fa-user-secret fs16"></i> Mandatos</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-shield-fill-exclamation"></i>
+                           <h4 data-section-title title="Imoveis">
+                              MANDATOS
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-               <div id="arrestWarrant-detail-template" class="hide" style="display:none">
-                  <div class="row ml10 mr10">
-                     <h4 class="text-warning">Detalhes do Mandado</h4>
-                     <div class="row">
-                        <div class="col-sm-2 mb10">
-                           <small>Validade</small>
-                           <strong class="mn">{Vanity}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Cumprimento</small>
-                           <strong class="mn">{ComplianceDate}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Verificação</small>
-                           <strong class="mn">{VerificationDate}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Dt. Situação</small>
-                           <strong class="mn">{DateSituation}</strong>
-                        </div>
-                        <div class="col-sm-4 mb10">
-                           <small>Situação</small>
-                           <strong class="mn">{Situation}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-2 mb10">
-                           <small>Data Crime</small>
-                           <strong class="mn">{Date}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Recaptura</small>
-                           <strong class="mn">{Recapture}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Prazo</small>
-                           <strong class="mn">{Deadline}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Pena</small>
-                           <strong class="mn">{CriminalPenalty}</strong>
-                        </div>
-                        <div class="col-sm-4 mb10">
-                           <small>Regime</small>
-                           <strong class="mn">{RegimeRules}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-12 mb20">
-                           <small>Motivo</small>
-                           <strong class="mn">{Reason}</strong>
-                        </div>
-                     </div>
-                     <h4 class="text-warning">Detalhes do Processo</h4>
-                     <div class="row">
-                        <div class="col-sm-4 mb10">
-                           <small>Processo</small>
-                           <strong class="mn">{Process}</strong>
-                        </div>
-                        <div class="col-sm-8 mb10">
-                           <small>Classe</small>
-                           <strong class="mn">{Class}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-1 mb10">
-                           <small>UF</small>
-                           <strong class="mn">{UF}</strong>
-                        </div>
-                        <div class="col-sm-3 mb10">
-                           <small>Município</small>
-                           <strong class="mn">{City}</strong>
-                        </div>
-                        <div class="col-sm-8 mb10">
-                           <small>Assuntos de Delitos</small>
-                           <strong class="mn">{CrimesMatters}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-12 mb20">
-                           <small>Orgão</small>
-                           <strong class="mn">{Organization}</strong>
-                        </div>
-                     </div>
-                     <h4 class="text-warning">Dados de Identificação</h4>
-                     <div class="row">
-                        <div class="col-sm-12 mb10">
-                           <small>Nome</small>
-                           <strong class="mn">{Names}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-2 mb10">
-                           <small>Dt. Nasc.</small>
-                           <strong class="mn">{BirthDate}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Sexo</small>
-                           <strong class="mn">{Gender}</strong>
-                        </div>
-                        <div class="col-sm-2 mb10">
-                           <small>Nacionalidade</small>
-                           <strong class="mn">{Nationalities}</strong>
-                        </div>
-                        <div class="col-sm-6 mb10">
-                           <small>Naturalidade</small>
-                           <strong class="mn">{Naturalities}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-6 mb10">
-                           <small>Genitora</small>
-                           <strong class="mn">{MothersNames}</strong>
-                        </div>
-                        <div class="col-sm-6 mb10">
-                           <small>Genitor</small>
-                           <strong class="mn">{FathersNames}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-4 mb10">
-                           <small>Alcunhas</small>
-                           <strong class="mn">{Nicknames}</strong>
-                        </div>
-                        <div class="col-sm-4 mb10">
-                           <small>Profissão</small>
-                           <strong class="mn">{Professions}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-12 mb10">
-                           <small>Aspectos Físicos</small>
-                           <strong class="mn d-block overflow-hidden text-ellipsis">{PhysicalAspects}</strong>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-12">
-                           <small>Endereços</small>
-                           <strong class="bg-none no-border">{Adresses}</strong>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div> <!-- Final container de mandato de prisão -->
+            </div> <!-- Final mandatos de prisão  -->
 
 
             <div class="main-card-dados_profissionais"> <!-- Começo Restrições  -->
@@ -2075,7 +1971,7 @@
                            </h4>
                         </div>
                         <div class="main-card-info-professional_data">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
+                           <h3 class="">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
@@ -2135,45 +2031,53 @@
                </section>
             </div> <!-- Final lista de dominios -->
 
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            <div class="main-card-dados_profissionais"> <!-- Começo comportamento digital-->
                <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
                <!-- Comportamento Digital -->
-               <section class="w-100 p-relative is-printable" data-section-info id="DigitalBehavior" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="DigitalBehavior" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Comportamento Digital"><i class="fa fa-cloud fs16"></i> Comportamento Digital</h4>
-                           <button type="button" class="btn btn-xs btn-default"
-                                 title="Clique para atualizar o dado a partir da fonte online"
-                                 data-block="DigitalBehavior"
-                                 data-spider="DigitalBehavior"
-                                 data-asaction="True"
+
+                        <div class="card-header-lsta_telefone ">
+                           <i class="bi bi-cloud-check-fill"></i>
+                           <h4 data-section-title title="Comportamento Digital">Comportamento Digital</h4>
+                           <div class="group-buttons-protestos_titulos">
+                              <button type="button" id="button-refresh-lista_protestos" class="button-box"
+                                 data-block="VoterRegistry"
+                                 data-spider="VoterRegistry"
+                                 data-asaction="False"
                                  data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
                                  data-contact="100003613081164"
-                                 data-timeout="300000"
+                                 data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                              <i class="fa fa-refresh"></i>
-                           </button>
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                           </div>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="cards d-flex flex-wrap">
-                              <div class="w-100 w-xl-50 pt-20 pr-20 pb-20 d-flex direction-column">
-                                 <h5 class="mn mb-10">Domínios visitados</h5>
-                                 <div class="d-flex direction-column h-100">
+
+                        <div class="main-card-info-comportamento_digital">
+                           
+                           <div class="main-container_info-comportamento-digital">
+
+                              <div class="box-1-comportamento_digital">
+                                 <h5>Domínios visitados</h5>
+                                 <div class="box-1-dominio_box">
                                     <table class="table">
                                        <tr>
-                                          <th>Domínio</th>
-                                          <th class=""><span class="d-none d-md-inline-block">Acessos</span></th>
-                                          <th class=""><span class="d-none d-md-inline-block">Últ. Acesso</span></th>
+                                          <th class="dominio-text-table" >Domínio</th>
+                                          <th class="acessos-text-table"><span>Acessos</span></th>
+                                          <th class="ult_acesso-text-table"><span>Últ. Acesso</span></th>
                                        </tr>
-                                       <tr>
-                                          <td class="d-flex align-center">
-                                             <b class="fw-600 fs-15 d-inline-block w40 text-center">1º </b>
+
+                                       <tr class="table_body-2">
+                                          <td class="dominio_text_resposta-table">
+                                             <b class="">1º </b>
                                              <div class="w-100">
                                                 <small class="d-none"></small>
                                                 <strong class="d-block w-100 fs-13 lh13 fw-digital">loja.multiclubes.com.br</strong>
-                                                <div class="d-flex d-md-none fs-10 lh10 mt5">
+                                                
+                                                <div class="disabled">
                                                    <div class="">
                                                       <span class="d-block">Acessos</span>
                                                       <span class="d-block fw600 fs13 lh14">1x</span>
@@ -2185,26 +2089,37 @@
                                                 </div>
                                              </div>
                                           </td>
-                                          <td class=""><span class="d-none d-md-inline-block">1x</span></td>
-                                          <td class=""><span class="d-none d-md-inline-block">h&#225; 5 anos</span></td>
+
+                                          <td class="acessos_text_resposta-table">
+                                             <span class="">1x</span>
+                                          </td>
+
+                                          <td class="ult_acesso_text_resposta-table">
+                                             <span class="d-none d-md-inline-block">h&#225; 5 anos</span>
+                                          </td>
+
                                        </tr>
                                     </table>
                                  </div>
                               </div>
-                              <div class="w-100 w-xl-50  card d-flex direction-column">
+
+                              <div class="box-2-comportamento_digital">
                                  <h5 class="mn mb-10">Dispositivos</h5>
                                  <input id="digitalBehavior-devices" name="digitalBehavior-devices" type="hidden" value="[{&quot;OS&quot;:&quot;Android&quot;,&quot;Brand&quot;:&quot;Samsung&quot;,&quot;Model&quot;:&quot;SM-A505GT&quot;,&quot;IsMobile&quot;:true,&quot;Ranking&quot;:20200812,&quot;CreateDate&quot;:&quot;2019-12-28T15:49:59.100Z&quot;}]" />                
-                                 <div class="h-100 d-flex justify-center align-center">
+                                 
+                                 <div class="gray_box-box_2">
                                     <div id="digitalBehavior-devices-graph">
                                     </div>
                                  </div>
                               </div>
-                              <div class="w-100 mt-20 d-flex direction-column">
-                                 <h5 class="mn mb-15">Categorias relacionadas</h5>
-                                 <div class="d-flex direction-column h-100 justify-center align-items-center">
+
+                              <div class="box-3-comportamento_digital">
+                                 <h5>Categorias relacionadas</h5>
+                                 <div class="box_result-box-3">
                                     <h4 class="no-result">NÃO HÁ RESULTADO EM NOSSA BASE</h4>
                                  </div>
                               </div>
+
                               <script>
                                  $$.blocks.digitalBehavior.devices();
                               </script>
@@ -2237,31 +2152,37 @@
                      </tr>
                   </tbody>
                </table>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
+            </div> <!-- Final comportamento digital-->
+
+            <div class="main-card-ultimas-consultas"> <!-- Começo ultimas consultas-->
                <!-- Últimas consultas -->
-               <section class="w-100 p-relative is-printable" data-section-info id="Queries" >
-                  <div class=" card-info list-model-1 ">
+               <section data-section-info id="Queries" >
+
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="&#218;ltimas consultas"><i class="fa fa-users fs16"></i> &#218;ltimas consultas</h4>
+
+                        <div class="card-header-lsta_telefone">
+                           <i class="bi bi-person-lines-fill"></i>
+                           <h4 data-section-title title="&#218;ltimas consultas">&#218;ltimas consultas</h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class=" d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap row-line align-items-center">
-                                       <div class="w-100 w-md-70 w-lg-80">
+
+                        <div class="main-card-info-ultimas_consultas">
+                           <div>
+                              <div>
+                                 <div class="responsive-body">
+                                    <div class="main-card-content-ultimas_consultas">
+
+                                       <div class="textBox card-area_consultas">
                                           <small>Área</small>
-                                          <strong class="ignore-text-with-dots">CONSULTORIA EM TECNOLOGIA DA INFORMACAO</strong>
+                                          <strong>CONSULTORIA EM TECNOLOGIA DA INFORMACAO</strong>
                                        </div>
-                                       <div class="w-50 mt-5 mt-md-0 w-md-15 w-lg-10">
+
+                                       <div class="textBox card-quantidade-consultas">
                                           <small>Quantidade</small>
                                           <strong>1x</strong>
                                        </div>
-                                       <div class="w-50 mt-5 mt-md-0 w-md-15 w-lg-10">
+
+                                       <div class="textBox card-rank-consultas">
                                           <small>Rank</small>
                                           <strong>20221201</strong>
                                        </div>
@@ -2273,32 +2194,39 @@
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Lista de Doações para Partidos Políticos -->
-               <section class="w-100 p-relative is-printable" data-section-info id="PoliticalPartyDonations" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final ultimas consultas-->
+
+            <div class="main-card-dados_profissionais"> <!-- Começo doação partidaria  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Doa&#231;&#245;es Partid&#225;rias"><i class="fa fa-money fs16"></i> Doa&#231;&#245;es Partid&#225;rias</h4>
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-cash"></i>
+                           <h4 data-section-title title="Imoveis">
+                              DOAÇÃO PARTIDARIA
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!--Este é um componente que apenas faz sentido para PF, então se for PJ, não carregar-->
-               <!-- Local de votação (TRE) -->
-               <section class="w-100 p-relative is-printable" data-section-info id="VoterRegistry" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final local doação partidaria -->
+
+
+            <div class="main-card-dados_profissionais"> <!-- Começo local de votação  -->
+               <section data-section-info id="ProfessionalData" >
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Local de Vota&#231;&#227;o"><i class="fa fa-address-card-o fs16"></i> Local de Vota&#231;&#227;o</h4>
-                           <button type="button" class="btn btn-xs btn-default"
-                                 title="Clique para atualizar o dado a partir da fonte online"
+                        <div class="card-header" id="professional_data-id">
+                           <i class="bi bi-person-vcard-fill"></i>
+                           <h4 data-section-title title="Imoveis">
+                              LOCAL DE VOTAÇÃO
+                           </h4>
+
+                           <div class="group-buttons-protestos_titulos">
+                              <button type="button" id="button-refresh-lista_protestos" class="button-box"
                                  data-block="VoterRegistry"
                                  data-spider="VoterRegistry"
                                  data-asaction="False"
@@ -2307,290 +2235,338 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                              <i class="fa fa-refresh"></i>
-                           </button>
+                                 <i style="font-size: 14px;" class="bi bi-arrow-clockwise icon-button"></i>
+                              </button>
+                           </div>
+
+
                         </div>
-                        <div class="main-card-info " style="">
-                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                        <div class="main-card-info-professional_data">
+                           <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>                        
                         </div>
                      </div>
                   </div>
                </section>
-            </div>
-            <div class="main-card d-flex flex-wrap justify-start " style="break-inside: avoid-region !important;">
-               <!-- Lista de Modelos Estatísicos -->
-               <section class="w-100 p-relative is-printable" data-section-info id="StatisticModels" >
-                  <div class=" card-info list-model-1 ">
+            </div> <!-- Final local de votação -->
+
+            <div class="main-card-modelos_estatisticos"> <!-- Começo lista de modelos estatisticos -->             
+               <!-- Lista de Modelos Estatísticos -->
+               <section data-section-info id="StatisticModels" >
+
+                  <div>
                      <div class="card-body">
-                        <div class="card-header d-flex justify-between align-items-center mb10">
-                           <h4 data-section-title title="Modelos Estat&#237;sticos"><i class="fa fa-tags fs16"></i> Modelos Estat&#237;sticos</h4>
+
+                        <div class="card-header-modelos_estatisticos">
+                           <i class="bi bi-tags"></i>
+                           <h4 data-section-title title="Modelos Estat&#237;sticos">
+                              Modelos Estat&#237;sticos
+                           </h4>
                         </div>
-                        <div class="main-card-info " style="">
-                           <div class="list">
-                              <div class="responsive d-inline-block w-100"
-                                 >
-                                 <div class="responsive-body"
-                                    >
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                        <div class="main-card-info-modelos_estatisticos">
+
+                           <div>
+
+                              <div class="responsive">
+                                 <div class="responsive-body main-container-modelos_estatisticos">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Franqueado</strong>
                                           <sub>
-                                          0015
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0015
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 8 (Ponto médio: 566)">
+
+                                       <div class="container-score-8" title="Score: 8 (Ponto médio: 566)">
                                           <small>Score</small>
-                                          <strong class="ignore-text-with-dots">8</strong>
-                                          <sub class="hotbar">
-                                          <span style="left: 56.60%"></span>
-                                          <span style="left: 0.80%"></span>
-                                          </sub>
+                                          <strong>8</strong>
+                                          <div class="hotbar">
+                                             <div class="circle" style="left: 0.80%"></div>
+                                             <div  class="pointer" style="left: 56.60%"></div>
+                                          </div>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
                                           <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
                                           <strong class="mt-5 ignore-text-with-dots">20231216</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Tomador de Empr&#233;stimos</strong>
                                           <sub>
-                                          0013
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0013
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 459 (Ponto médio: 516)">
+
+                                       <div class="container-score-459" title="Score: 459 (Ponto médio: 516)">
                                           <small>Score</small>
-                                          <strong class="ignore-text-with-dots">459</strong>
+                                          <strong>459</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 51.60%"></span>
-                                          <span style="left: 45.90%"></span>
+                                             <span class="circle-2" style="left: 51.60%"></span>
+                                             <span class="disabled pointer-2" style="left: 45.90%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231215</strong>
+                                          <strong>20231215</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Consumo de Luxo </strong>
                                           <sub>
-                                          0014
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0014
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 131 (Ponto médio: 493)">
+
+                                       <div class="container-score-131" title="Score: 131 (Ponto médio: 493)">
                                           <small>Score</small>
-                                          <strong class="ignore-text-with-dots">131</strong>
+                                          <strong>131</strong>
+
                                           <sub class="hotbar">
-                                          <span style="left: 49.30%"></span>
-                                          <span style="left: 13.10%"></span>
+                                             <span class="circle-3" style="left: 49.30%"></span>
+                                             <span class="pointer-3" style="left: 13.10%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
                                           <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
                                           <strong class="mt-5 ignore-text-with-dots">20231215</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado ">
                                           <small>Modelo</small>
-                                          <strong class="ignore-text-with-dots">Perfil de Posse de Im&#243;vel</strong>
+                                          <strong>Perfil de Posse de Im&#243;vel</strong>
                                           <sub>
-                                          0005
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0005
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 218 (Ponto médio: 461)">
+
+                                       <div class="container-score-218" title="Score: 218 (Ponto médio: 461)">
                                           <small>Score</small>
-                                          <strong class="ignore-text-with-dots">218</strong>
+                                          <strong>218</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 46.10%"></span>
-                                          <span style="left: 21.80%"></span>
+                                             <span class="circle-4" style="left: 46.10%"></span>
+                                             <span class="pointer-4" style="left: 21.80%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+                                       <div class="rank_box-modelos_estatisticos textBox">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231214</strong>
+                                          <strong>20231214</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Posse de Autom&#243;vel</strong>
                                           <sub>
-                                          0007
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0007
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 251 (Ponto médio: 493)">
+
+                                       <div class="container-score-251" title="Score: 251 (Ponto médio: 493)">
                                           <small>Score</small>
                                           <strong class="ignore-text-with-dots">251</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 49.30%"></span>
-                                          <span style="left: 25.10%"></span>
+                                             <span class="circle-5" style="left: 49.30%"></span>
+                                             <span class="pointer-5" style="left: 25.10%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="rank_box-modelos_estatisticos texBox">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231214</strong>
+                                          <strong>20231214</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
-                                          <strong class="ignore-text-with-dots">Perfil de Comportamento Digital</strong>
+                                          <strong>Perfil de Comportamento Digital</strong>
                                           <sub>
-                                          0009
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0009
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 188 (Ponto médio: 412)">
+
+                                       <div class="container-score-188" title="Score: 188 (Ponto médio: 412)">
                                           <small>Score</small>
                                           <strong class="ignore-text-with-dots">188</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 41.20%"></span>
-                                          <span style="left: 18.80%"></span>
+                                             <span class="circle-6" style="left: 41.20%"></span>
+                                             <span class="pointer-6" style="left: 18.80%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="resultado_box-modelos_estatisticos texBox">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong >Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="rank_box-modelos_estatisticos textBox">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231214</strong>
+                                          <strong>20231214</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
-                                          <strong class="ignore-text-with-dots">Perfil de Conta Banc&#225;ria Digital</strong>
+                                          <strong>Perfil de Conta Banc&#225;ria Digital</strong>
                                           <sub>
-                                          0001
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0001
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 61 (Ponto médio: 568)">
+
+                                       <div class="container-score-61" title="Score: 61 (Ponto médio: 568)">
                                           <small>Score</small>
                                           <strong class="ignore-text-with-dots">61</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 56.80%"></span>
-                                          <span style="left: 6.10%"></span>
+                                             <span class="circle-7" style="left: 56.80%"></span>
+                                             <span class="pointer-7" style="left: 6.10%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="resultado_box-modelos_estatisticos textBox">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231213</strong>
+                                          <strong>20231213</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Conta Banc&#225;ria de Investimento</strong>
                                           <sub>
-                                          0002
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0002
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 99 (Ponto médio: 529)">
+
+                                       <div class="container-score-99" title="Score: 99 (Ponto médio: 529)">
                                           <small>Score</small>
                                           <strong class="ignore-text-with-dots">99</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 52.90%"></span>
-                                          <span style="left: 9.90%"></span>
+                                             <span class="circle-8" style="left: 52.90%"></span>
+                                             <span class="pointer-8" style="left: 9.90%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20231213</strong>
+                                          <strong>20231213</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Conta Banc&#225;ria Premium</strong>
                                           <sub>
-                                          0003
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0003
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 10 (Ponto médio: 482)">
+
+                                       <div class="container-score-10" title="Score: 10 (Ponto médio: 482)">
                                           <small>Score</small>
-                                          <strong class="ignore-text-with-dots">10</strong>
+                                          <strong>10</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 48.20%"></span>
-                                          <span style="left: 1.00%"></span>
+                                             <span class="circle-9" style="left: 48.20%"></span>
+                                             <span class="pointer-9" style="left: 1.00%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox rank_box-modelos_estatisticos">
                                           <small>Rank</small>
                                           <strong class="mt-5 ignore-text-with-dots">20231213</strong>
                                        </div>
                                     </div>
-                                    <div class="d-flex flex-wrap row-line align-items-center negative">
-                                       <div class="w-md-50 w-sm-100 mb-sm-10 w-100 mb-10">
+
+                                    <div class="box-content-modelos_estatiscos">
+                                       <div class="container-modelo_perfil_franqueado">
                                           <small>Modelo</small>
                                           <strong class="ignore-text-with-dots">Perfil de Viagens e Turismo</strong>
                                           <sub>
-                                          0011
-                                          <i class="ml-10 badge fs-10">Afinidade</i>
+                                             0011
+                                             <span>Afinidade</span>
                                           </sub>
                                        </div>
-                                       <div class="w-md-15 w-sm-30" title="Score: 117 (Ponto médio: 530)">
+
+                                       <div class="container-score-117" title="Score: 117 (Ponto médio: 530)">
                                           <small>Score</small>
                                           <strong class="ignore-text-with-dots">117</strong>
                                           <sub class="hotbar">
-                                          <span style="left: 53.00%"></span>
-                                          <span style="left: 11.70%"></span>
+                                             <span class="circle-10" style="left: 53.00%"></span>
+                                             <span class="pointer-10" style="left: 11.70%"></span>
                                           </sub>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="textBox resultado_box-modelos_estatisticos">
                                           <small>Resultado</small>
-                                          <strong class="mt-5 ignore-text-with-dots">Negativo</strong>
+                                          <strong>Negativo</strong>
                                        </div>
-                                       <div class="mt-5 w-md-10 w-sm-20">
+
+                                       <div class="rank_box-modelos_estatisticos">
                                           <small>Rank</small>
-                                          <strong class="mt-5 ignore-text-with-dots">20230829</strong>
+                                          <strong>20230829</strong>
                                        </div>
                                     </div>
+
                                  </div>
                               </div>
                            </div>
@@ -2598,76 +2574,9 @@
                      </div>
                   </div>
                </section>
-            </div>
+            </div> <!-- Final lista de modelos estatisticos -->
+
          </div>
       </div>
-      </div>
-      <!-- Início: Navegação da página -->
-      <!-- Fim: Navegação da página -->
-      </section>
-      <!-- Fim: Conteúdo geral -->
-      <!-- Início: Menu lateral direito, Navegação relevante ao conteúdo da página  -->
-      <aside id="sidebar_right" class="nano affix has-scrollbar">
-         <!-- Início: Sidebar Right Content -->
-         <div id="sidebar-right-content" class="sidebar-right-content nano-content" tabindex="0" style="margin-right: -17px;">
-         </div>
-         <!-- Fim: Sidebar Right Content -->
-         <div class="nano-pane" style="display: none;">
-            <div class="nano-slider" style="height: 718px; transform: translate(0px, 0px);"></div>
-         </div>
-      </aside>
-      <!-- Fim: Menu lateral direito -->
-      </section>
-      </div>
-      <div class="main-load">
-         <!-- Load que cobre a tela inteira-->
-      </div>
-      <div id="modal-container"></div>
-      <!-- Início: Section Templates -->
-      <div id="template-base" class="ignore" hidden>
-         <div class="sp-messages text-center bg-light p7 mn flot-y-axis ">
-            <h5 class="mn">
-               <i class="mr10">Nenhum valor retornado</i> <button type="button" class="btn btn-sm btn-default"><i class="fa fa-refresh"></i> Tentar Novamente</button>
-            </h5>
-            <div>
-               <!--CRM/Content/Images/load-b.gif-->  
-               <img class="w20" src="" /><i> Buscando...</i>
-            </div>
-         </div>
-         <div id="address-neighbor-template" class="hide" style="display:none">
-            <div class="d-flex flex-wrap row-line align-items-center">
-               <div class="w-75 w-sm-100 w-md-45 w-lg-50">
-                  <small>Nome</small>
-                  <!--PERSON/DOCUMENT-->
-                  <a href="" target="_blank">
-                  <strong class="ignore-text-with-dots">{Name}</strong>
-                  </a>
-                  <!--PERSON/DOCUMENT-->
-                  <a href="" target="_blank">
-                  <sub>{DocumentFormatted}</sub>
-                  </a>
-               </div>
-               <div class="mt-5 mt-md-0 w-25 w-sm-20 w-md-15 w-lg-10">
-                  <span class="fs-10 label {cssPPE}" title="" data-toggle="tooltip" data-placement="top" data-original-title="Politicamente exposto">PPE</span>
-                  <span class="fs-10 label {cssVIP}" title="" data-toggle="tooltip" data-placement="top" data-original-title="Pessoa VIP">VIP</span>
-               </div>
-               <div class="w-30 w-sm-10">
-                  <small>nº</small>
-                  <strong class="ignore-text-with-dots">{Number}</strong>
-               </div>
-               <div class="w-60 w-sm-45 w-md-25">
-                  <small>Complemento</small>
-                  <strong class="ignore-text-with-dots">{Complement}</strong>
-               </div>
-               <div class="w-10 w-sm-5 text-right">
-                  <!--PERSON/DOCUMENT-->
-                     <a href="" target="_blank" class="btn btn-sm btn-default fa fa-chevron-right" title="Clique para ver os detalhes"></a>
-                  </div>
-               </div>
-            </div>
-            <div id="address-censu-sector-template" class="hide" style="display:none">
-            </div>
-         </div>
-         <!-- Fim: Section Templates -->
-      </body>
-      </html>
+   </body>
+</html>
