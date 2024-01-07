@@ -3423,6 +3423,24 @@ body {
 }
 
 
+/*************** Containers de lista de imoveis *******************/
+
+
+.button-group-imoveis {
+    position: relative;
+    right: -64.5rem;
+
+    display: flex;
+    gap: 0px;
+
+    vertical-align: middle;
+
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    color: #626262;
+}
+
 
 /*************** Containers de lista de email *******************/
 
@@ -3701,6 +3719,19 @@ width: auto;
     font-size: 20px;
     color: #f79c51;
 }
+
+/*************** Containers de dominios digitais  *******************/
+
+.group-buttons-dominios {
+    position: relative;
+    right: -65.7rem;
+}
+
+.group-buttons-dominios:hover {
+    background-color: #d8d5d5;
+    transition: 0.3s;
+}
+
 
 
 /*************** Containers de comportamento digital  *******************/
@@ -4041,10 +4072,17 @@ width: auto;
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-
-
 }
 
+.group-buttons-comportamento_digital {
+    position: relative;
+    right: -58.5rem;
+}
+
+.group-buttons-comportamento_digital:hover {
+    background-color: #d8d5d5;
+    transition: 0.3s;
+}
 
 /*************** Containers ultimas consultas  *******************/
 
@@ -4173,6 +4211,18 @@ width: auto;
     margin-right: 25px;
     font-size: 12px;
     font-weight: 900;
+}
+
+/*************** Containers de local de votação  *******************/
+
+.group-buttons-votacao {
+    position: relative;
+    right: -61.5rem;
+}
+
+.group-buttons-votacao:hover {
+    background-color: #d8d5d5;
+    transition: 0.3s;
 }
 
 
