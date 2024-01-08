@@ -128,7 +128,7 @@ body {
 }
 
 
-/*************** container de Fdentificação - Informações principais ***************/
+/*************** container de Identificação - Informações principais ***************/
 .card-informacoes_pessoais {
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +165,7 @@ body {
 
 }
 
-.card-header h4 {
+.card-header > h4 {
     line-height: 0;
     margin: 0;
     text-transform: uppercase;
@@ -174,10 +174,14 @@ body {
     font-weight: bold;
 }
 
+.card-header > span {
+    color: #f79c51;
+    
+}
+
 .row {
     margin-left: -11px;
     margin-right: -11px;
-
     display: flex;
 }
 
