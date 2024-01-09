@@ -1,19 +1,15 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media screen and (max-width: 728px) {
     .card-informacoes_pessoais {
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
         justify-content: space-between;
     
-        max-width: 100%;
-
-        flex-direction: row;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        break-inside: avoid-region!important;
+        width: 100%;
+        margin: 20px 0;
     }
 
-    .main-info_container { /* Sub-container */
+    .main-info_container {
         width: 100%;
         box-sizing: border-box;
         display: block;
@@ -39,26 +35,18 @@
 
     .col-1 {
         min-height: 1px;
-    
-        padding-left: 11px;
-        padding-right: 11px;
-    
-        margin-right: 2.5rem;
-        margin-left: 11px;
-    
+        padding: 0 11px;
+        margin: 0 2.5rem 0 11px;
     }
 
     .person-photo {
         width: 55px;
         height: 55px;
         background-color: #d4d4d4;
-        
         position: relative;
         overflow: hidden;
-        margin: auto;
-        margin-top: 10px;
-
-        border-radius: 64px!important;
+        margin: 10px auto 0;
+        border-radius: 64px;
     }
 
     .col-2 {
@@ -68,7 +56,6 @@
         font-weight: 400;
         font-size: 14px;
         color: #626262; 
-    
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -80,44 +67,34 @@
     }
 }
 
-
-/*Containers dados sumarizados*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     .container-dados-sumarizados {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    
-        max-width: 100%;
-        break-inside: avoid-region!important;
+        width: 100%;
         margin-bottom: 20px;
     }
 
     .div_agrupamento-dados_sumarizados {
         margin-left: -2.5px;
         width: 100%;
-    
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         gap: 10px;
     }
 
     .dado-sumarizado {
         cursor: pointer;
-        max-width: 100%;
         width: 100%;
      }
 
      .email-sumarizado {
         height: 100%;
-
         display: flex;
-        background-color: #fcecca!important;
-        color: #e19b0b!important;
-    
+        background-color: #fcecca;
+        color: #e19b0b;
         overflow: hidden;
         border-radius: 3px;
-    
     }
 }
