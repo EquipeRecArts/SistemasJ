@@ -1,6 +1,6 @@
-
+ 
     /*TABLET DADOS BÁSICOS RESPONSIVO*/
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 845px) and (max-width: 1030px) {
         .main-info_container{
             position: relative;
             box-sizing: border-box;
@@ -20,7 +20,7 @@
             left: 450px;
         }
         .person-photo{
-            width: 60px;
+            width: 100px;
             height: 60px;
             left: 450px;
     
@@ -90,7 +90,7 @@
             right: 630px;
             top: 310px;
         }
-        /* MOBILE DADOS sumarizados RESPONSIVO*/
+        /* TABLET DADOS sumarizados RESPONSIVO*/
     
     
         .container-dados-sumarizados {
@@ -116,7 +116,6 @@
         .div_agrupamento-dados_sumarizados {
             width: 100%;
             padding: 10px 10px;
-    
             display: block;
         
         
@@ -133,7 +132,7 @@
     
     
         .email-sumarizado {
-        width: 350px;
+            width: 800x;
             background-color: #fcecca!important;
             color: #e19b0b!important;
         
@@ -141,6 +140,7 @@
     
             border-radius: 3px;
     
+            
         
         }
         
@@ -172,7 +172,7 @@
         
         .imoveis-sumarizado-icon {
             max-width: auto;
-            width: 30%;
+            width: 800%;
             text-align: center;
         
             background-color: #3498db!important;
@@ -327,7 +327,7 @@
         
         }
     
-        /* MOBILE SITUAÇÃO CADASTRAL RESPONSIVO*/
+        /* TABLET SITUAÇÃO CADASTRAL RESPONSIVO*/
     
     
         .container_pai-situacao_cadastral {
@@ -413,7 +413,7 @@
             flex-direction: column;
         
         }
-            /* MOBILE CONTATO RESPONSIVO*/
+            /* TABLET CONTATO RESPONSIVO*/
     
            
             .hot-email-1 {
@@ -435,6 +435,7 @@
                 border-color: rgba(0,0,0,.15);
                 max-width: 100%;
                 max-width: auto;
+                
             /*sumindo com o texto do email icon*/
             }.text_container-hot_email  {
                 display: none;
@@ -936,11 +937,4 @@
         right: -3rem;
     }
     }
-    
-       
-    
-    
-        
-    
-            
     
