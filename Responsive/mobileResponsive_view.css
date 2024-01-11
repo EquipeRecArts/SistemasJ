@@ -765,6 +765,93 @@ position: relative;
     position: relative;
     right: 55px;
 
+
+}
+/*SOCIEDADES*/
+
+#Companies > div {
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: rgb(181, 181, 181) 0px 10px 7px -10px;
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    right: 40px;
+  }
+  .top_container-lista_sociedades {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 120px;
+    position: relative;
+    right: 100px;
+  }
+  .link-top {
+    text-decoration: none;
+    cursor: pointer;
+    color: #424242;
+    box-sizing: border-box;
+    background: transparent;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    right: 20px;
+  }
+  .link-bottom {
+    color: #424242;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: none;
+    position: relative;
+    right: 20px;
+  }
+  .col-1-lista_sociedades {
+    position: relative;
+    display: flex;
+    height: 120px;
+    top: 10px;
+    align-items: center;
+    display: list-item;
+    list-style: none;
+  }
+  .col-1-lista_sociedades:hover {
+    background-color: #e8e8e8;
+    transition: 0.3s;
+  }
+  .divseparar {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px;
+    position: relative;
+    right: 370px;
+    top: 70px;
+  }
+  .indireto-box > span {
+    opacity: 1;
+    background-color: #454545;
+    font-size: 13px;
+    display: inline;
+    padding: 0.3em 0.7em 0.4em;
+    font-weight: 600;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+
+    position: relative;
+    right: 22px;
+    top: 3px;
+  
 }.box-1-dominio_box > .table{
     margin: 10px 10px;
 
