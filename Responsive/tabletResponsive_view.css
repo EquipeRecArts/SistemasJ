@@ -1,5 +1,5 @@
 /*TABLET DADOS BÁSICOS RESPONSIVO*/
-@media screen and (min-width: 768px) and (max-width: 1030px) {
+@media (min-width: 768px) and (max-width: 1031px) {
   .main-info_container {
     position: relative;
     box-sizing: border-box;
@@ -423,12 +423,13 @@
     flex-direction: column;
   }
   /* MOBILE CONTATO RESPONSIVO*/
-  .TopContactInformation {
+  #TopContactInformation > div {
     position: relative;
+    right: 40px;
   }
   .elements-group-top_dados_contato {
     position: relative;
-    left: 50px;
+    left: 40px;
   }
 
   .hot-email-1 {
@@ -587,7 +588,14 @@
     top: 75px;
   }
 
+  
   /*PESSOAS MAIS RELEVANTES*/
+
+  #MostRelevantPeople > div{
+    position: relative;
+    right: 60px;
+  }
+
   .col_1-most_people {
     border-color: #1436cd;
     border-bottom: 1px solid #b3b3b3;
@@ -659,7 +667,7 @@
     position: relative;
     display: flex;
 
-    left: 30px;
+    right: 40px;
     width: 1400px;
     height: 220px;
   }
@@ -738,7 +746,7 @@
     box-sizing: border-box;
     position: relative;
 
-    left: 10px;
+    right: 60px;
     height: 200px;
 
     /*DADOS PROFISSIONAIS*/
@@ -751,6 +759,9 @@
   }
   #ProfessionalData > div {
     width: 700px;
+    position: relative;
+
+    right: 60px;
   }
   /*profissional contato*/
 
@@ -761,8 +772,16 @@
     margin: 10px;
     left: 15px;
 
-    /*relacionamentos*/
+   
   }
+
+  #ContactPersons  > div{
+    position: relative;
+
+    right: 60px;
+  }
+
+   /*relacionamentos*/
   .main-card-relacionamento {
     position: relative;
     display: flex;
@@ -966,7 +985,7 @@
   #DigitalBehavior {
     position: relative;
     width: 1200px;
-    left: 24px;
+    right: 24px;
   }
   .box-1-dominio_box > .table {
     margin: 10px 10px;
@@ -1013,7 +1032,8 @@
     box-sizing: border-box;
 
     position: relative;
-    left: 18px;
+    
+    left: 8px;
     width: 693px;
     height: 170px;
 
@@ -1022,7 +1042,7 @@
     
     position: relative;
   
-    height: 110px;
+    height: 80px;
     top: 8px;
     align-items: normal;
     padding: 10px;
@@ -1054,7 +1074,7 @@
     width: 550px;
     height: auto;
     position: relative;
-    left: 100px;
+    left: 60px;
   }
     /*buttom refresh local votação */
   

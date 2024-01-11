@@ -1,4 +1,5 @@
 
+
 /*************** GENERAL CLASS ***************/
 
 .text-center {
@@ -567,6 +568,7 @@ body {
     justify-content: start;
     margin-bottom: 20px;
 
+    margin: 0px 60px;
     max-width: 90%;
     width: 90%;
     height: auto;
@@ -579,7 +581,7 @@ body {
 .agrupamento_geral-situacao_cadastral {
     border-radius: 3px;
     background-color: #fff;
-
+    
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
@@ -587,7 +589,7 @@ body {
 
 #card-header-situacao_cadastral > button {
     position:relative;
-    right: -60rem;
+    right: -56rem;
     padding: 0 2px;
     vertical-align: middle;
     line-height: 0px;
@@ -635,6 +637,8 @@ body {
 
 #TopContactInformation {
     width: 100%;
+    position: relative;
+    left: 45px;
 }
 
 .elements-group-top_dados_contato {
@@ -1139,6 +1143,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+    
+    position: relative;
+    left: 60px;
 }
 
 
@@ -1370,6 +1377,8 @@ body {
     width: 92%;
     height: auto;
 
+    position: relative;
+    left: 53px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -1680,6 +1689,8 @@ body {
 }
 
 #Income > div {
+    position: relative;
+    left: 60px;
     border-radius: 3px;
     background-color: #fff;
 
@@ -1762,7 +1773,7 @@ body {
 
 .container_baixo-classe_social > h2 {
     line-height: 30px;
-    margin: 0 5px 0 0;
+    margin: 0 10px 0 0;
     padding: 0;
 
     font-size: 30px;
@@ -1774,20 +1785,22 @@ body {
 
 }
 
-#classeSocialPessoal > small, #containerTextBottom > small {
+#classeSocialPessoal > h3 {
     color: #424242;
-    font-size: 11px;
-    display: block;
+    font-size: 14px;
+    margin: 0 0px -4px 0;
 
     box-sizing: border-box;
     line-height: 1.231;
     font-weight: 400;
 }
 
-#classeSocialPessoal > strong, #containerTextBottom > strong {
+#classeSocialPessoal > small {
     height: 18px;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;
+
+    margin: 0 0px -3px 0;
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1822,6 +1835,8 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+   
 }
 
 #ClientIsPJ {
@@ -1840,6 +1855,8 @@ body {
 #ClientIsPJ > div {
     border-radius: 3px;
     background-color: #fff;
+
+  
 
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
@@ -1861,6 +1878,10 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+
+    position: relative;
+    left: 60px;
 }
 
 #Activities {
@@ -1874,6 +1895,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #626262;
+    
 }
 
 #Activities > div {
@@ -1937,6 +1959,8 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+    position: relative;
+    left: 60px;
 }
 
 #ProfessionalData {
@@ -2004,6 +2028,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 60px;
 }
 
 #ContactPersons > div {
@@ -2013,7 +2040,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px;
+    width: 1155px;
 }
 
 .card-head-contact_persons {
@@ -2309,6 +2336,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 60px;
 }
 
 #InCommon {
@@ -2359,7 +2389,7 @@ body {
 
 .group-buttons-relacionamento {
     position: relative;
-    right: -57.5rem;
+    right: -53.5rem;
 }
 
 #button-refresh-relacionamento {
@@ -2408,6 +2438,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 30px;
 }
 
 #Addresses {
@@ -2913,6 +2946,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 30px;
 }
 
 
@@ -3038,6 +3074,9 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 30px;
 }
 
 .main-card-info-lista_telefones > div:hover {
@@ -3440,7 +3479,7 @@ body {
 
 .button-group-imoveis {
     position: relative;
-    right: -64.5rem;
+    right: -60.5rem;
 
     display: flex;
     gap: 0px;
@@ -3717,7 +3756,7 @@ width: auto;
 
 .group-buttons-protestos_titulos {
     position: relative;
-    right: -60.5rem;
+    right: -55.5rem;
 }
 
 .group-buttons-protestos_titulos > button {
@@ -3736,7 +3775,7 @@ width: auto;
 
 .group-buttons-dominios {
     position: relative;
-    right: -65.7rem;
+    right: -60.7rem;
 }
 
 .group-buttons-dominios:hover {
@@ -4088,7 +4127,7 @@ width: auto;
 
 .group-buttons-comportamento_digital {
     position: relative;
-    right: -58.5rem;
+    right: -53.5rem;
 }
 
 .group-buttons-comportamento_digital:hover {
@@ -4110,6 +4149,9 @@ width: auto;
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 30px;
 }
 
 
@@ -4229,7 +4271,7 @@ width: auto;
 
 .group-buttons-votacao {
     position: relative;
-    right: -61.5rem;
+    right: -57.5rem;
 }
 
 .group-buttons-votacao:hover {
@@ -4252,6 +4294,9 @@ width: auto;
     max-width: 90%;
     width: 90%;
     height: auto;
+
+    position: relative;
+    left: 30px;
 }
 
 
@@ -4508,7 +4553,8 @@ width: auto;
     border: 2px solid #d0c6df;
     margin-left: 68px !important;
     margin-bottom: -20px!important;
-
+    position: relative; 
+    right: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px #000000;
     background: #e9e9e9;
@@ -4522,6 +4568,8 @@ width: auto;
     background: #e9e9e9;
     top: -1px;
     border-radius: 10px;
+
+   
 
     line-height: 8px;
     font-size: 75%;
@@ -4598,7 +4646,8 @@ width: auto;
     border: 2px solid #d0c6df;
     margin-bottom: -20px!important;
     margin-left: 43px;
-
+    position: relative; 
+    right: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px #000000;
     background: #e9e9e9;
@@ -4863,6 +4912,39 @@ width: auto;
         flex-direction: column;
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
