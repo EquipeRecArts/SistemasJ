@@ -826,18 +826,22 @@ position: relative;
     transition: 0.3s;
   }
   .divseparar {
-    width: 1200px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     margin: 0px 10px;
     position: relative;
-    right: 370px;
+    right: 500px;
     top: 70px;
+  }.menu_dropdown_icon{
+    position: relative;
+    right: 30px;
+    top: 4px;
   }
   .indireto-box > span {
     opacity: 1;
     background-color: #454545;
-    font-size: 13px;
+    font-size: 10px;
     display: inline;
     padding: 0.3em 0.7em 0.4em;
     font-weight: 600;
@@ -849,8 +853,8 @@ position: relative;
     border-radius: 0.25em;
 
     position: relative;
-    right: 22px;
-    top: 3px;
+    right: 10px;
+    top: 5px;
   
 }.box-1-dominio_box > .table{
     margin: 10px 10px;
