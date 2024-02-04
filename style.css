@@ -623,22 +623,25 @@ body {
 /*************** containers top dados de contato *******************/
 
 .container_pai-top_dados_contato {
+    margin-top: 40px;
     break-inside: avoid-region;
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: start;
     margin-bottom: 20px;
 
     max-width: 100%;
-    width: 92%;
+    width: 90%;
     height: auto;
+}
+
+.main-card-info-top_dados_contato {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #TopContactInformation {
     width: 100%;
-    position: relative;
-    left: 45px;
 }
 
 .elements-group-top_dados_contato {
@@ -1144,8 +1147,6 @@ body {
     width: 90%;
     height: auto;
     
-    position: relative;
-    left: 60px;
 }
 
 
@@ -1370,15 +1371,13 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: start;
+    justify-content: space-between;
     margin-bottom: 20px;
 
     max-width: 100%;
-    width: 92%;
+    width: 90%;
     height: auto;
 
-    position: relative;
-    left: 53px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -1390,7 +1389,7 @@ body {
 
 }
 
-#score {
+.Score {
     width: auto;
     margin-bottom: 20px;
 
@@ -1404,7 +1403,6 @@ body {
 }
 
 .card_main-score {
-    padding: 0px 10px;
     display: flex;
     margin-bottom: 0;
 
@@ -1689,8 +1687,6 @@ body {
 }
 
 #Income > div {
-    position: relative;
-    left: 60px;
     border-radius: 3px;
     background-color: #fff;
 
@@ -1878,10 +1874,6 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
-
-
-    position: relative;
-    left: 60px;
 }
 
 #Activities {
@@ -1959,8 +1951,6 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
-    position: relative;
-    left: 60px;
 }
 
 #ProfessionalData {
@@ -2028,9 +2018,11 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+}
 
-    position: relative;
-    left: 60px;
+#ContactPersons {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #ContactPersons > div {
@@ -2040,7 +2032,6 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1155px;
 }
 
 .card-head-contact_persons {
@@ -2337,8 +2328,6 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 60px;
 }
 
 #InCommon {
@@ -2439,8 +2428,7 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
+
 }
 
 #Addresses {
@@ -2459,7 +2447,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 1215px; 
 }
 
 .card-heade-lista_enderecos {
@@ -2947,8 +2935,6 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
@@ -3075,8 +3061,6 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 .main-card-info-lista_telefones > div:hover {
@@ -4150,8 +4134,6 @@ width: auto;
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
@@ -4295,8 +4277,6 @@ width: auto;
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
