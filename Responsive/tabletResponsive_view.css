@@ -1122,6 +1122,8 @@
 
   #Companies {
     margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
   }
 
   #Companies > div {
@@ -1134,13 +1136,17 @@
     height: 100%;
 
   }
+
+  .empresa-container-lista_sociedades {
+    width: 100%;
+  }
+
   .top_container-lista_sociedades {
-    width: 1200px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    margin: 0px 120px;
-    position: relative;
-    right: 100px;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
   }
   .link-top {
     text-decoration: none;
@@ -1151,8 +1157,7 @@
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
-    position: relative;
-    right: 20px;
+
   }
   .link-bottom {
     color: #424242;
@@ -1163,31 +1168,33 @@
     font-weight: 400;
     font-size: 14px;
     font-style: none;
-    position: relative;
-    right: 20px;
   }
+
   .col-1-lista_sociedades {
-    position: relative;
     display: flex;
-    height: 120px;
-    top: 10px;
+    height: 100%;
     align-items: center;
     display: list-item;
     list-style: none;
   }
+
   .col-1-lista_sociedades:hover {
     background-color: #e8e8e8;
     transition: 0.3s;
   }
   .divseparar {
-    width: 1200px;
+    width: 100%;
     display: flex;
+    gap: 10px;
     flex-direction: row;
-    margin: 0px 10px;
-    position: relative;
-    right: 370px;
-    top: 70px;
+    margin: 0px;
   }
+    .indireto-box {
+      display: flex;
+      align-items: center;
+      width: 20%;
+    }
+
   .indireto-box > span {
     opacity: 1;
     background-color: #454545;
@@ -1202,10 +1209,12 @@
     vertical-align: baseline;
     border-radius: 0.25em;
 
-    position: relative;
-    right: 22px;
-    top: 3px;
   }
+
+  .participacao-box {
+    width: 30%;
+  }
+
 
   /*COMPORTAMENTO DIGITAL*/
 

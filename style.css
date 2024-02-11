@@ -141,8 +141,8 @@ body {
     width: 90%;
 
     flex-direction: row;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     break-inside: avoid-region!important;
 }
 
@@ -336,7 +336,7 @@ body {
     max-width: 100%;
     width: 90%;
     break-inside: avoid-region!important;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #dados-sumarizados {
@@ -1930,8 +1930,9 @@ body {
     font-size: 14px;
 }
 .divseparar {
-    width: 1200px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 0px 10px;
     position: relative;
@@ -2810,10 +2811,6 @@ body {
 }
 
 .menu_dropdown_icon {
-    position: relative;
-    bottom: 0px;
-    right: -310px;
-    top: -6px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -2963,7 +2960,7 @@ body {
     flex-wrap: wrap;
 
     justify-content: start;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     max-width: 90%;
     width: 90%;
@@ -2974,7 +2971,6 @@ body {
 
 #BusinessAddresses {
     width: 100%;
-    margin-bottom: 20px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -3270,6 +3266,10 @@ body {
 
 /*************** Containers de sociedades *******************/
 
+.main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+}
+
 .col-1-lista_sociedades {
     border-color: #6a6e80;
     border-bottom: 1px solid #e7e7e7;
@@ -3369,7 +3369,7 @@ body {
 
 #Companies {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -3383,7 +3383,8 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -3483,7 +3484,7 @@ body {
 }
 
 .porc-box {
-    width: 10%!important;
+    width: 90%;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
