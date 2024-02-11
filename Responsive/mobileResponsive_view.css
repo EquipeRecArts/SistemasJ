@@ -12,7 +12,8 @@
         box-sizing: border-box;
         display: block;
 
-    }.card-info {
+    }
+    .card-info {
         width: 100%;
         height: auto;
         border-radius: 3px;

@@ -1,145 +1,171 @@
 /*TABLET DADOS BÁSICOS RESPONSIVO*/
-@media (min-width: 767px) and (max-width: 1031px) {
+@media (min-width: 568px) and (max-width: 1031px) {
+
+  .card-informacoes_pessoais {
+    margin-bottom: 40px;
+  }
+
   .main-info_container {
-    position: relative;
     box-sizing: border-box;
     display: block;
   }
+
   .card-info {
     width: 100%;
-    height: 540px;
+    height: auto;
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
   }
-  .group-field {
-    position: relative;
-    left: 450px;
+
+  .col-1 {
+    width: 100%;
+    display: flex;
+    margin: 0px!important;
+    padding: 0!important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
   }
+
+
   .person-photo {
+    position: relative;
     width: 60px;
     height: 60px;
-    left: 450px;
+    margin: 0px;
 
     background-color: #d4d4d4;
 
-    position: relative;
     overflow: hidden;
 
     border-radius: 64px !important;
   }
 
-  .card-header {
-    position: relative;
-  }
   .icons-container {
-    position: relative;
     display: flex;
-    left: 0px;
+    justify-content: center;
+    align-items: center;
   }
+
+  .group-field {
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  .row {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .col-2 {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   #nome-dados-basicos {
-    position: relative;
-    right: 220px;
-    top: 140px;
+    width: auto;
+    max-width: 60%;
   }
+
   #genero-dados-basicos {
-    position: relative;
-    right: 630px;
-    top: 195px;
+    width: 30%;
   }
+
   #estado_civil-dados-basicos {
-    position: relative;
-    right: 630px;
-    top: 205px;
+    width: 50%;
   }
+
   #escolaridade-dados-basicos {
-    position: relative;
-    right: 1039px;
-    top: 385px;
+    width: 30%;
   }
+
   #cpf-dados-basicos {
-    position: relative;
-    right: 220px;
-    top: 185px;
+    width: 50%;
   }
+
   #idade-dados-basicos {
-    position: relative;
-    right: 230px;
-    top: 185px;
+    width: 30%;
   }
+
   #nascimento-dados-basicos {
-    position: relative;
-    right: 429px;
-    top: 225px;
+    width: 50%;
   }
+
   #signo-dados-basicos {
-    position: relative;
-    right: 829px;
-    top: 245px;
+    width: 30%;
   }
+
   #situacao_cadastral-dados-basicos {
-    position: relative;
-    right: 839px;
-    top: 270px;
+    width: 50%;
   }
+
   #nacionalidade-dados-basicos {
-    position: relative;
-    right: 219px;
-    top: 235px;
+    width: 30%;
   }
+
   #dependentes-dados-basicos {
-    position: relative;
-    right: 230px;
-    top: 270px;
+    width: 50%;
   }
+
   #obito-dados-basicos {
-    position: relative;
-    right: 630px;
-    top: 310px;
+    width: 30%;
   }
+
+
+
   /* MOBILE DADOS sumarizados RESPONSIVO*/
 
   .container-dados-sumarizados {
     display: inline-block;
+    margin-bottom: 40px;
 
-    max-width: 100%;
-    width: 100%;
+    width: 90%;
     
     break-inside: avoid-region !important;
   }
 
   #dados-sumarizados {
     padding: 0 !important;
+    margin-bottom: 0px;
   }
 
   .section-dados-sumarizados {
     width: 100% !important;
-
   }
 
   .div_agrupamento-dados_sumarizados {
-    margin: 0px 60px;
-    width: auto;
+    width: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .dado-sumarizado {
     cursor: pointer;
 
     max-width: 100%;
+    height: auto;
     width: 30%;
-    
-    margin: 10px 0px;
    
   }
 
   .email-sumarizado {
-    width: 180px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
 
     background-color: #fcecca !important;
     color: #e19b0b !important;
@@ -151,7 +177,7 @@
 
   .email-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #f6bb42 !important;
@@ -162,9 +188,10 @@
     align-items: center;
     justify-content: center;
   }
+
   .imoveis-sumarizado {
-    height: 70px;
-    width: 180px;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     background-color: #c2d7f3 !important;
@@ -176,7 +203,7 @@
 
   .imoveis-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #3498db !important;
@@ -189,8 +216,8 @@
   }
 
   .telefones-sumarizado {
-    height: 70px;
-    width: 180px;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     background-color: #d2eece !important;
@@ -202,7 +229,7 @@
 
   .telefones-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #70ca63 !important;
@@ -215,8 +242,8 @@
   }
 
   .enderecos-sumarizado {
-    height: 70px;
-    width: 180px;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     background-color: #9fe3d2 !important;
@@ -228,7 +255,7 @@
 
   .enderecos-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #37bc9b !important;
@@ -242,8 +269,8 @@
 
   .contatos-sumarizado {
 
-    height: 70px;
-    width: 180px;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     background-color: #7c829d !important;
@@ -255,7 +282,7 @@
 
   .contatos-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #3b3f4f !important;
@@ -268,8 +295,8 @@
   }
 
   .carros-sumarizado {
-    height: 70px;
-    width: 180px;
+    height: 100%;
+    width: 100%;
 
     display: flex;
     background-color: #efebfa !important;
@@ -281,7 +308,7 @@
 
   .carros-sumarizado-icon {
     max-width: auto;
-    width: 20%;
+    width: 30%;
     text-align: center;
 
     background-color: #967adc;
@@ -299,7 +326,7 @@
   .enderecos-sumarizado-info,
   .contatos-sumarizado-info,
   .carros-sumarizado-info {
-    width: 20%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,6 +360,8 @@
     padding-left: 25px;
   }
 
+
+
   /* MOBILE SITUAÇÃO CADASTRAL RESPONSIVO*/
 
   .container_pai-situacao_cadastral {
@@ -340,50 +369,50 @@
     display: flex;
     flex-wrap: wrap;
 
-    margin: 0px 30px;
     justify-content: start;
-    margin-bottom: 20px;
 
     max-width: 90%;
     width: 90%;
   }
 
   #RegistrationStatus {
-    position: relative;
-
     width: 100%;
+    margin-bottom: 0px;
   }
-  #data_inscricao-situacao_cadastral {
-    position: relative;
-    right: 370px;
-    top: 60px;
+
+  .principal-situacao_cadastral {
+    width: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+
+  #nome-situacao_cadastral{
+    max-width: 60%;
+    width: auto;
+  }
+
   #codigo_controle-situacao_cadastral {
-    position: relative;
-    right: 720px;
-    top: 100px;
+    width: 30%;
   }
+  
   #ano_obito-situacao_cadastral {
-    position: relative;
-    right: 360px;
-    top: 60px;
+    width: 31%;
   }
+
   #status-situacao_cadastral {
-    position: relative;
-    right: 350px;
-    top: 60px;
+    width: 50%;
   }
   #emicao-situacao_cadastral {
-    position: relative;
-    right: 740px;
-    top: 100px;
+    width: 50%;
   }
 
   .agrupamento_geral-situacao_cadastral {
     border-radius: 3px;
     background-color: #fff;
 
-    height: 220px;
+    height: auto;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
@@ -408,10 +437,7 @@
     margin-top: 10px;
   }
 
-  .principal-situacao_cadastral {
-    display: flex;
-    gap: 5rem;
-  }
+
 
   #nome-situacao_cadastral,
   #status-situacao_cadastral,
@@ -422,14 +448,20 @@
     display: flex;
     flex-direction: column;
   }
+
+
   /* MOBILE CONTATO RESPONSIVO*/
-  #TopContactInformation > div {
-    position: relative;
-    right: 40px;
+
+  .container_pai-top_dados_contato {
+    margin-bottom: 40px;
   }
-  .elements-group-top_dados_contato {
-    position: relative;
-    left: 40px;
+
+  #TopContactInformation {
+    margin-bottom: 0px;
+  }
+
+  #TopContactInformation > div {
+      width: 100%;
   }
 
   .hot-email-1 {
@@ -439,9 +471,7 @@
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
 
-    padding-bottom: 20px;
     margin-bottom: -1px;
-    margin: 0 10px;
 
     display: flex;
     align-items: center;
@@ -449,15 +479,18 @@
     cursor: pointer;
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.15);
-    max-width: 50%;
     max-width: auto;
-    /*sumindo com o texto do email icon*/
+    width: 100%;
+    height: 100%;
   }
-  .text_container-hot_email {
-    display: none;
+
+  .main_container-hot-address, .main_container-hot-mobile_phone, .main_container-hot-phone {
+    width: 20%;
+    max-width: auto;
   }
+
   .hot-address-1 {
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #888;
 
     border-bottom: 0;
@@ -468,80 +501,117 @@
     margin: 0 2px;
 
     display: flex;
-    width: 80px;
-    height: 36px;
+    width: 100%;
+    height: 100%;
     align-items: center;
 
     cursor: pointer;
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.15);
   }
-  .text_container-hot_address {
-    display: none;
+
+  .text_container-hot_address, .text_container-hot_mobile_phone, .text_container-hot_phone {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
   }
+
+  .text_container-hot_address > strong, .text_container-hot_mobile_phone > strong,
+  .text_container-hot_phone > strong {
+    font-size: 13.5px;
+      
+    text-overflow: ellipsis;
+    width: calc(100% - 5px);
+    white-space: pre;
+    display: block!important;
+    
+    font-weight: 600;
+
+    cursor: pointer;
+    color: #888;
+  }
+
+  .text_container-hot_address > small, .text_container-hot_mobile_phone > small,
+  .text_container-hot_phone > small {
+    display: block;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: calc(100% - 5px);
+    white-space: pre;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+    text-align: left;
+  }
+
   .hot-mobile-phone-1 {
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #888;
 
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
 
     padding-bottom: 20px;
-    margin-bottom: 10px;
-    margin: 0 10px;
 
+    margin: 0px;
     display: flex;
-    width: 80px;
-    height: 36px;
+    max-width: auto;
+    width: 100%;
+    height: 100%;
     align-items: center;
 
     cursor: pointer;
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.15);
   }
-  .text_container-hot_mobile_phone {
-    display: none;
-  }
+
+
   .hot-phone-1 {
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #888;
 
     border-bottom: 0;
     border-radius: 3px 3px 0 0;
 
     padding-bottom: 20px;
-    margin-bottom: 10px;
-    margin: 10px 10px;
+    margin: 0px;
 
-    position: relative;
-    left: 10px;
     display: flex;
-    width: 80px;
-    bottom: 10px;
-    height: 36px;
+    width: 100%;
+    height: 100%;
     align-items: center;
 
     cursor: pointer;
     border: 1px solid;
     border-color: rgba(0, 0, 0, 0.15);
   }
-  .text_container-hot_phone {
-    display: none;
 
-    /*LIST EMAIL*/
+  .main-card-info-top_dados_contato {
+    height: 100%;
+    margin: 0px;
   }
+
+  .main-container-hot_email-1-list {
+    width: 100%;
+    height: 100%;
+  }
+
   .hot-email-1-list {
     background-color: #f5f5f5;
     border-color: #d7d7d7;
     width: 100%;
-    height: 130px;
+    height: 100%;
     overflow: initial;
     border: 1px solid #ddd;
     margin-bottom: 0 !important;
     border-radius: 3px;
 
-    margin: 0px 3px;
-    padding: 10px;
+    margin: 0px!important;
+    padding: 0px;
 
     line-height: 1.231;
     font-weight: 400;
@@ -553,8 +623,7 @@
   }
 
   .panel-body-email_list {
-    padding: 15px;
-    border: 0;
+    height: auto;
     clear: both;
   }
 
@@ -564,36 +633,53 @@
   }
 
   .email-list-body {
-    margin-bottom: -10px;
     border: 0;
-    padding: 5px 10px 7px;
-
+    gap: 10px;
     display: flex;
-    gap: 100px;
-    align-items: center;
-    min-height: 40px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
   }
 
   .email-group-info {
     display: flex;
+    width: 100%;
   }
+
   .email_list-group_box {
-    position: relative;
-    right: 520px;
-    top: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
   }
+
+  .sub_container-group_box  {
+    margin: 0px;
+
+  }
+
   .txtrank {
-    position: relative;
-    right: 380px;
-    top: 75px;
+    width: 100%;
+
   }
 
   
   /*PESSOAS MAIS RELEVANTES*/
 
+  .container_pai-pessoas_relevantes {
+    margin-bottom: 40px;
+  }
+
+  #MostRelevantPeople {
+    margin-bottom: 0px;
+  }
+
   #MostRelevantPeople > div{
-    position: relative;
-    right: 60px;
+    width: 100%;
+  }
+
+  .main-card-info-most_people {
+    height: auto;  
   }
 
   .col_1-most_people {
@@ -604,52 +690,67 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 2px;
     min-height: 40px;
 
-    position: relative;
     cursor: pointer;
     flex-direction: row;
     justify-content: space-between;
   }
-  .main-card-info-most_people {
-    position: relative;
-  }
-  #MostRelevantPeople {
-    position: relative;
-    width: 840px;
-    left: 28px;
-  }
-  /*SCORE
-         MARKETING
-         PROCESSOS JUDICIAIS  */
-  #Score {
-    position: relative;
 
-    padding: 15px 0px;
-    width: 200px;
-    left: 10px;
+  .box_photo {
+    width: auto;
   }
-  #MarketingScore {
-    position: relative;
 
-    padding: 15px 0px;
-    width: 200px;
-    left: 15px;
+  .name_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 50%;
   }
-  #LawProcessSummary {
-    position: relative;
 
-    padding: 15px 0px;
-    width: 200px;
-    left: 15px;
+  .vinculo_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 10%;
   }
+
+  .status_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .cpf_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .col_2-most_people {
+    border-color: #1436cd;
+    border-bottom: 1px solid #b3b3b3;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    min-height: 40px;
+
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  /*SCORE MARKETING PROCESSOS JUDICIAIS  */
+  
   .main-card-score_credito {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: start;
-    margin-bottom: 20px;
-    max-width: 100%;
-    width: 100%;
+    margin-bottom: 40px;
     height: auto;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
@@ -658,168 +759,208 @@
     font-weight: 400;
     font-size: 14px;
     color: rgb(98, 98, 98);
-
-    position: relative;
-    left: 50px;
   }
+  
+  #Score {
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .card-body-score {
+    width: 100%;
+  }
+  
+  #MarketingScore {
+    width: 100%;
+    margin: 0px;
+  }
+
+  #LawProcessSummary {
+    width: 100%;
+    margin: 0px;
+  }
+
+
   /*RENDA + CLASSE SOCIAL*/
-  #Income {
-    position: relative;
-    display: flex;
 
-    right: 40px;
-    width: 1400px;
-    height: 220px;
+  .main-card-classe_social {
+    margin-bottom: 40px;
   }
+
+
+  #Income {
+    display: flex;
+    margin: 0px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  #Income > div {
+    width: 100%;
+  }
+
+  .container_cima-classe_social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
   .green_box-classe_social {
-    position: relative;
-    top: 20px;
-    width: 650px;
+    width: 100%;
   }
-  #fs10 span {
-    position: relative;
-    right: 220px;
+
+  .main_container-baixo {
+    width: 100%;
+    display: flex;
+    gap: 20px;
   }
-  .fam {
-    position: relative;
-    left: 0px;
-    top: -0px;
+
+
+  .container_baixo-classe_social {
+    display: flex;
   }
-  .emp {
-    position: relative;
-    left: 0px;
-    top: -0px;
-  }
-  .apo {
-    position: relative;
-    right: 40px;
-  }
+
   .d-clp {
-    position: relative;
-    right: -5px;
-    top: 60px;
+    display: flex;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
   }
-  .d-clp small {
-    position: relative;
-    left: 26px;
-    bottom: 30px;
-  }
-  #classeSocialPessoal h3 {
-    position: relative;
-    font-size: 10px;
-    left: 26px;
-    bottom: 34px;
-  }
+
   .e-cls {
-    position: relative;
-    right: 80px;
-    top: 60px;
+    height: auto;
   }
-  .e-cls small {
-    position: relative;
-    left: 26px;
-    bottom: 30px;
-  }
-  .container_baixo-classe_social > h2 {
-    position: relative;
-    left: 15px;
-    top: -35px;
-  } /*************** PF = lista de atividades/funções; PJ = CNAEs *******************/
+
+  
+  /*************** PF = lista de atividades/funções; PJ = CNAEs *******************/
 
   .main-card-pf_lista_acoes_funcoes {
     break-inside: avoid-region;
     display: flex;
 
-    justify-content: start;
-    margin-bottom: 20px;
-    margin: 20px;
+    margin-bottom: 40px;
     max-width: 90%;
     max-height: 40%;
     width: 90%;
     height: auto;
   }
+
+  #Activities {
+    margin-bottom: 0px;
+  }
+
   #Activities > div {
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    position: relative;
-
-    right: 60px;
+    width: 100%;
     height: 200px;
-
-    /*DADOS PROFISSIONAIS*/
   }
+
+
+  /*DADOS PROFISSIONAIS*/
+
+  .main-card-dados_profissionais {
+    margin-bottom: 40px;
+  }
+
   #ProfessionalData {
     display: flex;
-    position: relative;
-    margin: 10px;
-    left: 15px;
+    margin-bottom: 0px;
   }
-  #ProfessionalData > div {
-    width: 700px;
-    position: relative;
 
-    right: 60px;
+  #ProfessionalData > div {
+    width: 100%;
   }
-  /*profissional contato*/
+
+
+  /*Pessoas de contato*/
+
+  .main-card-contact_persons  {
+    margin-bottom: 40px;
+  }
 
   #ContactPersons {
-    position: relative;
     display: flex;
     width: 100%;
-    margin: 10px;
-    left: 15px;
-
-   
+    margin-bottom: 0px;
   }
 
   #ContactPersons  > div{
-    position: relative;
-
-    right: 60px;
+    width: 100%;
   }
 
-   /*relacionamentos*/
+  .col-1-contact_persons, .col-2-contact_persons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+
+    align-items: center;
+    gap: 2px;
+    min-height: 40px;
+    cursor: pointer;
+  }
+
+  .name_box-contact_persons-1, .name_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+
+
+  .vinculo_box-contact_persons-1, .vinculo_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 10%;
+  }
+
+  .status_box-contact_persons-1, .status_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .cpf_box-contact_persons-1, .cpf_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+
+
+  
+  /*relacionamentos*/
+  
+  
   .main-card-relacionamento {
-    position: relative;
     display: flex;
     width: 100%;
-    margin: 10px;
-    left: 10px;
+    margin-bottom: 40px;
+  
   }
+
+  #InCommon {
+    margin-bottom: 0px;
+  }
+
+
   /*ENDEREÇO*/
 
-  /*icons trofeus lista endereço*/
-  .icon-trophy-lista_enderecos {
-    position: relative;
-    bottom: 19px;
-    left: -14px;
-    opacity: 1;
-    display: inline-block;
-    text-rendering: auto;
-    box-sizing: border-box;
-    font-size: 12px;
-    padding: 1px;
-    color: rgb(234, 162, 14);
-    background-color: rgb(252, 236, 202);
-    border-radius: 50%;
-    text-align: center;
+  .main-card-lista_enderecos {
+    margin-bottom: 40px;
   }
 
-  /*buttons lista endereço*/
-  .button-group-lista_enderecos {
-    position: relative;
-    right: -29.5rem;
-    display: flex;
-    gap: 0px;
-    vertical-align: middle;
-    line-height: 1.231;
-    font-weight: 400;
-    font-size: 14px;
-    color: #626262;
+  #Addresses {
+    margin-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
   }
+
   #Addresses > div {
     border-radius: 3px;
     background-color: #fff;
@@ -827,12 +968,35 @@
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 700px;
-    position: relative;
-    left: 10px;
+    width: 100%;
+
   }
 
+
+  /*icons trofeus lista endereço*/
+  .icon-trophy-lista_enderecos {
+    opacity: 1;
+    display: inline-block;
+    text-rendering: auto;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(234, 162, 14);
+    background-color: rgb(252, 236, 202);
+    border-radius: 50%;
+    text-align: center;
+  }
+
+
+
   /*ENDEREÇOS COMERCIAIS*/
+
+  .main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+  }
+
+  #BusinessAddresses {
+    margin-bottom: 0px;
+  }
 
   #BusinessAddresses > div {
     border-radius: 3px;
@@ -841,11 +1005,124 @@
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 700px;
-    position: relative;
-    left: 10px;
+    width: 100%;
   }
+
+
+  /*LISTA DE TELEFONES*/
+
+  .main-card-lista_telefones {
+    margin-bottom: 40px;
+  }
+
+  #Phones {
+    margin-bottom: 0px;
+  }
+
+  #Phones > div {
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+  } 
+
+  /*icons lista telefone*/
+  .telefone_list-group_box {
+    margin-top: 0;
+    width: 15%;
+    line-height: 100px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #626262;
+    position: relative;
+    right: 250px;
+    bottom: 30px;
+  }
+
+    /*EMAILS LIST*/
+
+    #Emails {
+      margin-bottom: 0px;
+    }
+  
+    #Emails > div {
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid #cccccc;
+      box-shadow: 0px 10px 7px -10px #b5b5b5;
+      box-sizing: border-box;
+      width: 100%;
+    } 
+    
+    /*icons email*/
+    .lista_email-group_box {
+      margin-top: 0;
+      width: 15%;
+      line-height: 100px;
+      font-weight: 400;
+      font-size: 10px;
+      color: #626262;
+    }
+  
+    .main_container-lista_emails {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .email_box-list_email {
+      mask-size: 60%;
+      width: auto;
+    }
+
+    .icon-box-lista_emails {
+      margin-bottom: 0;
+      width: auto;
+      max-width: 50%;
+      text-align: center;
+      display: block;
+  
+      line-height: 1.231;
+      font-weight: 400;
+      font-size: 14px;
+      color: #626262;
+      box-sizing: border-box;
+    }
+
+    .lista_email-group_box {
+      max-width: 80%;
+      margin-left: 20px;
+      width: auto;
+      overflow: hidden;
+      display: flex;
+      align-items: end;
+      height: 28px;
+    }
+
+    .rank-box {
+      max-width: 20%;
+      width: auto;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+
+
   /*SOCIEDADES*/
+
+  .main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+  }
+
+  #Companies {
+    margin-bottom: 0px;
+  }
 
   #Companies > div {
     border-radius: 3px;
@@ -853,10 +1130,9 @@
     border: 1px solid rgb(204, 204, 204);
     box-shadow: rgb(181, 181, 181) 0px 10px 7px -10px;
     box-sizing: border-box;
-    width: 690px;
-    height: 200px;
-    position: relative;
-    left: 23px;
+    width: 100%;
+    height: 100%;
+
   }
   .top_container-lista_sociedades {
     width: 1200px;
@@ -930,62 +1206,16 @@
     right: 22px;
     top: 3px;
   }
-  /*TELEFONES*/
-  #Phones > div {
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid #cccccc;
-    box-shadow: 0px 10px 7px -10px #b5b5b5;
-    box-sizing: border-box;
-    width: 700px;
-
-    position: relative;
-    left: 10px;
-  } /*icons lista telefone*/
-
-  .telefone_list-group_box {
-    margin-top: 0;
-    width: 15%;
-    line-height: 100px;
-    font-weight: 400;
-    font-size: 10px;
-    color: #626262;
-    position: relative;
-    right: 250px;
-    bottom: 30px;
-  }
-
-  /*EMAILS LIST*/
-  #Emails > div {
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid #cccccc;
-    box-shadow: 0px 10px 7px -10px #b5b5b5;
-    box-sizing: border-box;
-    width: 700px;
-
-    position: relative;
-    left: 10px;
-  } /*icons email*/
-  .lista_email-group_box {
-    margin-top: 0;
-    width: 15%;
-    line-height: 100px;
-    font-weight: 400;
-    font-size: 10px;
-    color: #626262;
-    position: relative;
-
-    position: relative;
-    right: 250px;
-    bottom: 30px;
-  }
 
   /*COMPORTAMENTO DIGITAL*/
+
+  .main-card-dados_profissionais {
+    margin-bottom: 40px;
+  }
+
   #DigitalBehavior {
-    position: relative;
-    width: 1200px;
-    right: 24px;
+    width: 100%;
+    margin-bottom: 0px;
   }
   .box-1-dominio_box > .table {
     margin: 10px 10px;
@@ -1022,7 +1252,18 @@
   .box-3-comportamento_digital h5 {
     position: relative;
     top: 30px;
-  } /*ÚLTIMAS CONSULTAS*/
+  } 
+  
+  /*ÚLTIMAS CONSULTAS*/
+  
+  .main-card-ultimas-consultas {
+    margin-bottom: 40px;
+  }
+
+  #Queries {
+    margin-bottom: 0px;
+  }
+  
   #Queries > div {
     border-radius: 3px;
     background-color: #fff;
@@ -1031,14 +1272,13 @@
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
 
-    position: relative;
-    
-    left: 8px;
-    width: 693px;
-    height: 170px;
+    width: 100%;
+    height: 100%;
 
 
-  }.main-card-content-ultimas_consultas{
+  }
+  
+  .main-card-content-ultimas_consultas{
     
     position: relative;
   
@@ -1063,7 +1303,17 @@
     right: 120px;
     top: 40px;
   }
+
   /*MODELO E ESTATISTICA*/
+
+  .main-card-modelos_estatisticos {
+    margin-bottom: 40px;
+  }
+
+  #StatisticModels { 
+    margin-bottom: 0px;
+  }
+
   #StatisticModels > div {
     border-radius: 3px;
     background-color: #fff;
@@ -1071,64 +1321,11 @@
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 550px;
-    height: auto;
-    position: relative;
-    left: 60px;
+    width: 100%;
+    height: 100%;
   }
-    /*buttom refresh local votação */
-  
-  .group-buttons-votacao {
-    position: relative;
-    right: -25.5rem;
-  }
-
-  .group-buttons-votacao:hover {
-    background-color: #d8d5d5;
-    transition: 0.3s;
-  }
-  .button-box {
-    position: relative;
-    right: -0rem;
-
-    /*button situação cadastral*/
-  }
-  #card-header-situacao_cadastral > button {
-    position: relative;
-    right: -25rem;
-    padding: 0 2px;
-    vertical-align: middle;
-    line-height: 0px;
-    font: inherit;
-    /*buttons relacionamento*/
-  }
-  .group-buttons-relacionamento {
-    position: relative;
-    right: -3.5rem;
-  }
-  /*icons imovel*/
-  .button-group-imoveis {
-    position: relative;
-    right: -30.5rem;
-    display: flex;
-    gap: 0px;
-    vertical-align: middle;
-    line-height: 1.231;
-    font-weight: 400;
-    font-size: 14px;
-    color: #626262;
-  } /*button refresh protesto*/
-  .group-buttons-protestos_titulos {
-    position: relative;
-    right: -24.5rem;
-  }
-  /*button dominios*/
-  .group-buttons-dominios {
-    position: relative;
-    right: -29.7rem;
-  } /*buttom comportamento digital*/
-  .group-buttons-comportamento_digital {
-    position: relative;
-    right: -22.5rem;
+    
+  .container-modelo_perfil_franqueado {
+    overflow: hidden;
   }
 }
