@@ -1,5 +1,5 @@
 /*TABLET DADOS BÁSICOS RESPONSIVO*/
-@media (min-width: 768px) and (max-width: 1031px) {
+@media (min-width: 767px) and (max-width: 1031px) {
   .main-info_container {
     position: relative;
     box-sizing: border-box;

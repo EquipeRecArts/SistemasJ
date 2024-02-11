@@ -1689,7 +1689,7 @@ body {
 #Income > div {
     border-radius: 3px;
     background-color: #fff;
-
+    
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
@@ -2084,6 +2084,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 .col-2-contact_persons {
     border-color: #6a6e80;
@@ -2779,6 +2780,7 @@ body {
 .menu_dropdown_icon {
     position: relative;
     bottom: 0px;
+    right: -310px;
     top: -6px;
     line-height: 1.231;
     font-weight: 400;
@@ -3153,7 +3155,7 @@ body {
 .main-container-lista_telefones {
     margin-bottom: -10px;
     display: flex;
-    flex-direction: row!important;
+    flex-direction: row;
     border: 0;
     align-items: center;
     flex-wrap: wrap;
@@ -3463,7 +3465,7 @@ body {
 
 .button-group-imoveis {
     position: relative;
-    right: -60.5rem;
+    right: -63.5rem;
 
     display: flex;
     gap: 0px;
@@ -3740,7 +3742,7 @@ width: auto;
 
 .group-buttons-protestos_titulos {
     position: relative;
-    right: -55.5rem;
+    right: -59.5rem;
 }
 
 .group-buttons-protestos_titulos > button {
@@ -3759,7 +3761,7 @@ width: auto;
 
 .group-buttons-dominios {
     position: relative;
-    right: -60.7rem;
+    right: -64.7rem;
 }
 
 .group-buttons-dominios:hover {
@@ -4111,7 +4113,7 @@ width: auto;
 
 .group-buttons-comportamento_digital {
     position: relative;
-    right: -53.5rem;
+    right: -57.5rem;
 }
 
 .group-buttons-comportamento_digital:hover {
@@ -4253,7 +4255,7 @@ width: auto;
 
 .group-buttons-votacao {
     position: relative;
-    right: -57.5rem;
+    right: -60.5rem;
 }
 
 .group-buttons-votacao:hover {
