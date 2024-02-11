@@ -1,5 +1,5 @@
 /*TABLET DADOS BÁSICOS RESPONSIVO*/
-@media (min-width: 568px) and (max-width: 1031px) {
+@media (min-width: 568px) and (max-width: 1200px) {
 
   .card-informacoes_pessoais {
     margin-bottom: 40px;
