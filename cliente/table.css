@@ -1,0 +1,19 @@
+tbody td{
+    padding: 5px;
+
+    width: 10%;
+    background: rgba(107, 165, 223, 0.918);
+    text-align: center;
+    position: relative;
+    padding: 20px;
+
+}tbody tr{
+            padding: 1px;
+            text-align: center;
+            width: 10%;
+
+            border-top: 1px solid #002f45;
+           
+}tbody{
+
+}
