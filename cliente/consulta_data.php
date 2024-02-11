@@ -320,11 +320,10 @@ if (array_key_exists('Products', $dados['Data'])) {
     
 
 <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?>
-
     <!--BASIC DATA--> 
     <table class="table table-bordered">
      <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?> 
-
+      <h3>Dados básicos</h3>
     <thead>
     <tr>
       <th scope="col">Id</th>
@@ -336,12 +335,10 @@ if (array_key_exists('Products', $dados['Data'])) {
       <th scope="col">Birthday</th>
       <th scope="col">Age</th>
       <th scope="col">Zodic</th>
-
     </tr>
   </thead>
 
   <tbody>
-
           <!--BASIC DATA--> <tr> <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['SequencialId'] ?? ''; ?></p></td> 
           <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Flags'] ?? ''; ?></p></td> 
           <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo implode(',', $dados['Data']['FlagList'] ?? []); ?></p></td> 
@@ -360,8 +357,8 @@ if (array_key_exists('Products', $dados['Data'])) {
     <!--PERSON--> 
 
     <table class=" table table-bordered">
-
       <?php if (array_key_exists('Person', $dados['Data']) && !empty($dados['Data']['Person'])): ?>
+        <h3>Dados Pessoais</h3>
         <thead>
     <tr>
       <th scope="col">Dependents</th>
@@ -373,12 +370,10 @@ if (array_key_exists('Products', $dados['Data'])) {
       <th scope="col">Birthday</th>
       <th scope="col">Death Year</th>
       <th scope="col">Educational Level Group</th>
-
     </tr>
   </thead>
 
   <tbody>
-
     <tr>
     <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['Dependents'] ?? ''; ?></p></td>
     <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['Nationality'] ?? ''; ?></p></td>
@@ -389,18 +384,14 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['DeathYear'] ?? ''; ?></p></td>
     <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['EducationalLevelGroup'] ?? ''; ?></p></td>
     </tr>    <?php endif; ?>
-
     </tbody>
       </table>
 
     <table class="table table-bordered">
-
     <!--COMPANY-->
     <?php if (array_key_exists('Company', $dados['Data']) && !empty($dados['Data']['Company'])): ?>
-
+      <h3>Dados Empresa</h3>
       <thead>
-
-
     <tr>
       <th scope="col">Tax Model</th>
       <th scope="col">Business Size</th>
@@ -414,14 +405,11 @@ if (array_key_exists('Products', $dados['Data'])) {
       <th scope="col">Total Company Partners</th>
       <th scope="col">Main Company Document</th>
       <th scope="col">Legal Nature</th>
-
-
     </tr>
   </thead>
 
   <tbody>
       <tr>
-
    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TaxModel'] ?? ''); ?></p></td>
    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['BusinessSize'] ?? ''); ?></p></td> 
    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['BusinessSizeOriginal'] ?? ''); ?></p></td>
@@ -442,14 +430,11 @@ if (array_key_exists('Products', $dados['Data'])) {
 
 
     <table class="table table-bordered">
-
     <!--CREDIT - SCORE-->
     <?php if (!empty($dados['Data']['CreditScore'])): ?>
+      <h3>Dados Score Crédito</h3>
       <thead>
-
-
 <tr>
-
   <th scope="col">D00</th>
   <th scope="col">D30</th>
   <th scope="col">D60</th>
@@ -457,15 +442,11 @@ if (array_key_exists('Products', $dados['Data'])) {
   <th scope="col">Ranking</th>
   <th scope="col">Create Date</th>
   <th scope="col">Status</th>
-
-
-
 </tr>
 </thead>
       
   <tbody>
       <tr>
-
       <td><p class="inputUser" id="creditScoreD00" name="creditScoreD00" readonly><?php echo ($dados['Data']['CreditScore']['D00'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="creditScoreD30" name="creditScoreD30" readonly><?php echo ($dados['Data']['CreditScore']['D30'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="creditScoreD60" name="creditScoreD60" readonly><?php echo ($dados['Data']['CreditScore']['D60'] ?? ''); ?></p></td> 
@@ -474,7 +455,6 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="creditScoreCreateDate" name="creditScoreCreateDate" readonly><?php echo ($dados['Data']['CreditScore']['CreateDate']?? ''); ?></p></td> 
     <td><p class="inputUser" id="creditScoreStatus" name="creditScoreStatus" readonly><?php echo ($dados['Data']['CreditScore']['Status'] ?? ''); ?></p></td>
     </tr>
-
     <?php endif; ?>
     </tbody>
       </table>
@@ -482,13 +462,9 @@ if (array_key_exists('Products', $dados['Data'])) {
 
 
     <table class=" table table-bordered">
-
-
+    <h3>Dados Marketing Score</h3>
     <thead>
-
-
 <tr>
-
   <th scope="col">MK00</th>
   <th scope="col">MK30</th>
   <th scope="col">MK60</th>
@@ -496,14 +472,10 @@ if (array_key_exists('Products', $dados['Data'])) {
   <th scope="col">Ranking</th>
   <th scope="col">Create Date</th>
   <th scope="col">Status</th>
-
-
-
 </tr>
 </thead>
     <!--MARKETING - SCORE-->
     <tr>
-
     <td><p class="inputUser" id="marketingScoreD00" name="marketingScoreD00" readonly><?php echo ($dados['Data']['MarketingScore']['D00'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="marketingScoreD30" name="marketingScoreD30" readonly><?php echo ($dados['Data']['MarketingScore']['D30'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="marketingScoreD60" name="marketingScoreD60" readonly><?php echo ($dados['Data']['MarketingScore']['D60'] ?? ''); ?></p></td> 
@@ -512,18 +484,14 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="marketingScoreCreateDate" name="marketingScoreCreateDate" readonly><?php echo ($dados['Data']['MarketingScore']['CreateDate'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="marketingScoreStatus" name="marketingScoreStatus" readonly><?php echo ($dados['Data']['MarketingScore']['ScoreStatus'] ?? ''); ?></p></td> 
     </tr>
-
     </tbody>
       </table>
 
 
       <table class=" table table-bordered">
-
+      <h3>Dados Pre Screening</h3>
       <thead>
-
-
 <tr>
-
   <th scope="col">PS00</th>
   <th scope="col">PS30</th>
   <th scope="col">PS60</th>
@@ -531,9 +499,6 @@ if (array_key_exists('Products', $dados['Data'])) {
   <th scope="col">Ranking</th>
   <th scope="col">Create Date</th>
   <th scope="col">Status</th>
-
-
-
 </tr>
 </thead>
     <tr>
@@ -547,22 +512,15 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="preScreeningCreateDate" name="preScreeningCreateDate" readonly><?php echo ($dados['Data']['PreScreening']['CreateDate'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="preScreeningStatus" name="preScreeningStatus" readonly><?php echo ($dados['Data']['PreScreening']['Status'] ?? ''); ?></p></td>
     </tr>
-
     <!--INCOME-->
     </tbody>
-
-    
-
       </table>
 
 
       <table class="table table-bordered">
-
+      <h3>Dados Income</h3>
       <thead>
-
-
 <tr>
-
   <th scope="col">Personal</th>
   <th scope="col">Partner</th>
   <th scope="col">Family</th>
@@ -573,13 +531,11 @@ if (array_key_exists('Products', $dados['Data'])) {
   <th scope="col">Ranking</th>
   <th scope="col">Create Date</th>
   <th scope="col">Status</th>
-
-
-
 </tr>
 </thead>
-    <tr>
 
+<tbody>
+    <tr>
     <?php if (array_key_exists('Income', $dados['Data']) && !empty($dados['Data']['Income'])): ?>
     <td><p class="inputUser" id="income_personal" name="income_personal" readonly><?php echo ($dados['Data']['Income']['Personal'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="income_partner" name="income_partner" readonly><?php echo ($dados['Data']['Income']['Partner'] ?? ''); ?></p></td> 
@@ -592,6 +548,7 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="income_create_date" name="income_create_date" readonly><?php echo ($dados['Data']['Income']['CreateDate'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="income_status" name="income_status" readonly><?php echo ($dados['Data']['Income']['Status'] ?? ''); ?></p></td> 
     </tr>
+    </tbody>
 
     <?php endif; ?>
     </table>
@@ -600,8 +557,11 @@ if (array_key_exists('Products', $dados['Data'])) {
     <table class="table table-bordered">
 
     <?php if (array_key_exists('Revenue', $dados['Data']) && !empty($dados['Data']['Revenue'])): ?>
+      <h3>Dados Revenue</h3>
 
     <thead>
+    
+    <tbody>
     <tr>
       <th scope="col">Condition</th>
       <th scope="col">Check Code</th>
@@ -615,9 +575,7 @@ if (array_key_exists('Products', $dados['Data'])) {
   </thead>
 
   <tbody>
-
     <tr>
-
     <!--INCOME-->
     <td><p class="inputUser" id="revenueShared" name="revenueShared" readonly><strong class="strong">Shared: </strong><?php echo ($dados['Data']['Revenue']['Shared'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="revenuePresumed" name="revenuePresumed" readonly><strong class="strong">Presumed: </strong><?php echo ($dados['Data']['Revenue']['Presumed'] ?? ''); ?></p></td> 
@@ -633,6 +591,7 @@ if (array_key_exists('Products', $dados['Data'])) {
 
 
     <table class="table table-bordered">
+    <h3>Situação Fiscal</h3>
   <thead>
     <tr>
       <th scope="col">Condition</th>
