@@ -597,9 +597,13 @@ body {
     font: inherit;
 }
 
-#card-header-situacao_cadastral > button:hover {
+.button-box-situacao_cadastral > button:hover {
     background-color: #d8d5d5;
     transition: 1s;
+}
+
+.button-box-situacao_cadastral > i{
+    font-size: 14px;
 }
 
 .main-card-info-situacao_cadastral {
@@ -1423,13 +1427,21 @@ body {
     box-sizing: border-box;
 }
 
-.card-body-score > h4 {
+.card-header-score {
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+    height: 20px;
+
+}
+
+.sub_card-header-score > h4 {
     display: block;
 
     text-align: center;
     line-height: 10px;
     font-size: 12px;
-
     margin-top: 9.5px;
     margin-bottom: 9.5px;
 
@@ -1442,6 +1454,14 @@ body {
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.sub_card-header-score {
+    width: 95%;
+}
+
+.button-box-score_refresh > i {
+    font-size: 14px;
 
 }
 
@@ -1980,6 +2000,22 @@ body {
     font-size: 18px;
 }
 
+#professional_data-id > h4 {
+    line-height: 0;
+    margin: 0;
+    color: #f79c51;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-weight: bold;
+}
+
+#professional_data-id {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: 99%;
+}
+
 .main-card-info-professional_data {
     line-height: 1.231;
     font-weight: 400;
@@ -2378,8 +2414,7 @@ body {
 }
 
 .group-buttons-relacionamento {
-    position: relative;
-    right: -53.5rem;
+    display: flex;
 }
 
 #button-refresh-relacionamento {
@@ -2475,9 +2510,6 @@ body {
 }
 
 .button-group-lista_enderecos {
-    position: relative;
-    right: -62.5rem;
-
     display: flex;
     gap: 0px;
 
@@ -3464,9 +3496,6 @@ body {
 
 
 .button-group-imoveis {
-    position: relative;
-    right: -63.5rem;
-
     display: flex;
     gap: 0px;
 
@@ -3740,11 +3769,6 @@ width: auto;
 /*************** Containers de processos de titulos *******************/
 
 
-.group-buttons-protestos_titulos {
-    position: relative;
-    right: -59.5rem;
-}
-
 .group-buttons-protestos_titulos > button {
     background-color: rgb(234, 234, 234);
 }
@@ -3759,10 +3783,6 @@ width: auto;
 
 /*************** Containers de dominios digitais  *******************/
 
-.group-buttons-dominios {
-    position: relative;
-    right: -64.7rem;
-}
 
 .group-buttons-dominios:hover {
     background-color: #d8d5d5;
@@ -4111,10 +4131,6 @@ width: auto;
     margin-inline-end: 0px;
 }
 
-.group-buttons-comportamento_digital {
-    position: relative;
-    right: -57.5rem;
-}
 
 .group-buttons-comportamento_digital:hover {
     background-color: #d8d5d5;
@@ -4254,8 +4270,7 @@ width: auto;
 /*************** Containers de local de votação  *******************/
 
 .group-buttons-votacao {
-    position: relative;
-    right: -60.5rem;
+
 }
 
 .group-buttons-votacao:hover {

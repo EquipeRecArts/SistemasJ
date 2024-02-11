@@ -284,12 +284,14 @@
 
                      <div class="card-body">
 
-                        <div class="card-header " id="card-header-situacao_cadastral">
-                            <span class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                            <h4 data-section-title title="Situa&#231;&#227;o cadastral"> Situa&#231;&#227;o cadastral</h4>
-                            <button type="button" class="button-box"
+                        <div class="card-header">
+                           <div class="card-header" id="professional_data-id">
+                              <span class="material-symbols-outlined">
+                                 account_circle
+                             </span>
+                             <h4 data-section-title title="Situa&#231;&#227;o cadastral"> Situa&#231;&#227;o cadastral</h4>                            
+                           </div>
+                            <button type="button" class="button-box button-box-situacao_cadastral"
                               title="Clique para atualizar o dado a partir da fonte online"
                               data-block="RegistrationStatus"
                               data-spider="situacaofiscal"
@@ -742,20 +744,26 @@
                   <div class="card_main-score">
                      <div class="card-body-score">
 
-                        <button type="button-score-refresh" class="button-box"
-                           title="Clique para atualizar o dado a partir da fonte online"
-                           data-block="RegistrationStatus"
-                           data-spider="situacaofiscal"
-                           data-asaction="False"
-                           data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
-                           data-contact="100003613081164"
-                           data-timeout="120000"
-                           data-info=""
-                           data-line="false">
-                           <i class="bi bi-arrow-clockwise icon-button"></i>
-                        </button>
+                        <div class="card-header-score">
+                           <div class="sub_card-header-score">
+                              <h4 class="fs12 block text-center lh10" title="Processos Judiciais">Processos Judiciais</h4>                           
+                           </div>
+                           
+                           <button type="button-score-refresh" class="button-box-score_refresh button-box"
+                              title="Clique para atualizar o dado a partir da fonte online"
+                              data-block="RegistrationStatus"
+                              data-spider="situacaofiscal"
+                              data-asaction="False"
+                              data-pid="1c49502e-9cd1-4613-bd93-eeab3fb5f1e9"
+                              data-contact="100003613081164"
+                              data-timeout="120000"
+                              data-info=""
+                              data-line="false">
+                              <i class="bi bi-arrow-clockwise icon-button"></i>
+                           </button>
+                        </div>
 
-                        <h4 class="fs12 block text-center lh10" title="Processos Judiciais">Processos Judiciais</h4>
+
 
 
                         <div class="main-card-info-score">
@@ -1047,11 +1055,13 @@
 
                   <div class="">
                      <div class="card-body">
-                        <div class="card-heade-relacionamento">
-                           <i class="bi bi-shuffle"></i>
-                           <h4 data-section-title title="Relacionamentos">
-                              Relacionamentos
-                           </h4>
+                        <div class="card-header">
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-shuffle"></i>
+                              <h4 data-section-title title="Relacionamentos">
+                                 Relacionamentos
+                              </h4>                              
+                           </div>
                            
                            <div class="group-buttons-relacionamento">
                               <button type="button" id="button-refresh-relacionamento" class="button-box"
@@ -1092,10 +1102,13 @@
                   <div>
                      <div class="card-body">
                         <div class="card-heade-lista_enderecos">
-                           <i class="bi bi-geo-alt-fill"></i>
-                           <h4 data-section-title title="Endere&#231;os">
-                              Endere&#231;os
-                           </h4>
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-geo-alt-fill"></i>
+                              <h4 data-section-title title="Endere&#231;os">
+                                 Endere&#231;os
+                              </h4>                              
+                           </div>
+
                            <div class="button-group-lista_enderecos" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
                               <label class="label-left-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização da lista">
@@ -1289,11 +1302,13 @@
                   <div class="">
                      <div class="card-body">
 
-                        <div class="card-heade-lista_enderecos">
-                           <i class="bi bi-geo-alt-fill"></i>
-                           <h4 data-section-title title="Endere&#231;os">
-                              Endere&#231;os
-                           </h4>
+                        <div class="card-header">
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-geo-alt-fill"></i>
+                              <h4 data-section-title title="Endere&#231;os Comerciais">
+                                 Endere&#231;os Comerciais
+                              </h4>                              
+                           </div>
 
                            <div class="button-group-lista_enderecos" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
                               <label class="label-left-lista_enderecos"
@@ -1816,11 +1831,14 @@
                <section data-section-info id="ProfessionalData" >
                   <div>
                      <div class="card-body">
-                        <div class="card-header" id="professional_data-id">
-                           <i class="bi bi-building-fill"></i>
-                           <h4 data-section-title title="Imoveis">
-                              IMOVEIS
-                           </h4>
+                        <div class="card-header">
+
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-building-fill"></i>
+                              <h4 data-section-title title="Imoveis">
+                                 IMOVEIS
+                              </h4>                              
+                           </div>
                            <div class="button-group-imoveis" data-toggle="buttons" data-source="[{&quot;Title&quot;:&quot;R PORTO FRANCO, 167, PARQUE DOS NOVOS ESTADOS&quot;,&quot;Lat&quot;:-20.420577,&quot;Long&quot;:-54.558117,&quot;Disabled&quot;:false}]">
                               <label class="label-left-lista_enderecos"
                                  data-toggle="tooltip" data-placement="top" title="Visualização da lista">
@@ -1848,11 +1866,14 @@
                <section data-section-info id="ProfessionalData" >
                   <div>
                      <div class="card-body">
-                        <div class="card-header" id="professional_data-id">
-                           <i class="bi bi-bank2"></i>
-                           <h4 data-section-title title="Imoveis">
-                              PROTESTO DE TÍTULOS
-                           </h4>
+                        <div class="card-header">
+
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-bank2"></i>
+                              <h4 data-section-title title="Imoveis">
+                                 PROTESTO DE TÍTULOS
+                              </h4>
+                           </div>
 
                            <div class="group-buttons-protestos_titulos">
                               <button type="button" id="button-refresh-lista_protestos" class="button-box"
@@ -1937,13 +1958,16 @@
                <section data-section-info id="ProfessionalData" >
                   <div>
                      <div class="card-body">
-                        <div class="card-header" id="professional_data-id">
-                           <span id="balance_list_process" class="material-symbols-outlined">
-                              balance
-                           </span>
-                           <h4 data-section-title title="Imoveis">
-                              PROCESSOS JUDICIAIS
-                           </h4>
+                        <div class="card-header">
+
+                           <div class="card-header" id="professional_data-id">
+                              <span id="balance_list_process" class="material-symbols-outlined">
+                                 balance
+                              </span>
+                              <h4 data-section-title title="Imoveis">
+                                 PROCESSOS JUDICIAIS
+                              </h4>                              
+                           </div>
 
                            <div class="group-buttons-protestos_titulos">
                               <button type="button" id="button-refresh-lista_protestos" class="button-box"
@@ -2031,11 +2055,14 @@
                <section data-section-info id="ProfessionalData" >
                   <div>
                      <div class="card-body">
-                        <div class="card-header" id="professional_data-id">
-                           <i class="bi bi-globe2"></i>
-                           <h4 data-section-title title="Imoveis">
-                              DOMINIOS
-                           </h4>
+                        <div class="card-header">
+
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-globe2"></i>
+                              <h4 data-section-title title="Imoveis">
+                                 DOMINIOS
+                              </h4>                                 
+                           </div>
 
                            <div class="group-buttons-dominios">
                               <button type="button" id="button-refresh-dominios" class="button-box"
@@ -2069,9 +2096,11 @@
                   <div>
                      <div class="card-body">
 
-                        <div class="card-header-lsta_telefone">
-                           <i class="bi bi-cloud-check-fill"></i>
-                           <h4 data-section-title title="Comportamento Digital">Comportamento Digital</h4>
+                        <div class="card-header">
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-cloud-check-fill"></i>
+                              <h4 data-section-title title="Comportamento Digital">Comportamento Digital</h4>   
+                           </div>
                            <div class="group-buttons-comportamento_digital">
                               <button type="button" id="button-refresh-comportamento_digital" class="button-box"
                                  title="Clique para atualizar o dado a partir da fonte online"
@@ -2250,11 +2279,14 @@
                <section data-section-info id="ProfessionalData" >
                   <div>
                      <div class="card-body">
-                        <div class="card-header" id="professional_data-id">
-                           <i class="bi bi-person-vcard-fill"></i>
-                           <h4 data-section-title title="Imoveis">
-                              LOCAL DE VOTAÇÃO
-                           </h4>
+                        <div class="card-header">
+
+                           <div class="card-header" id="professional_data-id">
+                              <i class="bi bi-person-vcard-fill"></i>
+                              <h4 data-section-title title="Imoveis">
+                                 LOCAL DE VOTAÇÃO
+                              </h4>
+                           </div>
 
                            <div class="group-buttons-votacao">
                               <button type="button" id="button-refresh-votacao" class="button-box"

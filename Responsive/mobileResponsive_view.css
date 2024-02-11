@@ -783,10 +783,6 @@
         margin-bottom: 0px;
     }
 
-    .group-buttons-relacionamento {
-        margin-left: 10rem;
-    }
-
 
     /************************** LISTA DE ENDEREÇOS **************************/
 
@@ -832,12 +828,6 @@
         color: #626262;
         width: 5%;
     }
-
-    .button-group-lista_enderecos {
-        margin-left: 9rem;
-    }
-
-
 
 
     /************************** LISTA DE ENDEREÇOS COMERCIAIS **************************/
@@ -1096,8 +1086,6 @@
     /******** IMOVEIS *********/
 
     .button-group-imoveis {
-        position: relative;
-        right: -20.2rem;
         display: flex;
         gap: 0px;
         vertical-align: middle;
@@ -1108,11 +1096,6 @@
     }
 
     /******** PROTESTOS DE TITULOS *********/
-
-    .group-buttons-protestos_titulos {
-        position: relative;
-        right: -16.3rem;
-    }
 
 
     /******** COMPORTAMENTOS DIGITAIS *********/
@@ -1312,12 +1295,6 @@
     }
 
 
-
-.group-buttons-votacao {
-    position: relative;
-    right: -6.5rem;
-}
-
 .group-buttons-votacao:hover {
     background-color: #d8d5d5;
     transition: 0.3s;
@@ -1335,12 +1312,9 @@
     font: inherit;
     /*buttons relacionamento*/
 }.group-buttons-relacionamento {
-    position: relative;
-    right: -3.5rem;
+    display: flex;
 }/*buttons lista endereço*/
 .button-group-lista_enderecos {
-    position: relative;
-    right: -9.5rem;
     display: flex;
     gap: 0px;
     vertical-align: middle;
@@ -1377,15 +1351,6 @@
 }/*icons imovel*/
 /*button refresh protesto*/
 
-/*button dominios*/
-.group-buttons-dominios {
-    position: relative;
-    right: -9.7rem;
-}/*buttom comportamento digital*/
-.group-buttons-comportamento_digital {
-    position: relative;
-    right: -3rem;
-}
 }
 
    
