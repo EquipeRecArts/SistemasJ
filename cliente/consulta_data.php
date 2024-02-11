@@ -298,7 +298,8 @@ if (array_key_exists('Products', $dados['Data'])) {
     <link href="../css/bootstrap-icons.min.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="table.css?<?php echo time(); ?>">
+
   
   
   </head>
@@ -321,145 +322,303 @@ if (array_key_exists('Products', $dados['Data'])) {
 <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?>
 
     <!--BASIC DATA--> 
-    <table class=" table-bg">
+    <table class="table table-bordered">
+     <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?> 
 
-         
-         <tbody> <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?> 
-          <!--BASIC DATA--> <tr> <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Sequencial Id: </strong><?php echo $dados['Data']['SequencialId'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Flags: </strong><?php echo $dados['Data']['Flags'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">FlagList: </strong><?php echo implode(',', $dados['Data']['FlagList'] ?? []); ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Name Brasil: </strong><?php echo $dados['Data']['NameBrasil'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Name Social: </strong><?php echo $dados['Data']['NameSocial'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Death Date: </strong><?php echo $dados['Data']['Person']['DeathDate'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Birthday: </strong><?php echo $dados['Data']['BirthDate'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Age: </strong><?php echo $dados['Data']['Age'] ?? ''; ?></p></td> 
-          <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Zodiac: </strong><?php echo $dados['Data']['Zodiac'] ?? ''; ?></p></td> 
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Flags</th>
+      <th scope="col">FlagList</th>
+      <th scope="col">Name Brasil</th>
+      <th scope="col">Name Social</th>
+      <th scope="col">Death Date</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Age</th>
+      <th scope="col">Zodic</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+          <!--BASIC DATA--> <tr> <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['SequencialId'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Flags'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo implode(',', $dados['Data']['FlagList'] ?? []); ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['NameBrasil'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['NameSocial'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['DeathDate'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['BirthDate'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Age'] ?? ''; ?></p></td> 
+          <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Zodiac'] ?? ''; ?></p></td> 
         </tr> <!--END BASIC DATA--> <?php endif; ?> </tbody>
-        </table>
+     </tbody>
+      </table>
 
 
     
     <!--PERSON--> 
 
-    <table class=" table-bg">
+    <table class=" table table-bordered">
 
       <?php if (array_key_exists('Person', $dados['Data']) && !empty($dados['Data']['Person'])): ?>
+        <thead>
+    <tr>
+      <th scope="col">Dependents</th>
+      <th scope="col">Nationality</th>
+      <th scope="col">Marital Status</th>
+      <th scope="col">Education Level</th>
+      <th scope="col">Mother Name</th>
+      <th scope="col">Father Name</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Death Year</th>
+      <th scope="col">Educational Level Group</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
 
     <tr>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Dependents: </strong><?php echo $dados['Data']['Person']['Dependents'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong"> Nationality: </strong><?php echo $dados['Data']['Person']['Nationality'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Marital Status: </strong><?php echo $dados['Data']['Person']['MaritalStatus'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Education Level: </strong><?php echo $dados['Data']['Person']['EducationLevel'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Mother Name: </strong><?php echo $dados['Data']['Person']['MotherName'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Father Name: </strong><?php echo $dados['Data']['Person']['FatherName'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Death Year: </strong><?php echo $dados['Data']['Person']['DeathYear'] ?? ''; ?></p></td>
-    <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Educational Level Group: </strong><?php echo $dados['Data']['Person']['EducationalLevelGroup'] ?? ''; ?></p></td>
-    </tr>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['Dependents'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['Nationality'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['MaritalStatus'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['EducationLevel'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['MotherName'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['FatherName'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['DeathYear'] ?? ''; ?></p></td>
+    <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo $dados['Data']['Person']['EducationalLevelGroup'] ?? ''; ?></p></td>
+    </tr>    <?php endif; ?>
 
-    <?php endif; ?>
-    </table>
+    </tbody>
+      </table>
 
-    <table class=" table-bg">
+    <table class="table table-bordered">
 
     <!--COMPANY-->
     <?php if (array_key_exists('Company', $dados['Data']) && !empty($dados['Data']['Company'])): ?>
+
+      <thead>
+
+
+    <tr>
+      <th scope="col">Tax Model</th>
+      <th scope="col">Business Size</th>
+      <th scope="col">Business Size Original</th>
+      <th scope="col">Opting Simple</th>
+      <th scope="col">MEI</th>
+      <th scope="col">Legal NatureId</th>
+      <th scope="col">Total Employees</th>
+      <th scope="col">Total Companies</th>
+      <th scope="col">Total Partners</th>
+      <th scope="col">Total Company Partners</th>
+      <th scope="col">Main Company Document</th>
+      <th scope="col">Legal Nature</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody>
       <tr>
 
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Tax Model: </strong><?php echo ($dados['Data']['Company']['TaxModel'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong"> Business Size: </strong><?php echo ($dados['Data']['Company']['BusinessSize'] ?? ''); ?></p></td> 
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Business Size Original: </strong><?php echo ($dados['Data']['Company']['BusinessSizeOriginal'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Opting Simple: </strong><?php echo ($dados['Data']['Company']['OptingSimple'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">MEI: </strong><?php echo ($dados['Data']['Company']['IsMEI'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Legal NatureId: </strong><?php echo ($dados['Data']['Company']['LegalNatureId'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Total Employees: </strong><?php echo ($dados['Data']['Company']['TotalEmployees'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Total Companies: </strong><?php echo ($dados['Data']['Company']['TotalCompanies'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Total Partners: </strong><?php echo ($dados['Data']['Company']['TotalPartners'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Total Company Partners: </strong><?php echo ($dados['Data']['Company']['TotalCompanyPartners'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Main Company Document: </strong><?php echo ($dados['Data']['Company']['MainCompanyDocument'] ?? ''); ?></p></td>
-   <td><p class="inputUser" id="telefone" name="telefone" readonly><strong class="strong">Legal Nature: </strong><?php echo ($dados['Data']['Company']['LegalNature'] ?? ''); ?></p></td> 
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TaxModel'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['BusinessSize'] ?? ''); ?></p></td> 
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['BusinessSizeOriginal'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['OptingSimple'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['IsMEI'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['LegalNatureId'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TotalEmployees'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TotalCompanies'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TotalPartners'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['TotalCompanyPartners'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['MainCompanyDocument'] ?? ''); ?></p></td>
+   <td><p class="inputUser" id="telefone" name="telefone" readonly><?php echo ($dados['Data']['Company']['LegalNature'] ?? ''); ?></p></td> 
    </tr>
 
     <?php endif; ?>
-    </table>
+    </tbody>
+      </table>
 
-    <table class=" table-bg">
+
+    <table class="table table-bordered">
 
     <!--CREDIT - SCORE-->
     <?php if (!empty($dados['Data']['CreditScore'])): ?>
+      <thead>
+
+
+<tr>
+
+  <th scope="col">D00</th>
+  <th scope="col">D30</th>
+  <th scope="col">D60</th>
+  <th scope="col">D90</th>
+  <th scope="col">Ranking</th>
+  <th scope="col">Create Date</th>
+  <th scope="col">Status</th>
+
+
+
+</tr>
+</thead>
+      
+  <tbody>
       <tr>
 
-      <td><p class="inputUser" id="creditScoreD00" name="creditScoreD00" readonly><strong class="strong">D00: </strong><?php echo ($dados['Data']['CreditScore']['D00'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="creditScoreD30" name="creditScoreD30" readonly><strong class="strong">D30: </strong><?php echo ($dados['Data']['CreditScore']['D30'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="creditScoreD60" name="creditScoreD60" readonly><strong class="strong">D60: </strong><?php echo ($dados['Data']['CreditScore']['D60'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="creditScoreD60" name="creditScoreD60" readonly><strong class="strong">D90: </strong><?php echo ($dados['Data']['CreditScore']['D90'] ?? ''); ?></p></td>
-    <td><p class="inputUser" id="creditScoreRanking" name="creditScoreRanking" readonly><strong class="strong">Ranking: </strong><?php echo ($dados['Data']['CreditScore']['Ranking'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="creditScoreCreateDate" name="creditScoreCreateDate" readonly><strong class="strong">Create Date: </strong><?php echo ($dados['Data']['CreditScore']['CreateDate']?? ''); ?></p></td> 
-    <td><p class="inputUser" id="creditScoreStatus" name="creditScoreStatus" readonly><strong class="strong">Status: </strong><?php echo ($dados['Data']['CreditScore']['Status'] ?? ''); ?></p></td>
+      <td><p class="inputUser" id="creditScoreD00" name="creditScoreD00" readonly><?php echo ($dados['Data']['CreditScore']['D00'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="creditScoreD30" name="creditScoreD30" readonly><?php echo ($dados['Data']['CreditScore']['D30'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="creditScoreD60" name="creditScoreD60" readonly><?php echo ($dados['Data']['CreditScore']['D60'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="creditScoreD60" name="creditScoreD60" readonly><?php echo ($dados['Data']['CreditScore']['D90'] ?? ''); ?></p></td>
+    <td><p class="inputUser" id="creditScoreRanking" name="creditScoreRanking" readonly><?php echo ($dados['Data']['CreditScore']['Ranking'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="creditScoreCreateDate" name="creditScoreCreateDate" readonly><?php echo ($dados['Data']['CreditScore']['CreateDate']?? ''); ?></p></td> 
+    <td><p class="inputUser" id="creditScoreStatus" name="creditScoreStatus" readonly><?php echo ($dados['Data']['CreditScore']['Status'] ?? ''); ?></p></td>
     </tr>
 
     <?php endif; ?>
-    </table>
+    </tbody>
+      </table>
 
 
-    <table class=" table-bg">
 
+    <table class=" table table-bordered">
+
+
+    <thead>
+
+
+<tr>
+
+  <th scope="col">MK00</th>
+  <th scope="col">MK30</th>
+  <th scope="col">MK60</th>
+  <th scope="col">MK90</th>
+  <th scope="col">Ranking</th>
+  <th scope="col">Create Date</th>
+  <th scope="col">Status</th>
+
+
+
+</tr>
+</thead>
     <!--MARKETING - SCORE-->
     <tr>
 
-    <td><p class="inputUser" id="marketingScoreD00" name="marketingScoreD00" readonly><strong class="strong">MK00: </strong><?php echo ($dados['Data']['MarketingScore']['D00'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreD30" name="marketingScoreD30" readonly><strong class="strong">MK30: </strong><?php echo ($dados['Data']['MarketingScore']['D30'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreD60" name="marketingScoreD60" readonly><strong class="strong">MK60: </strong><?php echo ($dados['Data']['MarketingScore']['D60'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreD90" name="marketingScoreD90" readonly><strong class="strong">MK90: </strong><?php echo ($dados['Data']['MarketingScore']['D90'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreRanking" name="marketingScoreRanking" readonly><strong class="strong">MKRanking: </strong><?php echo ($dados['Data']['MarketingScore']['Ranking'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreCreateDate" name="marketingScoreCreateDate" readonly><strong class="strong">MKCreate Date: </strong><?php echo ($dados['Data']['MarketingScore']['CreateDate'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="marketingScoreStatus" name="marketingScoreStatus" readonly><strong class="strong">MKStatus: </strong><?php echo ($dados['Data']['MarketingScore']['ScoreStatus'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreD00" name="marketingScoreD00" readonly><?php echo ($dados['Data']['MarketingScore']['D00'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreD30" name="marketingScoreD30" readonly><?php echo ($dados['Data']['MarketingScore']['D30'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreD60" name="marketingScoreD60" readonly><?php echo ($dados['Data']['MarketingScore']['D60'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreD90" name="marketingScoreD90" readonly><?php echo ($dados['Data']['MarketingScore']['D90'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreRanking" name="marketingScoreRanking" readonly><?php echo ($dados['Data']['MarketingScore']['Ranking'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreCreateDate" name="marketingScoreCreateDate" readonly><?php echo ($dados['Data']['MarketingScore']['CreateDate'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="marketingScoreStatus" name="marketingScoreStatus" readonly><?php echo ($dados['Data']['MarketingScore']['ScoreStatus'] ?? ''); ?></p></td> 
     </tr>
 
-    </table>
+    </tbody>
+      </table>
 
 
-    <table class=" table-bg">
+      <table class=" table table-bordered">
+
+      <thead>
+
+
+<tr>
+
+  <th scope="col">PS00</th>
+  <th scope="col">PS30</th>
+  <th scope="col">PS60</th>
+  <th scope="col">PS90</th>
+  <th scope="col">Ranking</th>
+  <th scope="col">Create Date</th>
+  <th scope="col">Status</th>
+
+
+
+</tr>
+</thead>
     <tr>
 
     <!--preScreening-->
-    <td><p class="inputUser" id="preScreeningD00" name="preScreeningD00" readonly><strong class="strong">PS00: </strong><?php echo ($dados['Data']['PreScreening']['D00'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningD30" name="preScreeningD30" readonly><strong class="strong">PS30: </strong><?php echo ($dados['Data']['PreScreening']['D30'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningD60" name="preScreeningD60" readonly><strong class="strong">PS60: </strong><?php echo ($dados['Data']['PreScreening']['D60'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningD90" name="preScreeningD90" readonly><strong class="strong">PS90: </strong><?php echo ($dados['Data']['PreScreening']['D90'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningRanking" name="preScreeningRanking" readonly><strong class="strong">PSRanking: </strong><?php echo ($dados['Data']['PreScreening']['Ranking'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningCreateDate" name="preScreeningCreateDate" readonly><strong class="strong">PS Create Date: </strong><?php echo ($dados['Data']['PreScreening']['CreateDate'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="preScreeningStatus" name="preScreeningStatus" readonly><strong class="strong">PS Status: </strong><?php echo ($dados['Data']['PreScreening']['Status'] ?? ''); ?></p></td>
+    <td><p class="inputUser" id="preScreeningD00" name="preScreeningD00" readonly><?php echo ($dados['Data']['PreScreening']['D00'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningD30" name="preScreeningD30" readonly><?php echo ($dados['Data']['PreScreening']['D30'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningD60" name="preScreeningD60" readonly><?php echo ($dados['Data']['PreScreening']['D60'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningD90" name="preScreeningD90" readonly><?php echo ($dados['Data']['PreScreening']['D90'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningRanking" name="preScreeningRanking" readonly><?php echo ($dados['Data']['PreScreening']['Ranking'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningCreateDate" name="preScreeningCreateDate" readonly><?php echo ($dados['Data']['PreScreening']['CreateDate'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="preScreeningStatus" name="preScreeningStatus" readonly><?php echo ($dados['Data']['PreScreening']['Status'] ?? ''); ?></p></td>
     </tr>
 
     <!--INCOME-->
-    </table>
+    </tbody>
+
+    
+
+      </table>
 
 
-    <table class=" table-bg">
+      <table class="table table-bordered">
+
+      <thead>
+
+
+<tr>
+
+  <th scope="col">Personal</th>
+  <th scope="col">Partner</th>
+  <th scope="col">Family</th>
+  <th scope="col">Retired</th>
+  <th scope="col">Presumed</th>
+  <th scope="col">Personal Class</th>
+  <th scope="col">Family Class</th>
+  <th scope="col">Ranking</th>
+  <th scope="col">Create Date</th>
+  <th scope="col">Status</th>
+
+
+
+</tr>
+</thead>
     <tr>
 
     <?php if (array_key_exists('Income', $dados['Data']) && !empty($dados['Data']['Income'])): ?>
-    <td><p class="inputUser" id="income_personal" name="income_personal" readonly><strong class="strong">Personal: </strong><?php echo ($dados['Data']['Income']['Personal'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_partner" name="income_partner" readonly><strong class="strong">Partner: </strong><?php echo ($dados['Data']['Income']['Partner'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_family" name="income_family" readonly><strong class="strong">Family: </strong><?php echo ($dados['Data']['Income']['Family'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_retired" name="income_retired" readonly><strong class="strong">Retired: </strong><?php echo ($dados['Data']['Income']['Retired'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_presumed" name="income_presumed" readonly><strong class="strong">Presumed: </strong><?php echo ($dados['Data']['Income']['Presumed'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_personal_class" name="income_personal_class" readonly><strong class="strong">Personal Class: </strong><?php echo ($dados['Data']['Income']['PersonalClass'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_family_class" name="income_family_class" readonly><strong class="strong">Family Class: </strong><?php echo ($incomedados_family_class['Data']['Income']['FamilyClass'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_ranking" name="income_ranking" readonly><strong class="strong">Ranking: </strong><?php echo ($dados['Data']['Income']['Ranking'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_create_date" name="income_create_date" readonly><strong class="strong">Create Date: </strong><?php echo ($dados['Data']['Income']['CreateDate'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="income_status" name="income_status" readonly><strong class="strong">Status: </strong><?php echo ($dados['Data']['Income']['Status'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_personal" name="income_personal" readonly><?php echo ($dados['Data']['Income']['Personal'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_partner" name="income_partner" readonly><?php echo ($dados['Data']['Income']['Partner'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_family" name="income_family" readonly><?php echo ($dados['Data']['Income']['Family'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_retired" name="income_retired" readonly><?php echo ($dados['Data']['Income']['Retired'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_presumed" name="income_presumed" readonly><?php echo ($dados['Data']['Income']['Presumed'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_personal_class" name="income_personal_class" readonly><?php echo ($dados['Data']['Income']['PersonalClass'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_family_class" name="income_family_class" readonly><?php echo ($incomedados_family_class['Data']['Income']['FamilyClass'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_ranking" name="income_ranking" readonly><?php echo ($dados['Data']['Income']['Ranking'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_create_date" name="income_create_date" readonly><?php echo ($dados['Data']['Income']['CreateDate'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="income_status" name="income_status" readonly><?php echo ($dados['Data']['Income']['Status'] ?? ''); ?></p></td> 
     </tr>
 
     <?php endif; ?>
     </table>
      
     
-    <table class=" table-bg">
+    <table class="table table-bordered">
+
+    <?php if (array_key_exists('Revenue', $dados['Data']) && !empty($dados['Data']['Revenue'])): ?>
+
+    <thead>
+    <tr>
+      <th scope="col">Condition</th>
+      <th scope="col">Check Code</th>
+      <th scope="col">Death Year</th>
+      <th scope="col">Check Date</th>
+      <th scope="col">Description</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
     <tr>
 
     <!--INCOME-->
-    <?php if (array_key_exists('Revenue', $dados['Data']) && !empty($dados['Data']['Revenue'])): ?>
     <td><p class="inputUser" id="revenueShared" name="revenueShared" readonly><strong class="strong">Shared: </strong><?php echo ($dados['Data']['Revenue']['Shared'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="revenuePresumed" name="revenuePresumed" readonly><strong class="strong">Presumed: </strong><?php echo ($dados['Data']['Revenue']['Presumed'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="revenueBalance" name="revenueBalance" readonly><strong class="strong">Balance: </strong><?php echo ($dados['Data']['Revenue']['Balance'] ?? ''); ?></p></td> 
@@ -467,13 +626,39 @@ if (array_key_exists('Products', $dados['Data'])) {
     <td><p class="inputUser" id="revenueCreateDate" name="revenueCreateDate" readonly><strong class="strong">Create Date: </strong><?php echo ($dados['Data']['Revenue']['CreateDate'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="revenueStatus" name="revenueStatus" readonly><strong class="strong">Status: </strong><?php echo ($dados['Data']['Revenue']['Status'] ?? ''); ?></p></td>
     </tr>
-
+    </tbody>
     <?php endif; ?>
 
     </table>
 
 
-     <!--final da tabela-->
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Condition</th>
+      <th scope="col">Check Code</th>
+      <th scope="col">Death Year</th>
+      <th scope="col">Check Date</th>
+      <th scope="col">Description</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="condition" name="condition" readonly><?php echo $fs_condition ?? ''; ?></p></td>
+      <td><p class="inputUser" id="checkCode" name="checkCode" readonly><?php echo $fs_checkCode ?? ''; ?></p></td>
+      <td><p class="inputUser" id="deathYear" name="deathYear" readonly><?php echo $fs_deathYear ?? ''; ?></p></td>
+      <td><p class="inputUser" id="checkDate" name="checkDate" readonly><?php echo $fs_checkDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="description" name="description" readonly><?php echo $fs_description ?? ''; ?></p></td>
+      <td><p class="inputUser" id="ranking" name="ranking" readonly><?php echo $fs_ranking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="createDate" name="createDate" readonly><?php echo $fs_createDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="status" name="status" readonly><?php echo $fs_status ?? ''; ?></p></td>
+    </tr>
+  </tbody>
+</table>
+
 
     <?php endif; ?>
   
