@@ -212,7 +212,6 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
   
   }
 
-  //PAREI O HTML DAQUI
 
       //FiscalSituation
   if (array_key_exists('FiscalSituation', $dados['Data'])) {
@@ -227,60 +226,151 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
   }
        //DigitalBehavior - Devices
   if (array_key_exists('DigitalBehavior', $dados['Data'])) {
-        $OS = array_key_exists('OS', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['OS'] : ''; 
-        $Brand = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Brand'] : ''; 
-        $Model = array_key_exists('Model', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Model'] : ''; 
-        $IsMobile = array_key_exists('IsMobile', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['IsMobile'] : ''; 
-        $Ranking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Ranking'] : ''; 
-        $CreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['CreateDate'] : ''; 
-        $Status = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Status'] : ''; 
+        $ddOS = array_key_exists('OS', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['OS'] : ''; 
+        $ddBrand = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Brand'] : ''; 
+        $ddModel = array_key_exists('Model', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Model'] : ''; 
+        $ddIsMobile = array_key_exists('IsMobile', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['IsMobile'] : ''; 
+        $ddRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Ranking'] : ''; 
+        $ddCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['CreateDate'] : ''; 
+        $ddStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Devices']) ? $dados['Data']['DigitalBehavior']['Devices']['Status'] : ''; 
   }
   
         //DigitalBehavior - Categories
   if (array_key_exists('Categories', $dados['Data'])) {
-          $Type = array_key_exists('OS', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Type'] : ''; 
-          $Interest = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Interest'] : ''; 
-          $Hits = array_key_exists('Model', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Hits'] : ''; 
-          $Relevance = array_key_exists('IsMobile', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Relevance'] : ''; 
-          $Ranking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Ranking'] : ''; 
-          $CreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['CreateDate'] : ''; 
-          $Status = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Status'] : ''; 
+          $dcType = array_key_exists('OS', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Type'] : ''; 
+          $dcInterest = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Interest'] : ''; 
+          $dcHits = array_key_exists('Model', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Hits'] : ''; 
+          $dcRelevance = array_key_exists('IsMobile', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Relevance'] : ''; 
+          $dcRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Ranking'] : ''; 
+          $dcCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['CreateDate'] : ''; 
+          $dcStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Categories']) ? $dados['Data']['DigitalBehavior']['Categories']['Status'] : ''; 
   }
 
 
  
             //DigitalBehavior - Domains
   if (array_key_exists('Domains', $dados['Data'])) {
-              $Type = array_key_exists('URL', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['URL'] : ''; 
-              $Interest = array_key_exists('Hits', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Hits'] : ''; 
-              $Hits = array_key_exists('UpdateDate', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['UpdateDate'] : ''; 
-              $Relevance = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Ranking'] : ''; 
-              $Ranking = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['CreateDate'] : ''; 
-              $CreateDate = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Status'] : ''; 
+              $ddmURL = array_key_exists('URL', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['URL'] : ''; 
+              $ddmHits = array_key_exists('Hits', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Hits'] : ''; 
+              $ddmUpdateDate = array_key_exists('UpdateDate', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['UpdateDate'] : ''; 
+              $ddmRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Ranking'] : ''; 
+              $ddmCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['CreateDate'] : ''; 
+              $ddmStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Domains']) ? $dados['Data']['DigitalBehavior']['Domains']['Status'] : ''; 
   }
             //DigitalBehavior - Products
   if (array_key_exists('Products', $dados['Data'])) {
-    $Brand = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Brand'] : ''; 
-    $Product = array_key_exists('Product', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Product'] : ''; 
-    $Acessos = array_key_exists('Acessos', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Acessos'] : ''; 
-    $Relevance = array_key_exists('Relevance', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Relevance'] : ''; 
-    $Ranking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Ranking'] : ''; 
-    $CreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['CreateDate'] : ''; 
-    $Status = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Status'] : ''; 
+    $dbpBrand = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Brand'] : ''; 
+    $dbpProduct = array_key_exists('Product', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Product'] : ''; 
+    $dbpAcessos = array_key_exists('Acessos', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Acessos'] : ''; 
+    $dbpRelevance = array_key_exists('Relevance', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Relevance'] : ''; 
+    $dbpRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Ranking'] : ''; 
+    $dbpCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['CreateDate'] : ''; 
+    $dbpStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Status'] : ''; 
 
-}            //DigitalBehavior - Products
-if (array_key_exists('Products', $dados['Data'])) {
-  $Brand = array_key_exists('Brand', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Brand'] : ''; 
-  $Product = array_key_exists('Product', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Product'] : ''; 
-  $Acessos = array_key_exists('Acessos', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Acessos'] : ''; 
-  $Relevance = array_key_exists('Relevance', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Relevance'] : ''; 
-  $Ranking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Ranking'] : ''; 
-  $CreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['CreateDate'] : ''; 
-  $Status = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Products']) ? $dados['Data']['DigitalBehavior']['Products']['Status'] : ''; 
+}           
 
-}
+//PAREI DAQUI O HTML
+//DigitalBehavior -"Ranking": "CreateDate": "Status": 
     
+  if (array_key_exists('DigitalBehavior', $dados['Data'])) {
+    $dbRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Ranking'] : ''; 
+    $dbCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['CreateDate'] : ''; 
+    $dbStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Status'] : ''; 
 
+  }
+
+                                                                                                                                                                                                                                   
+
+             //DigitalBehavior - VoterRegistry
+             if (array_key_exists('VoterRegistry', $dados['Data'])) {
+              $dbrgZone = array_key_exists('Zone', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Zone'] : ''; 
+              $dbrgSection = array_key_exists('Section', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Section'] : ''; 
+              $dbrgpIssuer = array_key_exists('Issuer', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Issuer'] : ''; 
+              $dbrgpStreet = array_key_exists('Street', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Street'] : ''; 
+              $dbrgNumber = array_key_exists('Number', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Number'] : ''; 
+              $dbrgComplement = array_key_exists('Complement', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Complement'] : ''; 
+              $dbrgDistrict = array_key_exists('District', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['District'] : ''; 
+              $dbrgZipCode = array_key_exists('ZipCode', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['ZipCode'] : ''; 
+              $dbrgCity = array_key_exists('City', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['City'] : ''; 
+              $dbrgType = array_key_exists('Type', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Type'] : ''; 
+              $dbrgTitle = array_key_exists('Title', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Title'] : ''; 
+              $dbrgState = array_key_exists('State', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['State'] : ''; 
+              $dbrgDneId = array_key_exists('DneId', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['DneId'] : ''; 
+              $dbrgIBGE = array_key_exists('IBGE', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['IBGE'] : ''; 
+              $dbrgCensusSector = array_key_exists('CensusSector', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['CensusSector'] : ''; 
+              $dbrgGeolocation = array_key_exists('Geolocation', $dados['Data']['DigitalBehavior']['VoterRegistry']) ? $dados['Data']['DigitalBehavior']['VoterRegistry']['Geolocation'] : ''; 
+              
+          }
+
+      
+
+         //DigitalBehavior -"Lat": "Long":  
+  if (array_key_exists('DigitalBehavior', $dados['Data'])) {
+    $dbLat = array_key_exists('Lat', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Lat'] : ''; 
+    $dbLong = array_key_exists('Long', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Long'] : ''; 
+  }
+           //DigitalBehavior - Borders
+           if (array_key_exists('DigitalBehavior', $dados['Data'])) {
+            $dbbBorders = array_key_exists('Borders', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Borders']: ''; 
+          }
+
+     
+                   //DigitalBehavior 
+                   if (array_key_exists('DigitalBehavior', $dados['Data'])) {
+                    $dbZone = array_key_exists('ComplementFormatted', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['ComplementFormatted'] : ''; 
+                    $dbSection = array_key_exists('Alias', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Alias']: ''; 
+                    $dbIssuer = array_key_exists('ShortAlias', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['ShortAlias'] : ''; 
+                    $dbStreet = array_key_exists('CompanyDocument', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['CompanyDocument'] : ''; 
+                    $dbNumber = array_key_exists('CompanyName', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['CompanyName']: ''; 
+                    $dbComplement = array_key_exists('Score', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Score'] : ''; 
+                    $dbDistrict = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Ranking']: ''; 
+                    $dbZipCode = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['CreateDate']: ''; 
+                    $dbType = array_key_exists('Status', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Status'] : ''; 
+                }
+                          //DigitalBehavior - OtherDocuments
+             if (array_key_exists('OtherDocuments', $dados['Data'])) {
+              $otdType = array_key_exists('Type', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Type'] : ''; 
+              $otdDocument = array_key_exists('Document', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Document'] : ''; 
+              $otdExpeditionDate = array_key_exists('ExpeditionDate', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['ExpeditionDate'] : ''; 
+              $otdExpirationDate = array_key_exists('ExpirationDate', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['ExpirationDate'] : ''; 
+              $otdState = array_key_exists('State', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['State'] : ''; 
+              $otdData = array_key_exists('Data', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Data'] : ''; 
+              $otdRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Ranking'] : ''; 
+              $otdCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['CreateDate'] : ''; 
+              $otdStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Status'] : ''; 
+          }
+
+   
+
+                             //DigitalBehavior - Activities
+                             if (array_key_exists('OtherDocuments', $dados['Data'])) {
+                              $dbatType = array_key_exists('Type', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Type'] : ''; 
+                              $dbatCode = array_key_exists('Code', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Code'] : ''; 
+                              $dbatIsPrimary = array_key_exists('IsPrimary', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['IsPrimary'] : ''; 
+                              $dbatRemoveDate = array_key_exists('RemoveDate', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['RemoveDate'] : ''; 
+                              $dbatDescription = array_key_exists('Description', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Description'] : ''; 
+                              $dbatRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Ranking'] : ''; 
+                              $dbatCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['CreateDate'] : ''; 
+                              $dbatStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['OtherDocuments']) ? $dados['Data']['DigitalBehavior']['OtherDocuments']['Status'] : ''; 
+                          }
+
+                  
+
+                                //DigitalBehavior - Activities
+                                if (array_key_exists('Relateds', $dados['Data'])) {
+                                  $dbrlType = array_key_exists('Type', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Type'] : ''; 
+                                  $dbrlIsPep = array_key_exists('IsPep', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['IsPep'] : ''; 
+                                  $dbrlIsVip = array_key_exists('IsVip', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['IsVip'] : ''; 
+                                  $dbrlName = array_key_exists('Name', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Name'] : ''; 
+                                  $dbrlGender = array_key_exists('Gender', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Gender'] : ''; 
+                                  $dbrlDocument = array_key_exists('Document', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Document'] : ''; 
+                                  $dbrlDocumentType = array_key_exists('DocumentType', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['DocumentType'] : ''; 
+                                  $dbrlDocumentFormatted = array_key_exists('DocumentFormatted', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['DocumentFormatted'] : ''; 
+                                  $dbrlRanking = array_key_exists('Ranking', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Ranking'] : ''; 
+                                  $dbrlCreateDate = array_key_exists('CreateDate', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['CreateDate'] : ''; 
+                                  $dbrlStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']['Relateds']) ? $dados['Data']['DigitalBehavior']['Relateds']['Status'] : ''; 
+                              
+                                }
 
 } else {
   echo "o CPF ou CNPJ pesquisado é nulo.";
@@ -491,17 +581,21 @@ if (array_key_exists('Products', $dados['Data'])) {
       <table class=" table table-bordered">
       <h3>Dados Pre Screening</h3>
       <thead>
-<tr>
-  <th scope="col">PS00</th>
-  <th scope="col">PS30</th>
-  <th scope="col">PS60</th>
-  <th scope="col">PS90</th>
-  <th scope="col">Ranking</th>
-  <th scope="col">Create Date</th>
-  <th scope="col">Status</th>
-</tr>
-</thead>
-    <tr>
+
+      <tr>
+      <thead>
+        <th scope="col">PS00</th>
+        <th scope="col">PS30</th>
+        <th scope="col">PS60</th>
+        <th scope="col">PS90</th>
+        <th scope="col">Ranking</th>
+        <th scope="col">Create Date</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr>
 
     <!--preScreening-->
     <td><p class="inputUser" id="preScreeningD00" name="preScreeningD00" readonly><?php echo ($dados['Data']['PreScreening']['D00'] ?? ''); ?></p></td> 
@@ -514,29 +608,29 @@ if (array_key_exists('Products', $dados['Data'])) {
     </tr>
     <!--INCOME-->
     </tbody>
-      </table>
+    </table>
 
 
-      <table class="table table-bordered">
-      <h3>Dados Income</h3>
-      <thead>
-<tr>
-  <th scope="col">Personal</th>
-  <th scope="col">Partner</th>
-  <th scope="col">Family</th>
-  <th scope="col">Retired</th>
-  <th scope="col">Presumed</th>
-  <th scope="col">Personal Class</th>
-  <th scope="col">Family Class</th>
-  <th scope="col">Ranking</th>
-  <th scope="col">Create Date</th>
-  <th scope="col">Status</th>
-</tr>
-</thead>
-
-<tbody>
-    <tr>
+    <table class="table table-bordered">
     <?php if (array_key_exists('Income', $dados['Data']) && !empty($dados['Data']['Income'])): ?>
+    <h3>Dados Income</h3>
+    <thead>
+    <tr>
+    <th scope="col">Personal</th>
+    <th scope="col">Partner</th>
+    <th scope="col">Family</th>
+    <th scope="col">Retired</th>
+    <th scope="col">Presumed</th>
+    <th scope="col">Personal Class</th>
+    <th scope="col">Family Class</th>
+    <th scope="col">Ranking</th>
+    <th scope="col">Create Date</th>
+    <th scope="col">Status</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
     <td><p class="inputUser" id="income_personal" name="income_personal" readonly><?php echo ($dados['Data']['Income']['Personal'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="income_partner" name="income_partner" readonly><?php echo ($dados['Data']['Income']['Partner'] ?? ''); ?></p></td> 
     <td><p class="inputUser" id="income_family" name="income_family" readonly><?php echo ($dados['Data']['Income']['Family'] ?? ''); ?></p></td> 
@@ -572,17 +666,17 @@ if (array_key_exists('Products', $dados['Data'])) {
       <th scope="col">Create Date</th>
       <th scope="col">Status</th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <tr>
     <!--INCOME-->
-    <td><p class="inputUser" id="revenueShared" name="revenueShared" readonly><strong class="strong">Shared: </strong><?php echo ($dados['Data']['Revenue']['Shared'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="revenuePresumed" name="revenuePresumed" readonly><strong class="strong">Presumed: </strong><?php echo ($dados['Data']['Revenue']['Presumed'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="revenueBalance" name="revenueBalance" readonly><strong class="strong">Balance: </strong><?php echo ($dados['Data']['Revenue']['Balance'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="revenueRanking" name="revenueRanking" readonly><strong class="strong">Ranking: </strong><?php echo ($dados['Data']['Revenue']['Ranking'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="revenueCreateDate" name="revenueCreateDate" readonly><strong class="strong">Create Date: </strong><?php echo ($dados['Data']['Revenue']['CreateDate'] ?? ''); ?></p></td> 
-    <td><p class="inputUser" id="revenueStatus" name="revenueStatus" readonly><strong class="strong">Status: </strong><?php echo ($dados['Data']['Revenue']['Status'] ?? ''); ?></p></td>
+    <td><p class="inputUser" id="revenueShared" name="revenueShared" readonly><?php echo ($dados['Data']['Revenue']['Shared'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="revenuePresumed" name="revenuePresumed" readonly><?php echo ($dados['Data']['Revenue']['Presumed'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="revenueBalance" name="revenueBalance" readonly><?php echo ($dados['Data']['Revenue']['Balance'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="revenueRanking" name="revenueRanking" readonly><?php echo ($dados['Data']['Revenue']['Ranking'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="revenueCreateDate" name="revenueCreateDate" readonly><?php echo ($dados['Data']['Revenue']['CreateDate'] ?? ''); ?></p></td> 
+    <td><p class="inputUser" id="revenueStatus" name="revenueStatus" readonly><?php echo ($dados['Data']['Revenue']['Status'] ?? ''); ?></p></td>
     </tr>
     </tbody>
     <?php endif; ?>
@@ -617,6 +711,211 @@ if (array_key_exists('Products', $dados['Data'])) {
     </tr>
   </tbody>
 </table>
+
+
+
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Devices'])): ?>
+    <h3>DigitalBehavior - Devices</h3>
+  <thead>
+    <tr>
+      <th scope="col">OS</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Is Mobile</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="condition" name="OS" readonly><?php echo $ddOS ?? ''; ?></p></td>
+      <td><p class="inputUser" id="checkCode" name="Brand" readonly><?php echo $ddBrand  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="deathYear" name="Model" readonly><?php echo $ddModel ?? ''; ?></p></td>
+      <td><p class="inputUser" id="checkDate" name="IsMobile" readonly><?php echo $ddIsMobile ?? ''; ?></p></td>
+      <td><p class="inputUser" id="description" name="Ranking" readonly><?php echo $ddRankingn ?? ''; ?></p></td>
+      <td><p class="inputUser" id="ranking" name="CreateDate" readonly><?php echo $ddCreateDate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="status" name="status" readonly><?php echo $ddStatus ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+<!--DigitalBehavior Categories-->
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Categories'])): ?>
+    <h3>DigitalBehavior - Categories</h3>
+  <thead>
+    <tr>
+
+   
+      <th scope="col">Type</th>
+      <th scope="col">Interest</th>
+      <th scope="col">Hits</th>
+      <th scope="col">Relevance</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Type" name="Type" readonly><?php echo $dcOS ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Interest" name="Interest" readonly><?php echo $dcBrand  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Hits" name="Hits" readonly><?php echo $dcModel ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dcIsMobile ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dcRankingn ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dcCreateDate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="status" name="status" readonly><?php echo $dcStatus ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+<!--DigitalBehavior Domains-->
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Domains'])): ?>
+    <h3>DigitalBehavior - Domains</h3>
+  <thead>
+    <tr>
+      <th scope="col">URL</th>
+      <th scope="col">Hits</th>
+      <th scope="col">UpdateDate</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">CreateDate</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Type" name="Type" readonly><?php echo $ddmURL ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Interest" name="Interest" readonly><?php echo $ddmHits  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Hits" name="Hits" readonly><?php echo $ddmUpdateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $ddmRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $ddmCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $ddmStatus  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+<!--DigitalBehavior Products-->
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Products'])): ?>
+    <h3>DigitalBehavior - Products</h3>
+  <thead>
+    <tr>
+      <th scope="col">Brand</th>
+      <th scope="col">Product</th>
+      <th scope="col">Acessos</th>
+      <th scope="col">Relevance</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">CreateDate</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Type" name="Type" readonly><?php echo $dbpBrand ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Interest" name="Interest" readonly><?php echo $dbpProduct  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Hits" name="Hits" readonly><?php echo $dbpAcessos ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbpRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbpCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbpStatus  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+<!--DigitalBehavior  "Ranking": "CreateDate": "Status" -->
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
+    <h3>DigitalBehavior</h3>
+  <thead>
+    <tr>
+  
+      <th scope="col">Ranking</th>
+      <th scope="col">CreateDate</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['VoterRegistry'])): ?>
+    <h3>DigitalBehavior - VoterRegistry</h3>
+  <thead>
+    <tr>
+      <th scope="col">Zone</th>
+      <th scope="col">Section</th>
+      <th scope="col">Issuer</th>
+      <th scope="col">Street</th>
+      <th scope="col">Number</th>
+      <th scope="col">Complement</th>
+      <th scope="col">District</th>
+      <th scope="col">ZipCode</th>
+      <th scope="col">City</th>
+      <th scope="col">Type</th>
+      <th scope="col">Title</th>
+      <th scope="col">State</th>
+      <th scope="col">DneId</th>
+      <th scope="col">IBGE</th>
+      <th scope="col">CensusSector</th>
+      <th scope="col">Geolocation</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
 
 
     <?php endif; ?>
