@@ -601,7 +601,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
                                 } else {
                                     $propertyAddressGeolocationLong = '';
                                 }
-                                     $propertyAddressBorders = array_key_exists('Borders', $property['Address']) ? $property['Address']['Borders'] : ''; 
+                                     $propertyAddressBorders = array_key_exists(0, $property['Address']) ? $property['Address'][0]['Borders'] : ''; 
                                      $propertyAddressComplementFormatted = array_key_exists('ComplementFormatted', $property['Address']) ? $property['Address']['ComplementFormatted'] : ''; 
                                      $propertyAddressAlias = array_key_exists('Alias', $property['Address']) ? $property['Address']['Alias'] : ''; 
                                      $propertyAddressShortAlias = array_key_exists('ShortAlias', $property['Address']) ? $property['Address']['ShortAlias'] : ''; 
@@ -1155,7 +1155,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?>
     <!--BASIC DATA--> 
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
      <?php if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados) && !empty($dados['Data'])): ?> 
       <h3>Dados básicos</h3>
     <thead>
@@ -1190,7 +1190,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
     
     <!--PERSON--> 
 
-    <table class=" table table-bordered">
+    <table class=" table table-bordered full-width">
       <?php if (array_key_exists('Person', $dados['Data']) && !empty($dados['Data']['Person'])): ?>
         <h3>Dados Pessoais</h3>
         <thead>
@@ -1221,7 +1221,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
     </tbody>
       </table>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
     <!--COMPANY-->
     <?php if (array_key_exists('Company', $dados['Data']) && !empty($dados['Data']['Company'])): ?>
       <h3>Dados Empresa</h3>
@@ -1263,7 +1263,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       </table>
 
 
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
     <!--CREDIT - SCORE-->
     <?php if (!empty($dados['Data']['CreditScore'])): ?>
       <h3>Dados Score Crédito</h3>
@@ -1295,7 +1295,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
-    <table class=" table table-bordered">
+    <table class=" table table-bordered full-width">
     <h3>Dados Marketing Score</h3>
     <thead>
 <tr>
@@ -1322,7 +1322,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       </table>
 
 
-      <table class=" table table-bordered">
+      <table class=" table table-bordered full-width">
       <h3>Dados Pre Screening</h3>
       <thead>
 
@@ -1355,7 +1355,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
     </table>
 
 
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
     <?php if (array_key_exists('Income', $dados['Data']) && !empty($dados['Data']['Income'])): ?>
     <h3>Dados Income</h3>
     <thead>
@@ -1392,14 +1392,13 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
     </table>
      
     
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
 
     <?php if (array_key_exists('Revenue', $dados['Data']) && !empty($dados['Data']['Revenue'])): ?>
       <h3>Dados Revenue</h3>
 
     <thead>
     
-    <tbody>
     <tr>
       <th scope="col">Condition</th>
       <th scope="col">Check Code</th>
@@ -1428,7 +1427,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
     </table>
 
 
-    <table class="table table-bordered">
+    <table class="table table-bordered full-width">
     <h3>Situação Fiscal</h3>
   <thead>
     <tr>
@@ -1459,7 +1458,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Devices'])): ?>
     <h3>DigitalBehavior - Devices</h3>
   <thead>
@@ -1490,7 +1489,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 <!--DigitalBehavior Categories-->
 
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Categories'])): ?>
     <h3>DigitalBehavior - Categories</h3>
   <thead>
@@ -1525,7 +1524,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 <!--DigitalBehavior Domains-->
 
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Domains'])): ?>
     <h3>DigitalBehavior - Domains</h3>
   <thead>
@@ -1556,7 +1555,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 <!--DigitalBehavior Products-->
 
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['Products'])): ?>
     <h3>DigitalBehavior - Products</h3>
   <thead>
@@ -1586,7 +1585,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 <!--DigitalBehavior  "Ranking": "CreateDate": "Status" -->
 
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
     <h3>DigitalBehavior</h3>
   <thead>
@@ -1610,7 +1609,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--DigitalBehavior  - VoterRegistry" -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['VoterRegistry'])): ?>
     <h3>DigitalBehavior - VoterRegistry</h3>
   <thead>
@@ -1665,7 +1664,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
           
 
 <!--DigitalBehavior -"Lat": "Long" -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
     <h3>DigitalBehavior - Lat - Long</h3>
   <thead>
@@ -1689,7 +1688,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- DigitalBehavior - Borders -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
     <h3>DigitalBehavior - Lat - Long</h3>
   <thead>
@@ -1716,7 +1715,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--DigitalBehavior " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
     <h3>DigitalBehavior</h3>
   <thead>
@@ -1759,7 +1758,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- OtherDocuments " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('OtherDocuments', $dados['Data']) && !empty($dados['Data']['OtherDocuments'])): ?>
     <h3>OtherDocuments </h3>
   <thead>
@@ -1798,7 +1797,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Activities " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Activities', $dados['Data']) && !empty($dados['Data']['Activities'])): ?>
     <h3>Activities</h3>
   <thead>
@@ -1839,7 +1838,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Relateds " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Relateds', $dados['Data']) && !empty($dados['Data']['Relateds'])): ?>
     <h3>Relateds</h3>
   <thead>
@@ -1885,7 +1884,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Phones " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Phones', $dados['Data']) && !empty($dados['Data']['Phones'])): ?>
     <h3>Phones</h3>
   <thead>
@@ -1897,12 +1896,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Operator</th>
       <th scope="col">Is Facebook</th>
       <th scope="col">Is Whatsapp</th>
-      <th scope="col">Is Procon</th>             
-      <th scope="col">Is Mobile</th>   
-      <th scope="col">Installation Date</th>
-      <th scope="col">Removal Date</th>
-      <th scope="col">Create Date</th>             
-      <th scope="col">Status</th>        
+     
     </tr>
   </thead>
   <tbody>
@@ -1914,6 +1908,35 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbphOperator  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbphIsFacebook  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbphIsWhatsapp ?? ''; ?></p></td>
+     
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+<!-- Phones " -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('Phones', $dados['Data']) && !empty($dados['Data']['Phones'])): ?>
+  <thead>
+    <tr>
+   
+      <th scope="col">Is Procon</th>             
+      <th scope="col">Is Mobile</th>   
+      <th scope="col">Installation Date</th>
+      <th scope="col">Removal Date</th>
+      <th scope="col">Create Date</th>             
+      <th scope="col">Status</th>        
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+   
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbphIsProcon ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbphIsMobile  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbphInstallationDate  ?? ''; ?></p></td>
@@ -1931,8 +1954,12 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
+
+
+
 <!-- Emails " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Emails', $dados['Data']) && !empty($dados['Data']['Emails'])): ?>
     <h3>Emails</h3>
   <thead>
@@ -1977,7 +2004,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Addresses " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Addresses', $dados['Data']) && !empty($dados['Data']['Addresses'])): ?>
     <h3>Addresses</h3>
   <thead>
@@ -1993,19 +2020,8 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">State</th>   
       <th scope="col">DneId</th>
       <th scope="col">IBGE</th>     
-      <th scope="col">Census Sector</th>
-      <th scope="col">Geolocation Lat</th>
-      <th scope="col">Geolocation Long</th>
-      <th scope="col">Borders</th>
-      <th scope="col">Complement Formatted</th>
-      <th scope="col">Alias</th>
-      <th scope="col">Short Alias</th>
-      <th scope="col">Company Document</th>             
-      <th scope="col">adCompany Name</th>   
-      <th scope="col">Score</th>
-      <th scope="col">Ranking</th>   
-      <th scope="col">Create Date</th>
-      <th scope="col">Status</th> 
+      <th scope="col">Census Sector</th> 
+
     </tr>
   </thead>
   <tbody>
@@ -2022,6 +2038,41 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $adDneId  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $adIBGE ?? ''; ?></p></td>]
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $adCensusSector  ?? ''; ?></p></td>
+
+
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+<!-- Addresses " -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('Addresses', $dados['Data']) && !empty($dados['Data']['Addresses'])): ?>
+  <thead>
+    <tr>
+      <th scope="col">Geolocation Lat</th>
+      <th scope="col">Geolocation Long</th>
+      <th scope="col">Borders</th>
+      <th scope="col">Complement Formatted</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Short Alias</th>
+      <th scope="col">Company Document</th>             
+      <th scope="col">adCompany Name</th>   
+      <th scope="col">Score</th>
+      <th scope="col">Ranking</th>   
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $adGeolocationLat  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $adGeolocationLong  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $adBorders ?? ''; ?></p></td>
@@ -2047,8 +2098,11 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
+
+
 <!-- BusinessAddresses " -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('BusinessAddresses', $dados['Data']) && !empty($dados['Data']['BusinessAddresses'])): ?>
     <h3> Business Addresses</h3>
   <thead>
@@ -2065,18 +2119,6 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">DneId</th>
       <th scope="col">IBGE</th>     
       <th scope="col">Census Sector</th>
-      <th scope="col">Geolocation Lat</th>
-      <th scope="col">Geolocation Long</th>
-      <th scope="col">Borders</th>
-      <th scope="col">Complement Formatted</th>
-      <th scope="col">Alias</th>
-      <th scope="col">Short Alias</th>
-      <th scope="col">Company Document</th>             
-      <th scope="col">adCompany Name</th>   
-      <th scope="col">Score</th>
-      <th scope="col">Ranking</th>   
-      <th scope="col">Create Date</th>
-      <th scope="col">Status</th> 
     </tr>
   </thead>
   <tbody>
@@ -2093,6 +2135,37 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $baDneId  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $baIBGE ?? ''; ?></p></td>]
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $baCensusSector  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+<!-- BusinessAddresses " -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('BusinessAddresses', $dados['Data']) && !empty($dados['Data']['BusinessAddresses'])): ?>
+  <thead>
+    <tr>
+      <th scope="col">Geolocation Lat</th> 
+      <th scope="col">Geolocation Long</th>
+      <th scope="col">Borders</th>
+      <th scope="col">Complement Formatted</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Short Alias</th>
+      <th scope="col">Company Document</th>             
+      <th scope="col">adCompany Name</th>   
+      <th scope="col">Score</th>
+      <th scope="col">Ranking</th>   
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $baGeolocationLat  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $baGeolocationLong  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $baBorders ?? ''; ?></p></td>
@@ -2118,7 +2191,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Vehicles -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Vehicles', $dados['Data']) && !empty($dados['Data']['Vehicles'])): ?>
     <h3>Vehicles</h3>
   <thead>
@@ -2135,6 +2208,45 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Model</th>
       <th scope="col">Version</th>     
       <th scope="col">Type</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veLicensePlate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $veRenavan  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veFrameSerial  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $veYearManufacturing ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veYearModel  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veBrandId  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veModelId ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veVersionId ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veBrand  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veModel  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veVersion ?? ''; ?></p></td>]
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veType  ?? ''; ?></p></td>
+     
+     
+    
+
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+<!-- Vehicles -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('Vehicles', $dados['Data']) && !empty($dados['Data']['Vehicles'])): ?>
+  <thead>
+    <tr>
+    
       <th scope="col">Color</th>
       <th scope="col">License Date</th>
       <th scope="col">Sales Date</th>
@@ -2153,18 +2265,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
   </thead>
   <tbody>
     <tr>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veLicensePlate  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $veRenavan  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veFrameSerial  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $veYearManufacturing ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veYearModel  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veBrandId  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veModelId ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veVersionId ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $veBrand  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veModel  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veVersion ?? ''; ?></p></td>]
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $veType  ?? ''; ?></p></td>
+ 
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $veColor  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $veLicenseDate  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $veSalesDate ?? ''; ?></p></td>
@@ -2192,8 +2293,12 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
+
+
+
 <!-- PreviousOwner -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('PreviousOwner', $dados['Data']) && !empty($dados['Data']['PreviousOwner'])): ?>
     <h3> PreviousOwner</h3>
   <thead>
@@ -2231,7 +2336,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Denatran -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Denatran', $dados['Data']) && !empty($dados['Data']['Denatran'])): ?>
     <h3> Denatran</h3>
   <thead>
@@ -2276,7 +2381,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- DPVAT -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['Denatran'])): ?>
     <h3> DPVAT</h3>
   <thead>
@@ -2318,7 +2423,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Properties -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Properties', $dados['Data']) && !empty($dados['Data']['Properties'])): ?>
     <h3> Properties</h3>
   <thead>
@@ -2361,7 +2466,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Address -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
     <h3>Address</h3>
   <thead>
     <tr>
@@ -2381,22 +2486,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Geolocation Lat</th>
       <th scope="col">Geolocation Long</th>
       <th scope="col">Borders</th>
-      <th scope="col">Complement Formatted</th>
-      <th scope="col">Alias</th>
-      <th scope="col">Short Alias</th>
-      <th scope="col">Company Document</th>
-      <th scope="col">Company Name</th>             
-      <th scope="col">Score</th> 
-      <th scope="col">Ranking</th>
-      <th scope="col">Create Date</th>             
-      <th scope="col">Status</th> 
-
-      <th scope="col">Property Ranking</th>
-      <th scope="col">Property Create Date</th>
-      <th scope="col">Property Status </th>
-   
-    </tr>
-  </thead>
+      
   <tbody>
     <tr>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $propertyAddressStreet  ?? ''; ?></p></td>
@@ -2415,7 +2505,37 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $propertyAddressGeolocationLat  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $propertyAddressGeolocationLong   ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $propertyAddressBorders  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $propertyAddressComplementFormatted ?? ''; ?></p></td>
+        </tr>   
+  </tbody>
+  
+</table>
+
+<table class="table table-bordered full-width">
+
+
+
+<thead>
+    <tr>
+<th scope="col">Complement Formatted</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Short Alias</th>
+      <th scope="col">Company Document</th>
+      <th scope="col">Company Name</th>             
+      <th scope="col">Score</th> 
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>             
+      <th scope="col">Status</th> 
+
+      <th scope="col">Property Ranking</th>
+      <th scope="col">Property Create Date</th>
+      <th scope="col">Property Status </th>
+   
+    </tr>
+  </thead>
+
+<tbody>
+    <tr>
+    <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $propertyAddressComplementFormatted ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $propertyAddressAlias  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $propertyAddressShortAlias  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $propertyAddressCompanyDocument ?? ''; ?></p></td>
@@ -2428,18 +2548,16 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $propertyRanking ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $propertyCreateDate ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $propertyStatus  ?? ''; ?></p></td>
-    </tr>   
+ 
+
+
+</tr>   
   </tbody>
   
 </table>
 
-
-
-
-
-
 <!-- Partners -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Partners', $dados['Data']) && !empty($dados['Data']['Partners'])): ?>
     <h3>Partners</h3>
   <thead>
@@ -2498,7 +2616,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Professional Data -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('ProfessionalData', $dados['Data']) && !empty($dados['Data']['ProfessionalData'])): ?>
     <h3>Professional Data</h3>
   <thead>
@@ -2553,7 +2671,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Correlated Companies -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('CorrelatedCompanies', $dados['Data']) && !empty($dados['Data']['CorrelatedCompanies'])): ?>
     <h3>Correlated Companies</h3>
   <thead>
@@ -2590,7 +2708,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--Partners Correlated Companies -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
      <h3>Partners Correlated Companies</h3>
   <thead>
     <tr>
@@ -2599,24 +2717,12 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Role</th>
       <th scope="col">Legal Representative Role </th>
       <th scope="col">Legal Representative Name</th>
-
       <th scope="col">Legal Representative Gender</th>
       <th scope="col">Legal Representative Document</th>
       <th scope="col">Legal Representative Document Type</th>
       <th scope="col">Legal Representative Document Formatted</th>
 
-      <th scope="col">Legal Representative Ranking</th>              
-      <th scope="col">Legal Representative Create Date</th>
-      <th scope="col">Legal Representative Status </th>      
-      
-      
-      <th scope="col">Name</th> 
-      <th scope="col">Document </th>
-      <th scope="col">Document Type </th>
-      <th scope="col">Document Formatted</th>
-      <th scope="col">Ranking</th>           
-      <th scope="col">Create Date</th>
-      <th scope="col">Status </th>               
+    
     </tr>
   </thead>
   <tbody>
@@ -2632,6 +2738,39 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $partnerLegalRepresentativeDocumentFormatted  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $partnerLegalRepresentativeRanking ?? ''; ?></p></td>
 
+     
+      </tbody>
+  
+</table>
+
+
+
+
+
+
+
+
+
+<!--Partners Correlated Companies -->
+<table class="table table-bordered full-width">
+  <thead>
+    <tr>
+    
+      
+      <th scope="col">Legal Representative Create Date</th>
+      <th scope="col">Legal Representative Status </th>      
+      <th scope="col">Name</th> 
+      <th scope="col">Document </th>
+      <th scope="col">Document Type </th>
+      <th scope="col">Document Formatted</th>
+      <th scope="col">Ranking</th>           
+      <th scope="col">Create Date</th>
+      <th scope="col">Status </th>               
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+  
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $partnerLegalRepresentativeCreateDate  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $partnerLegalRepresentativeStatus   ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $partnerName  ?? ''; ?></p></td>
@@ -2652,8 +2791,10 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
+
 <!--Affiliateds -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Affiliateds', $dados['Data']) && !empty($dados['Data']['Affiliateds'])): ?>
     <h3>Affiliateds</h3>
   <thead>
@@ -2695,7 +2836,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--Debits -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Debits', $dados['Data']) && !empty($dados['Data']['Debits'])): ?>
     <h3>Debits</h3>
   <thead>
@@ -2732,7 +2873,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--BankChecks -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('BankChecks', $dados['Data']) && !empty($dados['Data']['BankChecks'])): ?>
     <h3>Bank Checks</h3>
   <thead>
@@ -2775,7 +2916,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!--BankReferences -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('BankReferences', $dados['Data']) && !empty($dados['Data']['BankReferences'])): ?>
     <h3>Bank References</h3>
   <thead>
@@ -2811,7 +2952,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Assistances -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Assistances', $dados['Data']) && !empty($dados['Data']['Assistances'])): ?>
     <h3>Assistances</h3>
   <thead>
@@ -2853,7 +2994,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Refunds -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Refunds', $dados['Data']) && !empty($dados['Data']['Refunds'])): ?>
     <h3>Refunds</h3>
   <thead>
@@ -2898,7 +3039,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Services -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Services', $dados['Data']) && !empty($dados['Data']['Services'])): ?>
     <h3>Services</h3>
   <thead>
@@ -2934,7 +3075,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Restrictions -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Restrictions', $dados['Data']) && !empty($dados['Data']['Restrictions'])): ?>
     <h3>Restrictions</h3>
   <thead>
@@ -2974,7 +3115,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- Protests -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Protests', $dados['Data']) && !empty($dados['Data']['Protests'])): ?>
     <h3>Protests</h3>
   <thead>
@@ -3010,7 +3151,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- LawProcessSummary -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('LawProcessSummary', $dados['Data']) && !empty($dados['Data']['LawProcessSummary'])): ?>
     <h3>Law Process Summary</h3>
   <thead>
@@ -3047,7 +3188,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- LawProcess -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('LawProcess', $dados['Data']) && !empty($dados['Data']['LawProcess'])): ?>
     <h3>LawProcess</h3>
   <thead>
@@ -3103,7 +3244,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- ArrestWarranties -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('ArrestWarranties', $dados['Data']) && !empty($dados['Data']['ArrestWarranties'])): ?>
     <h3>Arrest Warranties</h3>
   <thead>
@@ -3117,7 +3258,34 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Expiration Date</th>
       <th scope="col">Conclusion Date</th>
 
-      
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyProcess  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $arrestWarrantyWarrantStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $arrestWarrantySubjects ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $arrestWarrantyExpeditionDate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $arrestWarrantyCrimeDate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyExpirationDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyConclusionDate  ?? ''; ?></p></td>
+    </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+<!-- ArrestWarranties -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('ArrestWarranties', $dados['Data']) && !empty($dados['Data']['ArrestWarranties'])): ?>
+  <thead>
+    <tr>
       <th scope="col">Locale</th>
       <th scope="col">Class</th>
       <th scope="col">Subject</th>
@@ -3132,13 +3300,6 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
   </thead>
   <tbody>
     <tr>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyProcess  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $arrestWarrantyWarrantStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $arrestWarrantySubjects ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $arrestWarrantyExpeditionDate  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $arrestWarrantyCrimeDate  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyExpirationDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyConclusionDate  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $arrestWarrantyLocale  ?? ''; ?></p></td>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $arrestWarrantyClass  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $arrestWarrantySubject ?? ''; ?></p></td>
@@ -3159,8 +3320,13 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
+
+
+
+
 <!-- Queries -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('Queries', $dados['Data']['Queries']) && !empty($dados['Data']['Queries'])): ?>
     <h3>Queries</h3>
   <thead>
@@ -3204,7 +3370,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- WebSites -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('WebSites', $dados['Data']) && !empty($dados['Data']['WebSites'])): ?>
     <h3>WebSites</h3>
   <thead>
@@ -3221,12 +3387,6 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">Traffic Country Rank</th>
       <th scope="col">Traffic Category</th>
 
-      <th scope="col">Traffic Category Rank</th>
-      <th scope="col">Traffic Audience</th>
-      <th scope="col">Ranking</th>
-      <th scope="col">Traffic Country </th>
-      <th scope="col">Create Date</th>
-      <th scope="col">Status</th>
 
 
     </tr>
@@ -3244,6 +3404,40 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $websiteWebTrafficCountryRank  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $websiteWebTrafficCategory ?? ''; ?></p></td>
 
+
+    </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+
+
+<!-- WebSites -->
+<table class="table table-bordered full-width">
+<?php if (array_key_exists('WebSites', $dados['Data']) && !empty($dados['Data']['WebSites'])): ?>
+  <thead>
+    <tr>
+
+  
+
+      <th scope="col">Traffic Category Rank</th>
+      <th scope="col">Traffic Audience</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Traffic Country </th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
       <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $websiteWebTrafficCategoryRank  ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $websiteWebTrafficAudience ?? ''; ?></p></td>
       <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $websiteRanking  ?? ''; ?></p></td>
@@ -3261,8 +3455,9 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 
+
 <!-- PoliticalPartyDonations -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('PoliticalPartyDonations', $dados['Data']) && !empty($dados['Data']['PoliticalPartyDonations'])): ?>
     <h3>Political Party Donations</h3>
   <thead>
@@ -3298,7 +3493,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 
 
 <!-- StatisticModels -->
-<table class="table table-bordered">
+<table class="table table-bordered full-width">
 <?php if (array_key_exists('StatisticModels', $dados['Data']) && !empty($dados['Data']['StatisticModels'])): ?>
     <h3>Statistic Models</h3>
   <thead>
