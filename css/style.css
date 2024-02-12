@@ -141,8 +141,8 @@ body {
     width: 90%;
 
     flex-direction: row;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     break-inside: avoid-region!important;
 }
 
@@ -336,7 +336,7 @@ body {
     max-width: 100%;
     width: 90%;
     break-inside: avoid-region!important;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #dados-sumarizados {
@@ -597,9 +597,13 @@ body {
     font: inherit;
 }
 
-#card-header-situacao_cadastral > button:hover {
+.button-box-situacao_cadastral > button:hover {
     background-color: #d8d5d5;
     transition: 1s;
+}
+
+.button-box-situacao_cadastral > i{
+    font-size: 14px;
 }
 
 .main-card-info-situacao_cadastral {
@@ -623,22 +627,25 @@ body {
 /*************** containers top dados de contato *******************/
 
 .container_pai-top_dados_contato {
+    margin-top: 40px;
     break-inside: avoid-region;
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: start;
     margin-bottom: 20px;
 
     max-width: 100%;
-    width: 92%;
+    width: 90%;
     height: auto;
+}
+
+.main-card-info-top_dados_contato {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #TopContactInformation {
     width: 100%;
-    position: relative;
-    left: 45px;
 }
 
 .elements-group-top_dados_contato {
@@ -1144,8 +1151,6 @@ body {
     width: 90%;
     height: auto;
     
-    position: relative;
-    left: 60px;
 }
 
 
@@ -1370,15 +1375,13 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: start;
+    justify-content: space-between;
     margin-bottom: 20px;
 
     max-width: 100%;
-    width: 92%;
+    width: 90%;
     height: auto;
 
-    position: relative;
-    left: 53px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -1390,7 +1393,7 @@ body {
 
 }
 
-#score {
+.Score {
     width: auto;
     margin-bottom: 20px;
 
@@ -1404,7 +1407,6 @@ body {
 }
 
 .card_main-score {
-    padding: 0px 10px;
     display: flex;
     margin-bottom: 0;
 
@@ -1425,13 +1427,21 @@ body {
     box-sizing: border-box;
 }
 
-.card-body-score > h4 {
+.card-header-score {
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+    height: 20px;
+
+}
+
+.sub_card-header-score > h4 {
     display: block;
 
     text-align: center;
     line-height: 10px;
     font-size: 12px;
-
     margin-top: 9.5px;
     margin-bottom: 9.5px;
 
@@ -1444,6 +1454,14 @@ body {
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.sub_card-header-score {
+    width: 95%;
+}
+
+.button-box-score_refresh > i {
+    font-size: 14px;
 
 }
 
@@ -1689,11 +1707,9 @@ body {
 }
 
 #Income > div {
-    position: relative;
-    left: 60px;
     border-radius: 3px;
     background-color: #fff;
-
+    
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
@@ -1878,10 +1894,6 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
-
-
-    position: relative;
-    left: 60px;
 }
 
 #Activities {
@@ -1918,8 +1930,9 @@ body {
     font-size: 14px;
 }
 .divseparar {
-    width: 1200px;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 0px 10px;
     position: relative;
@@ -1959,8 +1972,6 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
-    position: relative;
-    left: 60px;
 }
 
 #ProfessionalData {
@@ -1988,6 +1999,22 @@ body {
 #professional_data-id > i {
     color: #f79c51;
     font-size: 18px;
+}
+
+#professional_data-id > h4 {
+    line-height: 0;
+    margin: 0;
+    color: #f79c51;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-weight: bold;
+}
+
+#professional_data-id {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: 99%;
 }
 
 .main-card-info-professional_data {
@@ -2028,9 +2055,11 @@ body {
     max-width: 90%;
     width: 90%;
     height: auto;
+}
 
-    position: relative;
-    left: 60px;
+#ContactPersons {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 #ContactPersons > div {
@@ -2040,7 +2069,6 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1155px;
 }
 
 .card-head-contact_persons {
@@ -2093,6 +2121,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 .col-2-contact_persons {
     border-color: #6a6e80;
@@ -2337,8 +2366,6 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 60px;
 }
 
 #InCommon {
@@ -2388,8 +2415,7 @@ body {
 }
 
 .group-buttons-relacionamento {
-    position: relative;
-    right: -53.5rem;
+    display: flex;
 }
 
 #button-refresh-relacionamento {
@@ -2439,8 +2465,7 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
+
 }
 
 #Addresses {
@@ -2459,7 +2484,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%; 
 }
 
 .card-heade-lista_enderecos {
@@ -2467,7 +2492,7 @@ body {
     align-items: center;
     margin-bottom: 10px;
     height: auto;
-
+    margin: 0 5px;
     gap: 5px;
 }
 
@@ -2486,9 +2511,6 @@ body {
 }
 
 .button-group-lista_enderecos {
-    position: relative;
-    right: -62.5rem;
-
     display: flex;
     gap: 0px;
 
@@ -2789,9 +2811,6 @@ body {
 }
 
 .menu_dropdown_icon {
-    position: relative;
-    bottom: 0px;
-    top: -6px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -2941,20 +2960,17 @@ body {
     flex-wrap: wrap;
 
     justify-content: start;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     max-width: 90%;
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
 #BusinessAddresses {
     width: 100%;
-    margin-bottom: 20px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -2968,7 +2984,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
 }
 
 .col-1-lista_enderecos-business {
@@ -3075,8 +3091,6 @@ body {
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 .main-card-info-lista_telefones > div:hover {
@@ -3100,7 +3114,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
 }
 
 .card-heade-lista_telefones {
@@ -3169,7 +3183,7 @@ body {
 .main-container-lista_telefones {
     margin-bottom: -10px;
     display: flex;
-    flex-direction: row!important;
+    flex-direction: row;
     border: 0;
     align-items: center;
     flex-wrap: wrap;
@@ -3251,6 +3265,10 @@ body {
 
 
 /*************** Containers de sociedades *******************/
+
+.main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+}
 
 .col-1-lista_sociedades {
     border-color: #6a6e80;
@@ -3351,7 +3369,7 @@ body {
 
 #Companies {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -3365,7 +3383,8 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -3465,7 +3484,7 @@ body {
 }
 
 .porc-box {
-    width: 10%!important;
+    width: 90%;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -3478,9 +3497,6 @@ body {
 
 
 .button-group-imoveis {
-    position: relative;
-    right: -60.5rem;
-
     display: flex;
     gap: 0px;
 
@@ -3511,7 +3527,7 @@ body {
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
 }
 
 .icon-box-lista_emails {
@@ -3754,11 +3770,6 @@ width: auto;
 /*************** Containers de processos de titulos *******************/
 
 
-.group-buttons-protestos_titulos {
-    position: relative;
-    right: -55.5rem;
-}
-
 .group-buttons-protestos_titulos > button {
     background-color: rgb(234, 234, 234);
 }
@@ -3773,10 +3784,6 @@ width: auto;
 
 /*************** Containers de dominios digitais  *******************/
 
-.group-buttons-dominios {
-    position: relative;
-    right: -60.7rem;
-}
 
 .group-buttons-dominios:hover {
     background-color: #d8d5d5;
@@ -4125,10 +4132,6 @@ width: auto;
     margin-inline-end: 0px;
 }
 
-.group-buttons-comportamento_digital {
-    position: relative;
-    right: -53.5rem;
-}
 
 .group-buttons-comportamento_digital:hover {
     background-color: #d8d5d5;
@@ -4150,8 +4153,6 @@ width: auto;
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
@@ -4172,7 +4173,7 @@ width: auto;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
 }
 
 .card-header-lsta_telefone {
@@ -4270,8 +4271,7 @@ width: auto;
 /*************** Containers de local de votação  *******************/
 
 .group-buttons-votacao {
-    position: relative;
-    right: -57.5rem;
+
 }
 
 .group-buttons-votacao:hover {
@@ -4289,21 +4289,19 @@ width: auto;
     flex-wrap: wrap;
 
     justify-content: start;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     max-width: 90%;
     width: 90%;
     height: auto;
 
-    position: relative;
-    left: 30px;
 }
 
 
 
 #StatisticModels {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
@@ -4318,7 +4316,7 @@ width: auto;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
     box-sizing: border-box;
-    width: 1215px
+    width: 100%;
 }
 
 .card-header-modelos_estatisticos {
@@ -4355,6 +4353,7 @@ width: auto;
 .main-container-modelos_estatisticos {
     display: flex;
     flex-direction: column;
+
 }
 
 .box-content-modelos_estatiscos {
