@@ -548,48 +548,439 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
                                 
                                   //Properties
                                   if (array_key_exists('Properties', $dados['Data'])) { 
-                                  $propertyNsql = array_key_exists('Nsql', $dados) ? $dados['Nsql'] : ''; 
-                                  $propertyProtocol = array_key_exists('Protocol', $dados) ? $dados['Protocol'] : ''; 
-                                  $propertyStreetCode = array_key_exists('StreetCode', $dados) ? $dados['StreetCode'] : ''; 
-                                  $propertyForehead = array_key_exists('Forehead', $dados) ? $dados['Forehead'] : ''; 
-                                  $propertyIdealFraction = array_key_exists('IdealFraction', $dados) ? $dados['IdealFraction'] : ''; 
-                                  $propertyCorners = array_key_exists('Corners', $dados) ? $dados['Corners'] : ''; 
-                                  $propertyGrounds = array_key_exists('Grounds', $dados) ? $dados['Grounds'] : ''; 
-                                  $propertyArea = array_key_exists('Area',$dados) ? $dados['Area'] : ''; 
-                                  $propertyBuildArea = array_key_exists('BuildArea',$dados) ?$dados['BuildArea'] : ''; 
-                                  $propertyBuildValue = array_key_exists('BuildValue',$dados) ? $dados['BuildValue'] : ''; 
-                                  $propertyIptuValue = array_key_exists('IptuValue', $dados) ? $dados['IptuValue'] : ''; 
-                                  $propertyYear = array_key_exists('Year',$dados) ? $dados['Year'] : '';
+                                    foreach ($dados['Data']['Properties'] as $property) { 
+                                    $propertyNsql = array_key_exists('Nsql', $property) ? $property['Nsql'] : ''; 
+                                    $propertyProtocol = array_key_exists('Protocol', $property) ? $property['Protocol'] : ''; 
+                                    $propertyStreetCode = array_key_exists('StreetCode', $property) ? $property['StreetCode'] : ''; 
+                                    $propertyForehead = array_key_exists('Forehead', $property) ? $property['Forehead'] : ''; 
+                                    $propertyIdealFraction = array_key_exists('IdealFraction', $property) ? $property['IdealFraction'] : ''; 
+                                    $propertyCorners = array_key_exists('Corners', $property) ? $property['Corners'] : ''; 
+                                    $propertyGrounds = array_key_exists('Grounds', $property) ? $property['Grounds'] : ''; 
+                                    $propertyArea = array_key_exists('Area', $property) ? $property['Area'] : ''; 
+                                    $propertyBuildArea = array_key_exists('BuildArea', $property) ? $property['BuildArea'] : ''; 
+                                    $propertyBuildValue = array_key_exists('BuildValue', $property) ? $property['BuildValue'] : ''; 
+                                    $propertyIptuValue = array_key_exists('IptuValue', $property) ? $property['IptuValue'] : ''; 
+                                    $propertyYear = array_key_exists('Year', $property) ? $property['Year'] : '';
+
+                                  if (array_key_exists('Address', $property)) {
+                                     $propertyAddressStreet = array_key_exists('Street', $property['Address']) ? $property['Address']['Street'] : ''; 
+                                     $propertyAddressNumber = array_key_exists('Number', $property['Address']) ? $property['Address']['Number'] : ''; 
+                                     $propertyAddressComplement = array_key_exists('Complement', $property['Address']) ? $property['Address']['Complement'] : ''; 
+                                     $propertyAddressDistrict = array_key_exists('District', $property['Address']) ? $property['Address']['District'] : ''; 
+                                     $propertyAddressZipCode = array_key_exists('ZipCode', $property['Address']) ? $property['Address']['ZipCode'] : ''; 
+                                     $propertyAddressCity = array_key_exists('City', $property['Address']) ? $property['Address']['City'] : ''; 
+                                     $propertyAddressType = array_key_exists('Type', $property['Address']) ? $property['Address']['Type'] : ''; 
+                                     $propertyAddressTitle = array_key_exists('Title', $property['Address']) ? $property['Address']['Title'] : ''; 
+                                     $propertyAddressState = array_key_exists('State', $property['Address']) ? $property['Address']['State'] : ''; 
+                                     $propertyAddressDneId = array_key_exists('DneId', $property['Address']) ? $property['Address']['DneId'] : ''; 
+                                     $propertyAddressIBGE = array_key_exists('IBGE', $property['Address']) ? $property['Address']['IBGE'] : ''; 
+                                     $propertyAddressCensusSector = array_key_exists('CensusSector', $property['Address']) ? $property['Address']['CensusSector'] : ''; 
+
+                                     if (array_key_exists('Address', $property) && is_array($property['Address']) && array_key_exists('Geolocation', $property['Address']) && is_array($property['Address']['Geolocation'])) {
+                                      $propertyAddressGeolocationLat = $property['Address']['Geolocation']['Lat'] ?? '';
+                                  } else {
+                                      $propertyAddressGeolocationLat = '';
                                   }
 
-                                  //
+                                  if (array_key_exists('Address', $property) && is_array($property['Address']) && array_key_exists('Geolocation', $property['Address']) && is_array($property['Address']['Geolocation'])) {
+                                    $propertyAddressGeolocationLong = $property['Address']['Geolocation']['Long'] ?? '';
+                                } else {
+                                    $propertyAddressGeolocationLong = '';
+                                }
+                                     $propertyAddressBorders = array_key_exists('Borders', $property['Address']) ? $property['Address']['Borders'] : ''; 
+                                     $propertyAddressComplementFormatted = array_key_exists('ComplementFormatted', $property['Address']) ? $property['Address']['ComplementFormatted'] : ''; 
+                                     $propertyAddressAlias = array_key_exists('Alias', $property['Address']) ? $property['Address']['Alias'] : ''; 
+                                     $propertyAddressShortAlias = array_key_exists('ShortAlias', $property['Address']) ? $property['Address']['ShortAlias'] : ''; 
+                                     $propertyAddressCompanyDocument = array_key_exists('CompanyDocument', $property['Address']) ? $property['Address']['CompanyDocument'] : ''; 
+                                     
+                                      $propertyAddressCompanyName = array_key_exists('CompanyName', $property['Address']) ? $property['Address']['CompanyName'] : ''; 
+                                      $propertyAddressScore = array_key_exists('Score', $property['Address']) ? $property['Address']['Score'] : ''; 
+                                      $propertyAddressRanking = array_key_exists('Ranking', $property['Address']) ? $property['Address']['Ranking'] : ''; 
+                                      $propertyAddressCreateDate = array_key_exists('CreateDate', $property['Address']) ? $property['Address']['CreateDate'] : ''; 
+                                      $propertyAddressStatus = array_key_exists('Status', $property['Address']) ? $property['Address']['Status'] : ''; }
 
-                                  if (array_key_exists('Properties', $dados['Data'])) { 
-                                  $propertyAddressStreet = array_key_exists('Street', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Street'] : ''; 
-                                  $propertyAddressNumber = array_key_exists('Number', $dados['Properties']['Address']) ?$dados['Properties']['Address']['Number'] : ''; 
-                                  $propertyAddressComplement = array_key_exists('Complement',$dados['Properties']['Address']) ? $dados['Properties']['Address']['Complement'] : ''; 
-                                  $propertyAddressDistrict = array_key_exists('District', $dados['Properties']['Address']) ? $dados['Properties']['Address']['District'] : ''; 
-                                  $propertyAddressZipCode = array_key_exists('ZipCode', $dados['Properties']['Address']) ? $dados['Properties']['Address']['ZipCode'] : ''; 
-                                  $propertyAddressCity = array_key_exists('City', $dados['Properties']['Address']) ? $dados['Properties']['Address']['City'] : ''; 
-                                  $propertyAddressType = array_key_exists('Type', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Type'] : ''; 
-                                  $propertyAddressTitle = array_key_exists('Title', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Title'] : ''; 
-                                  $propertyAddressState = array_key_exists('State', $dados['Properties']['Address']) ? $dados['Properties']['Address']['State'] : ''; 
-                                  $propertyAddressDneId = array_key_exists('DneId', $dados['Properties']['Address']) ? $dados['Properties']['Address']['DneId'] : ''; 
-                                  $propertyAddressIBGE = array_key_exists('IBGE', $dados['Properties']['Address']) ? $dados['Properties']['Address']['IBGE'] : ''; 
-                                  $propertyAddressCensusSector = array_key_exists('CensusSector', $dados['Properties']['Address']) ? $dados['Properties']['Address']['CensusSector'] : ''; 
-                                  $propertyAddressGeolocationLat = array_key_exists('Lat',$dados['Properties']['Address']['Geolocation']) ? $dados['Properties']['Address']['Geolocation']['Lat'] : ''; 
-                                  $propertyAddressGeolocationLong = array_key_exists('Long', $dados['Properties']['Address']['Geolocation']) ? $dados['Properties']['Address']['Geolocation']['Long'] : ''; 
-                                  $propertyAddressBorders = array_key_exists('Borders', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Borders'] : ''; 
-                                  $propertyAddressComplementFormatted = array_key_exists('ComplementFormatted', $dados['Properties']['Address']) ? $dados['Properties']['Address']['ComplementFormatted'] : ''; 
-                                  $propertyAddressAlias = array_key_exists('Alias', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Alias'] : ''; 
-                                  $propertyAddressShortAlias = array_key_exists('ShortAlias', $dados['Properties']['Address']) ? $dados['Properties']['Address']['ShortAlias'] : ''; 
-                                  $propertyAddressCompanyDocument = array_key_exists('CompanyDocument', $dados['Properties']['Address']) ? $dados['Properties']['Address']['CompanyDocument'] : ''; 
-                                  $propertyAddressCompanyName = array_key_exists('CompanyName', $dados['Properties']['Address']) ? $dados['Properties']['Address']['CompanyName'] : ''; 
-                                  $propertyAddressScore = array_key_exists('Score', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Score'] : ''; 
-                                  $propertyAddressRanking = array_key_exists('Ranking', $dados['Properties']['Address']) ? $dados['Properties']['Address']['Ranking'] : ''; 
-                                  $propertyAddressCreateDate = array_key_exists('CreateDate', $dados['Properties']['Address']) ? $dados['Properties']['Address']['CreateDate'] : ''; 
-                                  $propertyAddressStatus = array_key_exists('Status', $dados['Properties']['Address']) ?$dados['Properties']['Address']['Status'] : '';
-                                 }
+                                     $propertyRanking = array_key_exists('Ranking', $property) ? $property['Ranking'] : ''; 
+                                     $propertyCreateDate = array_key_exists('CreateDate', $property) ? $property['CreateDate'] : ''; 
+                                     $propertyStatus = array_key_exists('Status', $property) ? $property['Status'] : '';
+                                    
+                                    } }
+                                  
+
+                               
+
+
+                                 //Professional Data
+                                 if (array_key_exists('ProfessionalData', $dados['Data'])) {  
+                                 $professionalDataDemissionDate = array_key_exists('DemissionDate', $dados) ? $dados['DemissionDate'] : ''; 
+                                 $professionalDataCompanyCNAE = array_key_exists('CNAE', $dados['ProfessionalData']) ? $dados['ProfessionalData']['CNAE'] : ''; 
+                                 $professionalDataCompanySize = array_key_exists('Size', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Size'] : ''; 
+                                 $professionalDataCompanyName = array_key_exists('Name', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Name'] : ''; 
+                                 $professionalDataCompanyGender = array_key_exists('Gender', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Gender'] : ''; 
+                                 $professionalDataCompanyDocument = array_key_exists('Document', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Document'] : ''; 
+                                 $professionalDataCompanyDocumentType = array_key_exists('DocumentType', $dados['ProfessionalData']) ? $dados['ProfessionalData']['DocumentType'] : ''; 
+                                 $professionalDataCompanyDocumentFormatted = array_key_exists('DocumentFormatted', $dados['ProfessionalData']) ? $dados['ProfessionalData']['DocumentFormatted'] : ''; 
+                                 $professionalDataCompanyRanking = array_key_exists('Ranking', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Ranking'] : ''; 
+                                 $professionalDataCompanyCreateDate = array_key_exists('CreateDate', $dados['ProfessionalData']) ? $dados['ProfessionalData']['ProfessionalData']['CreateDate'] : ''; 
+                                 $professionalDataCompanyStatus = array_key_exists('Status', $dados['ProfessionalData']) ? $dados['ProfessionalData']['ProfessionalData']['Status'] : ''; 
+                                 $professionalDataElapsedDays = array_key_exists('ElapsedDays', $dados['ProfessionalData']) ? $dados['ProfessionalData']['ElapsedDays'] : ''; 
+                                 $professionalDataDescription = array_key_exists('Description', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Description'] : ''; 
+                                 $professionalDataRanking = array_key_exists('Ranking', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Ranking'] : ''; 
+                                 $professionalDataCreateDate = array_key_exists('CreateDate', $dados['ProfessionalData']) ? $dados['ProfessionalData']['CreateDate'] : ''; 
+                                 $professionalDataStatus = array_key_exists('Status', $dados['ProfessionalData']) ? $dados['ProfessionalData']['Status'] : ''; 
+                                
+                                } 
+
+                                //PartnerShips
+                                if (array_key_exists('PartnerShips', $dados['Data'])) 
+                                { foreach ($dados['Data']['PartnerShips'] as $partnership) {
+                                   $partnershipSize = array_key_exists('Size', $partnership) ? $partnership['Size'] : ''; 
+                                   $partnershipRelationType = array_key_exists('RelationType', $partnership) ? $partnership['RelationType'] : '';
+                                   $partnershipName = array_key_exists('Name', $partnership) ? $partnership['Name'] : ''; 
+                                   $partnershipGender = array_key_exists('Gender', $partnership) ? $partnership['Gender'] : ''; 
+                                   $partnershipDocument = array_key_exists('Document', $partnership) ? $partnership['Document'] : ''; 
+                                   $partnershipDocumentType = array_key_exists('DocumentType', $partnership) ? $partnership['DocumentType'] : ''; 
+                                   $partnershipDocumentFormatted = array_key_exists('DocumentFormatted', $partnership) ? $partnership['DocumentFormatted'] : ''; 
+                                   $partnershipRanking = array_key_exists('Ranking', $partnership) ? $partnership['Ranking'] : ''; 
+                                   $partnershipCreateDate = array_key_exists('CreateDate', $partnership) ? $partnership['CreateDate'] : ''; 
+                                   $partnershipStatus = array_key_exists('Status', $partnership) ? $partnership['Status'] : ''; 
+                                  }
+                              }
+
+                                //Partners
+                              if (array_key_exists('Partners', $dados['Data'])) { 
+                                foreach ($dados['Partners'] as $partner) { 
+                                $partnerEntryDate = array_key_exists('EntryDate', $partner) ? $partner['EntryDate'] : ''; 
+                                $partnerQuote = array_key_exists('Quote', $partner) ? $partner['Quote'] : ''; 
+                                $partnerRole = array_key_exists('Role', $partner) ? $partner['Role'] : ''; 
+                                $partnerLegalRepresentativeRole = array_key_exists('Role', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Role'] : ''; 
+                                $partnerLegalRepresentativeName = array_key_exists('Name', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Name'] : ''; 
+                                $partnerLegalRepresentativeGender = array_key_exists('Gender', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Gender'] : ''; 
+                                $partnerLegalRepresentativeDocument = array_key_exists('Document', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Document'] : ''; 
+                                $partnerLegalRepresentativeDocumentType = array_key_exists('DocumentType', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['DocumentType'] : ''; 
+                                $partnerLegalRepresentativeDocumentFormatted = array_key_exists('DocumentFormatted', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['DocumentFormatted'] : ''; 
+                                $partnerLegalRepresentativeRanking = array_key_exists('Ranking', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Ranking'] : ''; 
+                                $partnerLegalRepresentativeCreateDate = array_key_exists('CreateDate', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['CreateDate'] : ''; 
+                                $partnerLegalRepresentativeStatus = array_key_exists('Status', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Status'] : ''; 
+                                $partnerName = array_key_exists('Name', $partner) ? $partner['Name'] : ''; $partnerGender = array_key_exists('Gender', $partner) ? $partner['Gender'] : ''; 
+                                $partnerDocument = array_key_exists('Document', $partner) ? $partner['Document'] : ''; 
+                                $partnerDocumentType = array_key_exists('DocumentType', $partner) ? $partner['DocumentType'] : ''; 
+                                $partnerDocumentFormatted = array_key_exists('DocumentFormatted', $partner) ? $partner['DocumentFormatted'] : ''; 
+                                $partnerRanking = array_key_exists('Ranking', $partner) ? $partner['Ranking'] : ''; 
+                                $partnerCreateDate = array_key_exists('CreateDate', $partner) ? $partner['CreateDate'] : ''; 
+                                $partnerStatus = array_key_exists('Status', $partner) ? $partner['Status'] : ''; } 
+
+                              
+                              }
+
+                              //CorrelatedCompanies
+                              if (array_key_exists('CorrelatedCompanies', $dados['Data'])) { 
+                                foreach ($dados['Data']['CorrelatedCompanies'] as $correlatedCompany) { 
+                                  $correlatedCompanySize = array_key_exists('Size', $correlatedCompany) ? $correlatedCompany['Size'] : ''; 
+                                  $correlatedCompanyRelationType = array_key_exists('RelationType', $correlatedCompany) ? $correlatedCompany['RelationType'] : '';
+                                  $correlatedCompanyName = array_key_exists('Name', $correlatedCompany) ? $correlatedCompany['Name'] : ''; 
+                                  $correlatedCompanyGender = array_key_exists('Gender', $correlatedCompany) ? $correlatedCompany['Gender'] : ''; 
+                                  $correlatedCompanyDocument = array_key_exists('Document', $correlatedCompany) ? $correlatedCompany['Document'] : ''; 
+                                  $correlatedCompanyDocumentType = array_key_exists('DocumentType', $correlatedCompany) ? $correlatedCompany['DocumentType'] : ''; 
+                                  $correlatedCompanyDocumentFormatted = array_key_exists('DocumentFormatted', $correlatedCompany) ? $correlatedCompany['DocumentFormatted'] : '';
+                                  $correlatedCompanyRanking = array_key_exists('Ranking', $correlatedCompany) ? $correlatedCompany['Ranking'] : ''; 
+                                  $correlatedCompanyCreateDate = array_key_exists('CreateDate', $correlatedCompany) ? $correlatedCompany['CreateDate'] : ''; 
+                                  $correlatedCompanyStatus = array_key_exists('Status', $correlatedCompany) ? $correlatedCompany['Status'] : ''; 
+
+                                   //Partners
+                                  if (array_key_exists('Partners', $correlatedCompany)) { 
+                                
+                                    foreach ($correlatedCompany['Partners'] as $partner) { 
+                                    $partnerEntryDate = array_key_exists('EntryDate', $partner) ? $partner['EntryDate'] : ''; 
+                                    $partnerQuote = array_key_exists('Quote', $partner) ? $partner['Quote'] : ''; 
+                                    $partnerRole = array_key_exists('Role', $partner) ? $partner['Role'] : ''; 
+                                    $partnerLegalRepresentativeRole = array_key_exists('Role', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Role'] : ''; 
+                                    $partnerLegalRepresentativeName = array_key_exists('Name', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Name'] : ''; 
+                                    $partnerLegalRepresentativeGender = array_key_exists('Gender', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Gender'] : ''; 
+                                    $partnerLegalRepresentativeDocument = array_key_exists('Document', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Document'] : ''; 
+                                    $partnerLegalRepresentativeDocumentType = array_key_exists('DocumentType', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['DocumentType'] : ''; 
+                                    $partnerLegalRepresentativeDocumentFormatted = array_key_exists('DocumentFormatted', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['DocumentFormatted'] : ''; 
+                                    $partnerLegalRepresentativeRanking = array_key_exists('Ranking', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Ranking'] : ''; 
+                                    $partnerLegalRepresentativeCreateDate = array_key_exists('CreateDate', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['CreateDate'] : ''; 
+                                    $partnerLegalRepresentativeStatus = array_key_exists('Status', $partner['LegalRepresentative']) ? $partner['LegalRepresentative']['Status'] : ''; 
+                                    $partnerName = array_key_exists('Name', $partner) ? $partner['Name'] : ''; $partnerGender = array_key_exists('Gender', $partner) ? $partner['Gender'] : ''; 
+                                    $partnerDocument = array_key_exists('Document', $partner) ? $partner['Document'] : ''; 
+                                    $partnerDocumentType = array_key_exists('DocumentType', $partner) ? $partner['DocumentType'] : ''; 
+                                    $partnerDocumentFormatted = array_key_exists('DocumentFormatted', $partner) ? $partner['DocumentFormatted'] : ''; 
+                                    $partnerRanking = array_key_exists('Ranking', $partner) ? $partner['Ranking'] : ''; 
+                                    $partnerCreateDate = array_key_exists('CreateDate', $partner) ? $partner['CreateDate'] : ''; 
+                                    $partnerStatus = array_key_exists('Status', $partner) ? $partner['Status'] : ''; } }
+
+                                }
+                              }
+
+                              //Affiliateds
+                              if (array_key_exists('Affiliateds', $dados['Data'])) { 
+                              foreach ($dados['Data']['Affiliateds'] as $affiliated) { 
+                              $affiliatedIsHeadQuarter = array_key_exists('IsHeadQuarter', $affiliated) ? $affiliated['IsHeadQuarter'] : ''; 
+                              $affiliatedName = array_key_exists('Name', $affiliated) ? $affiliated['Name'] : ''; 
+                              $affiliatedGender = array_key_exists('Gender', $affiliated) ? $affiliated['Gender'] : ''; 
+                              $affiliatedDocument = array_key_exists('Document', $affiliated) ? $affiliated['Document'] : ''; 
+                              $affiliatedDocumentType = array_key_exists('DocumentType', $affiliated) ? $affiliated['DocumentType'] : ''; 
+                              $affiliatedDocumentFormatted = array_key_exists('DocumentFormatted', $affiliated) ? $affiliated['DocumentFormatted'] : ''; 
+                              $affiliatedRanking = array_key_exists('Ranking', $affiliated) ? $affiliated['Ranking'] : ''; 
+                              $affiliatedCreateDate = array_key_exists('CreateDate', $affiliated) ? $affiliated['CreateDate'] : ''; 
+                              $affiliatedStatus = array_key_exists('Status', $affiliated) ? $affiliated['Status'] : ''; 
+                            
+                            } 
+                          }
+
+                            //Debits
+                            if (array_key_exists('Debits', $dados['Data'])) { 
+                            foreach ($dados['Data']['Debits'] as $debit) { $debitCompanyID = array_key_exists('CompanyID', $debit) ? $debit['CompanyID'] : ''; 
+                            $debitCompanyName = array_key_exists('CompanyName', $debit) ? $debit['CompanyName'] : ''; 
+                            $debitCurrentQuantity = array_key_exists('CurrentQuantity', $debit) ? $debit['CurrentQuantity'] : ''; 
+                            $debitHistoryQuantity = array_key_exists('HistoryQuantity', $debit) ? $debit['HistoryQuantity'] : ''; 
+                            $debitRanking = array_key_exists('Ranking', $debit) ? $debit['Ranking'] : ''; 
+                            $debitCreateDate = array_key_exists('CreateDate', $debit) ? $debit['CreateDate'] : ''; 
+                            $debitStatus = array_key_exists('Status', $debit) ? $debit['Status'] : ''; 
+                          
+                          }
+                         }
+                         //BankChecks
+                         if (array_key_exists('BankChecks', $dados['Data'])) { 
+                          foreach ($dados['Data']['BankChecks'] as $bankCheck) { $bankCheckType = array_key_exists('Type', $bankCheck) ? $bankCheck['Type'] : ''; 
+                            $bankCheckReason = array_key_exists('Reason', $bankCheck) ? $bankCheck['Reason'] : ''; 
+                            $bankCheckActiveQuantity = array_key_exists('Active', $bankCheck) && array_key_exists('Quantity', $bankCheck['Active']) ? $bankCheck['Active']['Quantity'] : ''; 
+                            $bankCheckActiveLastDate = array_key_exists('Active', $bankCheck) && array_key_exists('LastDate', $bankCheck['Active']) ? $bankCheck['Active']['LastDate'] : ''; 
+                            $bankCheckPayedQuantity = array_key_exists('Payed', $bankCheck) && array_key_exists('Quantity', $bankCheck['Payed']) ? $bankCheck['Payed']['Quantity'] : ''; 
+                            $bankCheckPayedLastDate = array_key_exists('Payed', $bankCheck) && array_key_exists('LastDate', $bankCheck['Payed']) ? $bankCheck['Payed']['LastDate'] : ''; 
+                            $bankCheckExpiredQuantity = array_key_exists('Expired', $bankCheck) && array_key_exists('Quantity', $bankCheck['Expired']) ? $bankCheck['Expired']['Quantity'] : ''; 
+                            $bankCheckExpiredLastDate = array_key_exists('Expired', $bankCheck) && array_key_exists('LastDate', $bankCheck['Expired']) ? $bankCheck['Expired']['LastDate'] : ''; 
+                            $bankCheckBank = array_key_exists('Bank', $bankCheck) ? $bankCheck['Bank'] : ''; $bankCheckAgency = array_key_exists('Agency', $bankCheck) ? $bankCheck['Agency'] : ''; 
+                            $bankCheckName = array_key_exists('Name', $bankCheck) ? $bankCheck['Name'] : ''; $bankCheckRanking = array_key_exists('Ranking', $bankCheck) ? $bankCheck['Ranking'] : ''; 
+                            $bankCheckCreateDate = array_key_exists('CreateDate', $bankCheck) ? $bankCheck['CreateDate'] : ''; 
+                            $bankCheckStatus = array_key_exists('Status', $bankCheck) ? $bankCheck['Status'] : '';
+                           }
+                         }
+
+                         //BankReferences
+                         if (array_key_exists('BankReferences', $dados['Data'])) { 
+                          foreach ($dados['Data']['BankReferences'] as $bankReference) { 
+                          $bankReferenceType = array_key_exists('Type', $bankReference) ? $bankReference['Type'] : ''; 
+                          $bankReferenceBank = array_key_exists('Bank', $bankReference) ? $bankReference['Bank'] : ''; 
+                          $bankReferenceAgency = array_key_exists('Agency', $bankReference) ? $bankReference['Agency'] : ''; 
+                          $bankReferenceName = array_key_exists('Name', $bankReference) ? $bankReference['Name'] : ''; 
+                          $bankReferenceRanking = array_key_exists('Ranking', $bankReference) ? $bankReference['Ranking'] : ''; 
+                          $bankReferenceCreateDate = array_key_exists('CreateDate', $bankReference) ? $bankReference['CreateDate'] : ''; 
+                          $bankReferenceStatus = array_key_exists('Status', $bankReference) ? $bankReference['Status'] : '';
+                        
+                        } 
+                      }    
+
+                      //Assistances
+                      if (array_key_exists('Assistances', $dados['Data'])) { 
+                        foreach ($dados['Data']['Assistances'] as $assistance) { 
+                        $assistanceType = array_key_exists('Type', $assistance) ? $assistance['Type'] : ''; 
+                        $assistanceValue = array_key_exists('Value', $assistance) ? $assistance['Value'] : ''; 
+                        $assistanceCode = array_key_exists('Code', $assistance) ? $assistance['Code'] : ''; 
+                        $assistanceCity = array_key_exists('City', $assistance) ? $assistance['City'] : ''; 
+                        $assistanceState = array_key_exists('State', $assistance) ? $assistance['State'] : ''; 
+                        $assistanceBank = array_key_exists('Bank', $assistance) ? $assistance['Bank'] : ''; 
+                        $assistanceAgency = array_key_exists('Agency', $assistance) ? $assistance['Agency'] : ''; 
+                        $assistanceRanking = array_key_exists('Ranking', $assistance) ? $assistance['Ranking'] : ''; 
+                        $assistanceCreateDate = array_key_exists('CreateDate', $assistance) ? $assistance['CreateDate'] : ''; 
+                        $assistanceStatus = array_key_exists('Status', $assistance) ? $assistance['Status'] : ''; 
+                      } 
+                    }
+
+                    //Refunds
+                    if (array_key_exists('Refunds', $dados['Data'])) { 
+                      foreach ($dados['Data']['Refunds'] as $refund) { 
+                      $refundYear = array_key_exists('Year', $refund) ? $refund['Year'] : ''; 
+                      $refundLot = array_key_exists('Lot', $refund) ? $refund['Lot'] : ''; 
+                      $refundCreditDate = array_key_exists('CreditDate', $refund) ? $refund['CreditDate'] : ''; 
+                      $refundRefundStatus = array_key_exists('RefundStatus', $refund) ? $refund['RefundStatus'] : ''; 
+                      $refundBank = array_key_exists('Bank', $refund) ? $refund['Bank'] : ''; 
+                      $refundAgency = array_key_exists('Agency', $refund) ? $refund['Agency'] : ''; 
+                      $refundName = array_key_exists('Name', $refund) ? $refund['Name'] : ''; 
+                      $refundRanking = array_key_exists('Ranking', $refund) ? $refund['Ranking'] : ''; 
+                      $refundCreateDate = array_key_exists('CreateDate', $refund) ? $refund['CreateDate'] : ''; 
+                      $refundStatus = array_key_exists('Status', $refund) ? $refund['Status'] : ''; 
+                    } 
+                  }
+                       
+                  //Services
+                  if (array_key_exists('Services', $dados['Data'])) { 
+                    foreach ($dados['Data']['Services'] as $service) { 
+                      $serviceType = array_key_exists('Type', $service) ? $service['Type'] : ''; 
+                      $serviceNumber = array_key_exists('Number', $service) ? $service['Number'] : ''; 
+                      $serviceDescription = array_key_exists('Description', $service) ? $service['Description'] : ''; 
+                      $serviceData = array_key_exists('Data', $service) ? $service['Data'] : ''; 
+                      $serviceRanking = array_key_exists('Ranking', $service) ? $service['Ranking'] : ''; 
+                      $serviceCreateDate = array_key_exists('CreateDate', $service) ? $service['CreateDate'] : ''; 
+                      $serviceStatus = array_key_exists('Status', $service) ? $service['Status'] : '';
+                     } 
+                    }
+
+                  //Restrictions
+                  if (array_key_exists('Restrictions', $dados['Data'])) { 
+                  foreach ($dados['Data']['Restrictions'] as $restriction) { 
+                  $restrictionTypeId = array_key_exists('TypeId', $restriction) ? $restriction['TypeId'] : ''; 
+                  $restrictionName = array_key_exists('Name', $restriction) ? $restriction['Name'] : ''; 
+                  $restrictionDescription = array_key_exists('Description', $restriction) ? $restriction['Description'] : ''; 
+                  $restrictionProcessNumber = array_key_exists('ProcessNumber', $restriction) ? $restriction['ProcessNumber'] : ''; 
+                  $restrictionPublishDate = array_key_exists('PublishDate', $restriction) ? $restriction['PublishDate'] : ''; 
+                  $restrictionRemoveDate = array_key_exists('RemoveDate', $restriction) ? $restriction['RemoveDate'] : ''; 
+                  $restrictionRanking = array_key_exists('Ranking', $restriction) ? $restriction['Ranking'] : ''; 
+                  $restrictionCreateDate = array_key_exists('CreateDate', $restriction) ? $restriction['CreateDate'] : ''; 
+                  $restrictionStatus = array_key_exists('Status', $restriction) ? $restriction['Status'] : '';
+                 }
+                }
+
+                //Protests
+                if (array_key_exists('Protests', $dados['Data'])) { 
+                foreach ($dados['Data']['Protests'] as $protest) { 
+                $protestState = array_key_exists('State', $protest) ? $protest['State'] : ''; 
+                $protestCity = array_key_exists('City', $protest) ? $protest['City'] : ''; 
+                $protestLocation = array_key_exists('Location', $protest) ? $protest['Location'] : ''; 
+                $protestQuantity = array_key_exists('Quantity', $protest) ? $protest['Quantity'] : ''; 
+                $protestRanking = array_key_exists('Ranking', $protest) ? $protest['Ranking'] : ''; 
+                $protestCreateDate = array_key_exists('CreateDate', $protest) ? $protest['CreateDate'] : ''; 
+                $protestStatus = array_key_exists('Status', $protest) ? $protest['Status'] : ''; 
+              } 
+            }
+
+            //Protests
+            if (array_key_exists('Protests', $dados['Data'])) { 
+              foreach ($dados['Data']['Protests'] as $protest) { 
+              $protestState = array_key_exists('State', $protest) ? $protest['State'] : ''; 
+              $protestCity = array_key_exists('City', $protest) ? $protest['City'] : ''; 
+              $protestLocation = array_key_exists('Location', $protest) ? $protest['Location'] : ''; 
+              $protestQuantity = array_key_exists('Quantity', $protest) ? $protest['Quantity'] : ''; 
+              $protestRanking = array_key_exists('Ranking', $protest) ? $protest['Ranking'] : ''; 
+              $protestCreateDate = array_key_exists('CreateDate', $protest) ? $protest['CreateDate'] : ''; 
+              $protestStatus = array_key_exists('Status', $protest) ? $protest['Status'] : ''; 
+            } 
+          }
+
+          //LawProcessSummary
+          if (array_key_exists('LawProcessSummary', $dados['Data'])) { 
+            $lawProcessSummaryTotal = array_key_exists('Total', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Total'] : ''; 
+            $lawProcessSummaryPassive = array_key_exists('Passive', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Passive'] : ''; 
+            $lawProcessSummaryActive = array_key_exists('Active', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Active'] : ''; 
+            $lawProcessSummaryOthers = array_key_exists('Others', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Others'] : ''; 
+            $lawProcessSummaryRanking = array_key_exists('Ranking', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Ranking'] : ''; 
+            $lawProcessSummaryCreateDate = array_key_exists('CreateDate', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['CreateDate'] : ''; 
+            $lawProcessSummaryStatus = array_key_exists('Status', $dados['Data']['LawProcessSummary']) ? $dados['Data']['LawProcessSummary']['Status'] : '';
+           }
+
+           //LawProcesses
+          if (array_key_exists('LawProcesses', $dados['Data'])) { 
+            foreach ($dados['Data']['LawProcesses'] as $lawProcess) { $lawProcessCode = array_key_exists('Code', $lawProcess) ? $lawProcess['Code'] : ''; 
+              $lawProcessNumber = array_key_exists('Number', $lawProcess) ? $lawProcess['Number'] : ''; 
+              $lawProcessControlNumber = array_key_exists('ControlNumber', $lawProcess) ? $lawProcess['ControlNumber'] : ''; 
+              $lawProcessArea = array_key_exists('Area', $lawProcess) ? $lawProcess['Area'] : ''; 
+              $lawProcessType = array_key_exists('Type', $lawProcess) ? $lawProcess['Type'] : ''; 
+              $lawProcessSubject = array_key_exists('Subject', $lawProcess) ? $lawProcess['Subject'] : ''; 
+              $lawProcessJudge = array_key_exists('Judge', $lawProcess) ? $lawProcess['Judge'] : ''; 
+              $lawProcessDistributionDate = array_key_exists('DistributionDate', $lawProcess) ? $lawProcess['DistributionDate'] : ''; 
+              $lawProcessArchiveDate = array_key_exists('ArchiveDate', $lawProcess) ? $lawProcess['ArchiveDate'] : ''; 
+              $lawProcessArchiveDescription = array_key_exists('ArchiveDescription', $lawProcess) ? $lawProcess['ArchiveDescription'] : ''; 
+              $lawProcessValue = array_key_exists('Value', $lawProcess) ? $lawProcess['Value'] : ''; 
+              $lawProcessPartsType = array_key_exists('Type', $lawProcess['Parts'][0]) ? $lawProcess['Parts'][0]['Type'] : ''; 
+              $lawProcessPartsName = array_key_exists('Name', $lawProcess['Parts'][0]) ? $lawProcess['Parts'][0]['Name'] : ''; 
+              $lawProcessRanking = array_key_exists('Ranking', $lawProcess) ? $lawProcess['Ranking'] : ''; 
+              $lawProcessCreateDate = array_key_exists('CreateDate', $lawProcess) ? $lawProcess['CreateDate'] : ''; 
+              $lawProcessStatus = array_key_exists('Status', $lawProcess) ? $lawProcess['Status'] : ''; 
+            } 
+          }
+
+          //ArrestWarranties
+          if (array_key_exists('ArrestWarranties', $dados['Data'])) { 
+            foreach ($dados['Data']['ArrestWarranties'] as $arrestWarranty) { 
+              $arrestWarrantyProcess = array_key_exists('Process', $arrestWarranty) ? $arrestWarranty['Process'] : ''; 
+              $arrestWarrantyWarrantStatus = array_key_exists('WarrantStatus', $arrestWarranty) ? $arrestWarranty['WarrantStatus'] : ''; 
+              $arrestWarrantySubjects = array_key_exists('Subjects', $arrestWarranty) ? $arrestWarranty['Subjects'] : ''; 
+              $arrestWarrantyExpeditionDate = array_key_exists('ExpeditionDate', $arrestWarranty) ? $arrestWarranty['ExpeditionDate'] : '';
+              $arrestWarrantyCrimeDate = array_key_exists('CrimeDate', $arrestWarranty) ? $arrestWarranty['CrimeDate'] : ''; 
+              $arrestWarrantyExpirationDate = array_key_exists('ExpirationDate', $arrestWarranty) ? $arrestWarranty['ExpirationDate'] : ''; 
+              $arrestWarrantyConclusionDate = array_key_exists('ConclusionDate', $arrestWarranty) ? $arrestWarranty['ConclusionDate'] : ''; 
+              $arrestWarrantyLocale = array_key_exists('Locale', $arrestWarranty) ? $arrestWarranty['Locale'] : ''; 
+              $arrestWarrantyClass = array_key_exists('Class', $arrestWarranty) ? $arrestWarranty['Class'] : ''; 
+              $arrestWarrantySubject = array_key_exists('Subject', $arrestWarranty) ? $arrestWarranty['Subject'] : ''; 
+              $arrestWarrantyDisposition = array_key_exists('Disposition', $arrestWarranty) ? $arrestWarranty['Disposition'] : ''; 
+              $arrestWarrantyMagistrate = array_key_exists('Magistrate', $arrestWarranty) ? $arrestWarranty['Magistrate'] : ''; 
+              $arrestWarrantyRanking = array_key_exists('Ranking', $arrestWarranty) ? $arrestWarranty['Ranking'] : ''; 
+              $arrestWarrantyCreateDate = array_key_exists('CreateDate', $arrestWarranty) ? $arrestWarranty['CreateDate'] : ''; 
+              $arrestWarrantyStatus = array_key_exists('Status', $arrestWarranty) ? $arrestWarranty['Status'] : '';
+             } 
+            }
+
+            //Queries
+            if (array_key_exists('Queries', $dados['Data'])) { 
+              foreach ($dados['Data']['Queries'] as $query) { $queryQuantity = array_key_exists('Quantity', $query) ? $query['Quantity'] : ''; 
+                $queryCnae = array_key_exists('Cnae', $query) ? $query['Cnae'] : ''; 
+                $queryDescription = array_key_exists('Description', $query) ? $query['Description'] : ''; 
+                $queryName = array_key_exists('Name', $query) ? $query['Name'] : ''; 
+                $queryGender = array_key_exists('Gender', $query) ? $query['Gender'] : ''; 
+                $queryDocument = array_key_exists('Document', $query) ? $query['Document'] : ''; 
+                $queryDocumentType = array_key_exists('DocumentType', $query) ? $query['DocumentType'] : ''; 
+                $queryDocumentFormatted = array_key_exists('DocumentFormatted', $query) ? $query['DocumentFormatted'] : ''; 
+                $queryRanking = array_key_exists('Ranking', $query) ? $query['Ranking'] : ''; 
+                $queryCreateDate = array_key_exists('CreateDate', $query) ? $query['CreateDate'] : ''; 
+                $queryStatus = array_key_exists('Status', $query) ? $query['Status'] : '';
+               } 
+            }
+
+            //WebSites
+            if (array_key_exists('WebSites', $dados['Data'])) { 
+              foreach ($dados['Data']['WebSites'] as $website) { 
+                $websiteURL = array_key_exists('URL', $website) ? $website['URL'] : ''; 
+                $websiteCheckDate = array_key_exists('CheckDate', $website) ? $website['CheckDate'] : ''; 
+                $websiteWebTrafficGlobalRank = array_key_exists('GlobalRank', $website['WebTraffic']) ? $website['WebTraffic']['GlobalRank'] : ''; 
+                $websiteWebTrafficTotalVisits = array_key_exists('TotalVisits', $website['WebTraffic']) ? $website['WebTraffic']['TotalVisits'] : ''; 
+                $websiteWebTrafficAvgVisitDuration = array_key_exists('AvgVisitDuration', $website['WebTraffic']) ? $website['WebTraffic']['AvgVisitDuration'] : ''; 
+                $websiteWebTrafficPagesPerVisit = array_key_exists('PagesPerVisit', $website['WebTraffic']) ? $website['WebTraffic']['PagesPerVisit'] : ''; $
+              $webTrafficBounceRate = array_key_exists('BounceRate', $website['WebTraffic']) ? $website['WebTraffic']['BounceRate'] : ''; 
+              $websiteWebTrafficCountry = array_key_exists('Country', $website['WebTraffic']) ? $website['WebTraffic']['Country'] : ''; 
+              $websiteWebTrafficCountryRank = array_key_exists('CountryRank', $website['WebTraffic']) ? $website['WebTraffic']['CountryRank'] : ''; 
+              $websiteWebTrafficCategory = array_key_exists('Category', $website['WebTraffic']) ? $website['WebTraffic']['Category'] : ''; 
+              $websiteWebTrafficCategoryRank = array_key_exists('CategoryRank', $website['WebTraffic']) ? $website['WebTraffic']['CategoryRank'] : ''; 
+              $websiteWebTrafficAudience = array_key_exists('Audience', $website['WebTraffic']) ? $website['WebTraffic']['Audience'] : ''; 
+              $websiteRanking = array_key_exists('Ranking', $website) ? $website['Ranking'] : ''; 
+              $websiteCreateDate = array_key_exists('CreateDate', $website) ? $website['CreateDate'] : ''; 
+              $websiteStatus = array_key_exists('Status', $website) ? $website['Status'] : ''; 
+            } 
+          }
+          
+          //PoliticalPartyDonations
+          if (array_key_exists('PoliticalPartyDonations', $dados['Data'])) { 
+            foreach ($dados['Data']['PoliticalPartyDonations'] as $donation) { $donationDate = array_key_exists('Date', $donation) ? $donation['Date'] : ''; 
+              $donationAmount = array_key_exists('Amount', $donation) ? $donation['Amount'] : ''; 
+              $donationPoliticalPartyNumber = array_key_exists('Number', $donation['PoliticalParty']) ? $donation['PoliticalParty']['Number'] : ''; 
+              $donationPoliticalPartyInitials = array_key_exists('Initials', $donation['PoliticalParty']) ? $donation['PoliticalParty']['Initials'] : ''; 
+              $donationPoliticalPartyName = array_key_exists('Name', $donation['PoliticalParty']) ? $donation['PoliticalParty']['Name'] : ''; 
+              $donationRanking = array_key_exists('Ranking', $donation) ? $donation['Ranking'] : ''; 
+              $donationCreateDate = array_key_exists('CreateDate', $donation) ? $donation['CreateDate'] : ''; 
+              $donationStatus = array_key_exists('Status', $donation) ? $donation['Status'] : ''; 
+            } 
+          }
+          
+          //StatisticModels
+          if (array_key_exists('StatisticModels', $dados['Data'])) { 
+            foreach ($dados['Data']['StatisticModels'] as $statisticModel) { $statisticModelKind = array_key_exists('Kind', $statisticModel) ? $statisticModel['Kind'] : ''; 
+              $statisticModelId = array_key_exists('Id', $statisticModel) ? $statisticModel['Id'] : ''; 
+              $statisticModelName = array_key_exists('Name', $statisticModel) ? $statisticModel['Name'] : ''; 
+              $statisticModelAverageDecil = array_key_exists('AverageDecil', $statisticModel) ? $statisticModel['AverageDecil'] : ''; 
+              $statisticModelAverageScore = array_key_exists('AverageScore', $statisticModel) ? $statisticModel['AverageScore'] : ''; 
+              $statisticModelModelUpdate = array_key_exists('ModelUpdate', $statisticModel) ? $statisticModel['ModelUpdate'] : ''; 
+              $statisticModelDecil = array_key_exists('Decil', $statisticModel) ? $statisticModel['Decil'] : ''; 
+              $statisticModelScore = array_key_exists('Score', $statisticModel) ? $statisticModel['Score'] : ''; 
+              $statisticModelIsValid = array_key_exists('IsValid', $statisticModel) ? $statisticModel['IsValid'] : ''; 
+              $statisticModelRanking = array_key_exists('Ranking', $statisticModel) ? $statisticModel['Ranking'] :''; 
+              $statisticModelCreateDate = array_key_exists('CreateDate', $statisticModel) ? $statisticModel['CreateDate'] : ''; 
+              $statisticModelStatus = array_key_exists('Status', $statisticModel) ? $statisticModel['Status'] : ''; 
+            } 
+          }
+
+
+
+
 
 
                                 
