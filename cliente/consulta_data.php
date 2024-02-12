@@ -289,8 +289,8 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
              if (array_key_exists('VoterRegistry', $dados['Data'])) {
               $dbrgZone = array_key_exists('Zone', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Zone'] : ''; 
               $dbrgSection = array_key_exists('Section', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Section'] : ''; 
-              $dbrgpIssuer = array_key_exists('Issuer', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Issuer'] : ''; 
-              $dbrgpStreet = array_key_exists('Street', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Street'] : ''; 
+              $dbrgIssuer = array_key_exists('Issuer', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Issuer'] : ''; 
+              $dbrgStreet = array_key_exists('Street', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Street'] : ''; 
               $dbrgNumber = array_key_exists('Number', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Number'] : ''; 
               $dbrgComplement = array_key_exists('Complement', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['Complement'] : ''; 
               $dbrgDistrict = array_key_exists('District', $dados['Data']['VoterRegistry']) ? $dados['Data']['VoterRegistry']['District'] : ''; 
@@ -306,6 +306,9 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
               
           }
 
+
+
+           
       
 
          //DigitalBehavior -"Lat": "Long":  
@@ -332,17 +335,17 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
                     $dbStatus = array_key_exists('Status', $dados['Data']['DigitalBehavior']) ? $dados['Data']['DigitalBehavior']['Status'] : ''; 
                 }
                           //DigitalBehavior - OtherDocuments
-             if (array_key_exists('OtherDocuments', $dados['Data'])) {
-              $otdType = array_key_exists('Type', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Type'] : ''; 
-              $otdDocument = array_key_exists('Document', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Document'] : ''; 
-              $otdExpeditionDate = array_key_exists('ExpeditionDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['ExpeditionDate'] : ''; 
-              $otdExpirationDate = array_key_exists('ExpirationDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['ExpirationDate'] : ''; 
-              $otdState = array_key_exists('State', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['State'] : ''; 
-              $otdData = array_key_exists('Data', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Data'] : ''; 
-              $otdRanking = array_key_exists('Ranking', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Ranking'] : ''; 
-              $otdCreateDate = array_key_exists('CreateDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['CreateDate'] : ''; 
-              $otdStatus = array_key_exists('Status', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Status'] : ''; 
-          }
+                          if (array_key_exists('OtherDocuments', $dados['Data'])) {
+                            $otdType = array_key_exists(0, $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments'][0]['Type'] : ''; 
+                            $otdDocument = array_key_exists(0, $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments'][0]['Document'] : ''; 
+                            $otdExpeditionDate = array_key_exists('ExpeditionDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['ExpeditionDate'] : ''; 
+                            $otdExpirationDate = array_key_exists('ExpirationDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['ExpirationDate'] : ''; 
+                            $otdState = array_key_exists(0, $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments'][0]['State'] : ''; 
+                            $otdData = array_key_exists('Data', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['Data'] : ''; 
+                            $otdRanking = array_key_exists(0, $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments'][0]['Ranking'] : ''; 
+                            $otdCreateDate = array_key_exists('CreateDate', $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments']['CreateDate'] : ''; 
+                            $otdStatus = array_key_exists(0, $dados['Data']['OtherDocuments']) ? $dados['Data']['OtherDocuments'][0]['Status'] : ''; 
+                        }
 
    
 
@@ -534,16 +537,17 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
                                 
                                 //DPVAT
                                 if (array_key_exists('DPVAT', $dados['Data'])) {
-                                      $dpvatSituation = array_key_exists('Situation', $dpvat) ? $dpvat['Situation'] : ''; 
-                                      $dpvatDataPayment = array_key_exists('DataPayment', $dpvat) ? $dpvat['DataPayment'] : ''; 
-                                      $dpvatPrice = array_key_exists('Price', $dpvat) ? $dpvat['Price'] : ''; 
-                                      $dpvatYear = array_key_exists('Year', $dpvat) ? $dpvat['Year'] : ''; 
-                                      $dpvatRanking = array_key_exists('Ranking', $dpvat) ? $dpvat['Ranking'] : ''; 
-                                      $dpvatCreateDate = array_key_exists('CreateDate', $dpvat) ? $dpvat['CreateDate'] : ''; 
-                                      $dpvatStatus = array_key_exists('Status', $dpvat) ? $dpvat['Status'] : '';
-                                    
-                                    }
+                                 
+                                     $dpvatSituation = array_key_exists('Situation', $dados['Data']['DPVAT']) ? $dados['Data']['DPVAT']['Situation'] : ''; 
+                                     $dpvatDataPayment = array_key_exists('DataPayment', $dados) ? $dados['DataPayment'] : ''; 
+                                     $dpvatPrice = array_key_exists('Price', $dados) ? $dados['Price'] : ''; 
+                                     $dpvatYear = array_key_exists('Year', $dados) ? $dados['Year'] : ''; 
+                                     $dpvatRanking = array_key_exists('Ranking', $dados) ? $dados['Ranking'] : ''; 
+                                     $dpvatCreateDate = array_key_exists('CreateDate', $dados) ? $dados['CreateDate'] : ''; 
+                                     $dpvatStatus = array_key_exists('Status', $dados) ? $dados['Status'] : '';
                                   
+                                
+                                }
                              
                                 
                                   //Properties
@@ -930,14 +934,27 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
             //WebSites
             if (array_key_exists('WebSites', $dados['Data'])) { 
               foreach ($dados['Data']['WebSites'] as $website) { 
+                if (array_key_exists('WebTraffic', $website) && array_key_exists('BounceRate', $website['WebTraffic'])) {
+                  $webTrafficBounceRate = $website['WebTraffic']['BounceRate'];
+              } else {
+                  $webTrafficBounceRate = '';
+              }
+
+              if (array_key_exists('WebTraffic', $website) && array_key_exists('Country', $website['WebTraffic'])) {
+                $websiteWebTrafficCountry = $website['WebTraffic']['Country'];
+            } else {
+                $websiteWebTrafficCountry = '';
+            }
                 $websiteURL = array_key_exists('URL', $website) ? $website['URL'] : ''; 
                 $websiteCheckDate = array_key_exists('CheckDate', $website) ? $website['CheckDate'] : ''; 
                 $websiteWebTrafficGlobalRank = array_key_exists('GlobalRank', $website['WebTraffic']) ? $website['WebTraffic']['GlobalRank'] : ''; 
                 $websiteWebTrafficTotalVisits = array_key_exists('TotalVisits', $website['WebTraffic']) ? $website['WebTraffic']['TotalVisits'] : ''; 
                 $websiteWebTrafficAvgVisitDuration = array_key_exists('AvgVisitDuration', $website['WebTraffic']) ? $website['WebTraffic']['AvgVisitDuration'] : ''; 
                 $websiteWebTrafficPagesPerVisit = array_key_exists('PagesPerVisit', $website['WebTraffic']) ? $website['WebTraffic']['PagesPerVisit'] : ''; $
-              $webTrafficBounceRate = array_key_exists('BounceRate', $website['WebTraffic']) ? $website['WebTraffic']['BounceRate'] : ''; 
-              $websiteWebTrafficCountry = array_key_exists('Country', $website['WebTraffic']) ? $website['WebTraffic']['Country'] : ''; 
+
+           
+            
+                $websiteWebTrafficCountry = array_key_exists('Country', $website['WebTraffic']) ? $website['WebTraffic']['Country'] : ''; 
               $websiteWebTrafficCountryRank = array_key_exists('CountryRank', $website['WebTraffic']) ? $website['WebTraffic']['CountryRank'] : ''; 
               $websiteWebTrafficCategory = array_key_exists('Category', $website['WebTraffic']) ? $website['WebTraffic']['Category'] : ''; 
               $websiteWebTrafficCategoryRank = array_key_exists('CategoryRank', $website['WebTraffic']) ? $website['WebTraffic']['CategoryRank'] : ''; 
@@ -1482,7 +1499,7 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
 </table>
 
 
-
+<!--DigitalBehavior  - VoterRegistry" -->
 <table class="table table-bordered">
 <?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior']['VoterRegistry'])): ?>
     <h3>DigitalBehavior - VoterRegistry</h3>
@@ -1503,34 +1520,175 @@ if (isset($dados) && is_array($dados) && array_key_exists('Data', $dados)) {
       <th scope="col">DneId</th>
       <th scope="col">IBGE</th>
       <th scope="col">CensusSector</th>
-      <th scope="col">Geolocation</th>
-      
+      <th scope="col">Geolocation</th>          
+            
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbRanking ?? ''; ?></p></td>
-      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
-      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbrgZone  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $dbrgSection  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbrgIssuer  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $dbrgStreet ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbrgNumber  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbrgComplement  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbrgDistrict ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbrgZipCode ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbrgCity   ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbrgType ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbrgTitle ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbrgState  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo $dbrgDneId ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbrgIBGE ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbrgCensusSector  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbrgGeolocation  ?? ''; ?></p></td>
 
     </tr>   
   </tbody>
   <?php endif; ?>
   
 </table>
+
+
+
+        
+          
+
+<!--DigitalBehavior -"Lat": "Long" -->
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
+    <h3>DigitalBehavior - Lat - Long</h3>
+  <thead>
+    <tr>
+      <th scope="col">Lat</th>
+      <th scope="col">Long</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbLat  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $dbLong  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+<!-- DigitalBehavior - Borders -->
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
+    <h3>DigitalBehavior - Lat - Long</h3>
+  <thead>
+    <tr>
+      <th scope="col">Lat</th>
+      <th scope="col">Long</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbbBorders  ?? ''; ?></p></td>
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+
+
+<!--DigitalBehavior " -->
+<table class="table table-bordered">
+<?php if (array_key_exists('DigitalBehavior', $dados['Data']) && !empty($dados['Data']['DigitalBehavior'])): ?>
+    <h3>DigitalBehavior</h3>
+  <thead>
+    <tr>
+      <th scope="col">Complement Formatted</th>
+      <th scope="col">Alias</th>
+      <th scope="col">Short Alias</th>
+      <th scope="col">Company Document</th>
+      <th scope="col">Company Name</th>
+      <th scope="col">Complement</th>
+      <th scope="col">Score</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>             
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbComplementFormatted  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $dbAlias  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbShortAlias  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $dbCompanyDocument ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCompanyName  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $dbScore  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $dbRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $dbCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $dbStatus   ?? ''; ?></p></td>
+
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- OtherDocuments " -->
+<table class="table table-bordered">
+<?php if (array_key_exists('OtherDocuments', $dados['Data']) && !empty($dados['Data']['OtherDocuments'])): ?>
+    <h3>OtherDocuments </h3>
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Document</th>
+      <th scope="col">Expedition Date</th>
+      <th scope="col">Expiration Date</th>
+      <th scope="col">State</th>
+      <th scope="col">Data</th>
+      <th scope="col">Ranking</th>
+      <th scope="col">Create Date</th>
+      <th scope="col">Status</th>             
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $otdType  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo  $otdDocument  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $otdExpeditionDate  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo   $otdExpirationDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $otdState  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo  $otdData  ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Relevance" name="Relevance" readonly><?php echo  $otdRanking ?? ''; ?></p></td>
+      <td><p class="inputUser" id="Ranking" name="Ranking" readonly><?php echo $otdCreateDate ?? ''; ?></p></td>
+      <td><p class="inputUser" id="CreateDate" name="CreateDate" readonly><?php echo $otdStatus   ?? ''; ?></p></td>
+
+    </tr>   
+  </tbody>
+  <?php endif; ?>
+  
+</table>
+
+
+
+
 
 
 
