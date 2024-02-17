@@ -1,0 +1,1340 @@
+/*TABLET DADOS BÁSICOS RESPONSIVO*/
+@media (min-width: 568px) and (max-width: 1200px) {
+
+  .card-informacoes_pessoais {
+    margin-bottom: 40px;
+  }
+
+  .main-info_container {
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .card-info {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+  }
+
+  .col-1 {
+    width: 100%;
+    display: flex;
+    margin: 0px!important;
+    padding: 0!important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+  }
+
+
+  .person-photo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+
+    background-color: #d4d4d4;
+
+    overflow: hidden;
+
+    border-radius: 64px !important;
+  }
+
+  .icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .group-field {
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  .row {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .col-2 {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #nome-dados-basicos {
+    width: auto;
+    max-width: 60%;
+  }
+
+  #genero-dados-basicos {
+    width: 30%;
+  }
+
+  #estado_civil-dados-basicos {
+    width: 50%;
+  }
+
+  #escolaridade-dados-basicos {
+    width: 30%;
+  }
+
+  #cpf-dados-basicos {
+    width: 50%;
+  }
+
+  #idade-dados-basicos {
+    width: 30%;
+  }
+
+  #nascimento-dados-basicos {
+    width: 50%;
+  }
+
+  #signo-dados-basicos {
+    width: 30%;
+  }
+
+  #situacao_cadastral-dados-basicos {
+    width: 50%;
+  }
+
+  #nacionalidade-dados-basicos {
+    width: 30%;
+  }
+
+  #dependentes-dados-basicos {
+    width: 50%;
+  }
+
+  #obito-dados-basicos {
+    width: 30%;
+  }
+
+
+
+  /* MOBILE DADOS sumarizados RESPONSIVO*/
+
+  .container-dados-sumarizados {
+    display: inline-block;
+    margin-bottom: 40px;
+
+    width: 90%;
+    
+    break-inside: avoid-region !important;
+  }
+
+  #dados-sumarizados {
+    padding: 0 !important;
+    margin-bottom: 0px;
+  }
+
+  .section-dados-sumarizados {
+    width: 100% !important;
+  }
+
+  .div_agrupamento-dados_sumarizados {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dado-sumarizado {
+    cursor: pointer;
+
+    max-width: 100%;
+    height: auto;
+    width: 30%;
+   
+  }
+
+  .email-sumarizado {
+    width: 100%;
+    height: 100%;
+
+    background-color: #fcecca !important;
+    color: #e19b0b !important;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+  }
+
+  .email-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #f6bb42 !important;
+    color: #fff;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imoveis-sumarizado {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    background-color: #c2d7f3 !important;
+    color: #2363b6 !important;
+
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .imoveis-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #3498db !important;
+    color: #f5f8fd;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .telefones-sumarizado {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    background-color: #d2eece !important;
+    color: #47a839 !important;
+
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .telefones-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #70ca63 !important;
+    color: #f5f8fd;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .enderecos-sumarizado {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    background-color: #9fe3d2 !important;
+    color: #26816a !important;
+
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .enderecos-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #37bc9b !important;
+    color: #cef1e8;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contatos-sumarizado {
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    background-color: #7c829d !important;
+    color: #1a1c23 !important;
+
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .contatos-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #3b3f4f !important;
+    color: #9fa4b7;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carros-sumarizado {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    background-color: #efebfa !important;
+    color: #663dcc !important;
+
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  .carros-sumarizado-icon {
+    max-width: auto;
+    width: 30%;
+    text-align: center;
+
+    background-color: #967adc;
+    color: #fff;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imoveis-sumarizado-info,
+  .telefones-sumarizado-info,
+  .email-sumarizado-info,
+  .enderecos-sumarizado-info,
+  .contatos-sumarizado-info,
+  .carros-sumarizado-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imoveis-sumarizado-info > h2,
+  .telefones-sumarizado-info > h2,
+  .email-sumarizado-info > h2,
+  .enderecos-sumarizado-info > h2,
+  .contatos-sumarizado-info > h2,
+  .carros-sumarizado-info > h2 {
+    font-size: 25px;
+    display: flex;
+    line-height: 25px;
+
+    padding-left: 2px;
+    margin: 0;
+  }
+
+  .imoveis-sumarizado-info > small,
+  .telefones-sumarizado-info > small,
+  .email-sumarizado-info > small,
+  .enderecos-sumarizado-info > small,
+  .contatos-sumarizado-info > small,
+  .carros-sumarizado-info > small {
+    font-size: 9px;
+    display: block;
+    font-weight: 600;
+
+    padding-left: 25px;
+  }
+
+
+
+  /* MOBILE SITUAÇÃO CADASTRAL RESPONSIVO*/
+
+  .container_pai-situacao_cadastral {
+    break-inside: avoid-region;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: start;
+
+    max-width: 90%;
+    width: 90%;
+  }
+
+  #RegistrationStatus {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .principal-situacao_cadastral {
+    width: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #nome-situacao_cadastral{
+    max-width: 60%;
+    width: auto;
+  }
+
+  #codigo_controle-situacao_cadastral {
+    width: 30%;
+  }
+  
+  #ano_obito-situacao_cadastral {
+    width: 31%;
+  }
+
+  #status-situacao_cadastral {
+    width: 50%;
+  }
+  #emicao-situacao_cadastral {
+    width: 50%;
+  }
+
+  .agrupamento_geral-situacao_cadastral {
+    border-radius: 3px;
+    background-color: #fff;
+
+    height: auto;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+  }
+
+  #card-header-situacao_cadastral > button {
+    position: relative;
+    right: -60rem;
+    padding: 0 2px;
+    vertical-align: middle;
+    line-height: 0px;
+
+    font: inherit;
+  }
+
+  #card-header-situacao_cadastral > button:hover {
+    background-color: #d8d5d5;
+    transition: 1s;
+  }
+
+  .main-card-info-situacao_cadastral {
+    margin-top: 10px;
+  }
+
+
+
+  #nome-situacao_cadastral,
+  #status-situacao_cadastral,
+  #ano_obito-situacao_cadastral,
+  #data_inscricao-situacao_cadastral,
+  #emicao-situacao_cadastral,
+  #codigo_controle-situacao_cadastral {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  /* MOBILE CONTATO RESPONSIVO*/
+
+  .container_pai-top_dados_contato {
+    margin-bottom: 40px;
+  }
+
+  #TopContactInformation {
+    margin-bottom: 0px;
+  }
+
+  #TopContactInformation > div {
+      width: 100%;
+  }
+
+  .hot-email-1 {
+    background-color: #f5f5f5;
+    color: #888;
+
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+
+    margin-bottom: -1px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+    max-width: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main_container-hot-address, .main_container-hot-mobile_phone, .main_container-hot-phone {
+    width: 20%;
+    max-width: auto;
+  }
+
+  .hot-address-1 {
+    background-color: #fff;
+    color: #888;
+
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+
+    padding-bottom: 20px;
+    margin-bottom: -1px;
+    margin: 0 2px;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .text_container-hot_address, .text_container-hot_mobile_phone, .text_container-hot_phone {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .text_container-hot_address > strong, .text_container-hot_mobile_phone > strong,
+  .text_container-hot_phone > strong {
+    font-size: 13.5px;
+      
+    text-overflow: ellipsis;
+    width: calc(100% - 5px);
+    white-space: pre;
+    display: block!important;
+    
+    font-weight: 600;
+
+    cursor: pointer;
+    color: #888;
+  }
+
+  .text_container-hot_address > small, .text_container-hot_mobile_phone > small,
+  .text_container-hot_phone > small {
+    display: block;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: calc(100% - 5px);
+    white-space: pre;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .hot-mobile-phone-1 {
+    background-color: #fff;
+    color: #888;
+
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+
+    padding-bottom: 20px;
+
+    margin: 0px;
+    display: flex;
+    max-width: auto;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+
+  .hot-phone-1 {
+    background-color: #fff;
+    color: #888;
+
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+
+    padding-bottom: 20px;
+    margin: 0px;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .main-card-info-top_dados_contato {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .main-container-hot_email-1-list {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hot-email-1-list {
+    background-color: #f5f5f5;
+    border-color: #d7d7d7;
+    width: 100%;
+    height: 100%;
+    overflow: initial;
+    border: 1px solid #ddd;
+    margin-bottom: 0 !important;
+    border-radius: 3px;
+
+    margin: 0px!important;
+    padding: 0px;
+
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    color: #626262;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .panel-body-email_list {
+    height: auto;
+    clear: both;
+  }
+
+  .email-list {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .email-list-body {
+    border: 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .email-group-info {
+    display: flex;
+    width: 100%;
+  }
+
+  .email_list-group_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .sub_container-group_box  {
+    margin: 0px;
+
+  }
+
+  .txtrank {
+    width: 100%;
+
+  }
+
+  
+  /*PESSOAS MAIS RELEVANTES*/
+
+  .container_pai-pessoas_relevantes {
+    margin-bottom: 40px;
+  }
+
+  #MostRelevantPeople {
+    margin-bottom: 0px;
+  }
+
+  #MostRelevantPeople > div{
+    width: 100%;
+  }
+
+  .main-card-info-most_people {
+    height: auto;  
+  }
+
+  .col_1-most_people {
+    border-color: #1436cd;
+    border-bottom: 1px solid #b3b3b3;
+    padding: 5px 10px 7px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    min-height: 40px;
+
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box_photo {
+    width: auto;
+  }
+
+  .name_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+
+  .vinculo_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 10%;
+  }
+
+  .status_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .cpf_box-most_people {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .col_2-most_people {
+    border-color: #1436cd;
+    border-bottom: 1px solid #b3b3b3;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    min-height: 40px;
+
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  /*SCORE MARKETING PROCESSOS JUDICIAIS  */
+  
+  .main-card-score_credito {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-bottom: 40px;
+    height: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(98, 98, 98);
+  }
+  
+  #Score {
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .card-body-score {
+    width: 100%;
+  }
+  
+  #MarketingScore {
+    width: 100%;
+    margin: 0px;
+  }
+
+  #LawProcessSummary {
+    width: 100%;
+    margin: 0px;
+  }
+
+
+  /*RENDA + CLASSE SOCIAL*/
+
+  .main-card-classe_social {
+    margin-bottom: 40px;
+  }
+
+
+  #Income {
+    display: flex;
+    margin: 0px;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  #Income > div {
+    width: 100%;
+  }
+
+  .container_cima-classe_social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .green_box-classe_social {
+    width: 100%;
+  }
+
+  .main_container-baixo {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+  }
+
+
+  .container_baixo-classe_social {
+    display: flex;
+  }
+
+  .d-clp {
+    display: flex;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+  }
+
+  .e-cls {
+    height: auto;
+  }
+
+  
+  /*************** PF = lista de atividades/funções; PJ = CNAEs *******************/
+
+  .main-card-pf_lista_acoes_funcoes {
+    break-inside: avoid-region;
+    display: flex;
+
+    margin-bottom: 40px;
+    max-width: 90%;
+    max-height: 40%;
+    width: 90%;
+    height: auto;
+  }
+
+  #Activities {
+    margin-bottom: 0px;
+  }
+
+  #Activities > div {
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+  }
+
+
+  /*DADOS PROFISSIONAIS*/
+
+  .main-card-dados_profissionais {
+    margin-bottom: 40px;
+  }
+
+  #ProfessionalData {
+    display: flex;
+    margin-bottom: 0px;
+  }
+
+  #ProfessionalData > div {
+    width: 100%;
+  }
+
+
+  /*Pessoas de contato*/
+
+  .main-card-contact_persons  {
+    margin-bottom: 40px;
+  }
+
+  #ContactPersons {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  #ContactPersons  > div{
+    width: 100%;
+  }
+
+  .col-1-contact_persons, .col-2-contact_persons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+
+    align-items: center;
+    gap: 2px;
+    min-height: 40px;
+    cursor: pointer;
+  }
+
+  .name_box-contact_persons-1, .name_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+
+
+  .vinculo_box-contact_persons-1, .vinculo_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 10%;
+  }
+
+  .status_box-contact_persons-1, .status_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+  .cpf_box-contact_persons-1, .cpf_box-contact_persons-2 {
+    width: auto;
+    flex-wrap: wrap;
+    max-width: 15%;
+  }
+
+
+
+  
+  /*relacionamentos*/
+  
+  
+  .main-card-relacionamento {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+  
+  }
+
+  #InCommon {
+    margin-bottom: 0px;
+  }
+
+
+  /*ENDEREÇO*/
+
+  .main-card-lista_enderecos {
+    margin-bottom: 40px;
+  }
+
+  #Addresses {
+    margin-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #Addresses > div {
+    border-radius: 3px;
+    background-color: #fff;
+
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+
+  }
+
+
+  /*icons trofeus lista endereço*/
+  .icon-trophy-lista_enderecos {
+    opacity: 1;
+    display: inline-block;
+    text-rendering: auto;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgb(234, 162, 14);
+    background-color: rgb(252, 236, 202);
+    border-radius: 50%;
+    text-align: center;
+  }
+
+
+
+  /*ENDEREÇOS COMERCIAIS*/
+
+  .main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+  }
+
+  #BusinessAddresses {
+    margin-bottom: 0px;
+  }
+
+  #BusinessAddresses > div {
+    border-radius: 3px;
+    background-color: #fff;
+
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+
+  /*LISTA DE TELEFONES*/
+
+  .main-card-lista_telefones {
+    margin-bottom: 40px;
+  }
+
+  #Phones {
+    margin-bottom: 0px;
+  }
+
+  #Phones > div {
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+  } 
+
+  /*icons lista telefone*/
+  .telefone_list-group_box {
+    margin-top: 0;
+    width: 15%;
+    line-height: 100px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #626262;
+    position: relative;
+    right: 250px;
+    bottom: 30px;
+  }
+
+    /*EMAILS LIST*/
+
+    #Emails {
+      margin-bottom: 0px;
+    }
+  
+    #Emails > div {
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid #cccccc;
+      box-shadow: 0px 10px 7px -10px #b5b5b5;
+      box-sizing: border-box;
+      width: 100%;
+    } 
+    
+    /*icons email*/
+    .lista_email-group_box {
+      margin-top: 0;
+      width: 15%;
+      line-height: 100px;
+      font-weight: 400;
+      font-size: 10px;
+      color: #626262;
+    }
+  
+    .main_container-lista_emails {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .email_box-list_email {
+      mask-size: 60%;
+      width: auto;
+    }
+
+    .icon-box-lista_emails {
+      margin-bottom: 0;
+      width: auto;
+      max-width: 50%;
+      text-align: center;
+      display: block;
+  
+      line-height: 1.231;
+      font-weight: 400;
+      font-size: 14px;
+      color: #626262;
+      box-sizing: border-box;
+    }
+
+    .lista_email-group_box {
+      max-width: 80%;
+      margin-left: 20px;
+      width: auto;
+      overflow: hidden;
+      display: flex;
+      align-items: end;
+      height: 28px;
+    }
+
+    .rank-box {
+      max-width: 20%;
+      width: auto;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+
+
+  /*SOCIEDADES*/
+
+  .main-card-lista_enderecos_comerciais {
+    margin-bottom: 40px;
+  }
+
+  #Companies {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #Companies > div {
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    box-shadow: rgb(181, 181, 181) 0px 10px 7px -10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .empresa-container-lista_sociedades {
+    width: 100%;
+  }
+
+  .top_container-lista_sociedades {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  .link-top {
+    text-decoration: none;
+    cursor: pointer;
+    color: #424242;
+    box-sizing: border-box;
+    background: transparent;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+
+  }
+  .link-bottom {
+    color: #424242;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: none;
+  }
+
+  .col-1-lista_sociedades {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    display: list-item;
+    list-style: none;
+  }
+
+  .col-1-lista_sociedades:hover {
+    background-color: #e8e8e8;
+    transition: 0.3s;
+  }
+  .divseparar {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin: 0px;
+  }
+    .indireto-box {
+      display: flex;
+      align-items: center;
+      width: 20%;
+    }
+
+  .indireto-box > span {
+    opacity: 1;
+    background-color: #454545;
+    font-size: 13px;
+    display: inline;
+    padding: 0.3em 0.7em 0.4em;
+    font-weight: 600;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+
+  }
+
+  .participacao-box {
+    width: 30%;
+  }
+
+
+  /*COMPORTAMENTO DIGITAL*/
+
+  .main-card-dados_profissionais {
+    margin-bottom: 40px;
+  }
+
+  #DigitalBehavior {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .box-1-dominio_box > .table {
+    margin: 10px 10px;
+  }
+  .acessos-text-table {
+    position: relative;
+    right: 200px;
+    top: 55px;
+    font-weight: 100;
+  }
+  .acessos_text_resposta-table {
+    position: relative;
+    margin: 100px 100px;
+    right: 200px;
+    top: 35px;
+  }
+  .ult_acesso-text-table {
+    position: relative;
+    right: 100px;
+    top: 55px;
+    display: block;
+    font-weight: 100;
+  }
+  .ult_acesso_text_resposta-table {
+    position: relative;
+    right: 100px;
+    top: 35px;
+  }
+  .box-2-comportamento_digital {
+    position: relative;
+    top: 30px;
+    width: 87%;
+  }
+  .box-3-comportamento_digital h5 {
+    position: relative;
+    top: 30px;
+  } 
+  
+  /*ÚLTIMAS CONSULTAS*/
+  
+  .main-card-ultimas-consultas {
+    margin-bottom: 40px;
+  }
+
+  #Queries {
+    margin-bottom: 0px;
+  }
+  
+  #Queries > div {
+    border-radius: 3px;
+    background-color: #fff;
+
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+
+  }
+  
+  .main-card-content-ultimas_consultas{
+    
+    position: relative;
+  
+    height: 80px;
+    top: 8px;
+    align-items: normal;
+    padding: 10px;
+    
+  }
+  .main-card-content-ultimas_consultas:hover {
+    background-color: #e8e8e8;
+    transition: 0.3s;
+}
+
+  .card-quantidade-consultas {
+    position: relative;
+    right: 255px;
+    top: 40px;
+  }
+  .card-rank-consultas {
+    position: relative;
+    right: 120px;
+    top: 40px;
+  }
+
+  /*MODELO E ESTATISTICA*/
+
+  .main-card-modelos_estatisticos {
+    margin-bottom: 40px;
+  }
+
+  #StatisticModels { 
+    margin-bottom: 0px;
+  }
+
+  #StatisticModels > div {
+    border-radius: 3px;
+    background-color: #fff;
+
+    border: 1px solid #cccccc;
+    box-shadow: 0px 10px 7px -10px #b5b5b5;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+    
+  .container-modelo_perfil_franqueado {
+    overflow: hidden;
+  }
+}

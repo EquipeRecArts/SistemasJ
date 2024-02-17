@@ -1,0 +1,37 @@
+.main-color,#main-color{
+    color: #b770ba;
+}
+
+.main-color-hard,#main-color-hard{
+    color: #b423ba;
+}
+
+hr.main-color-hard {
+            border-color: #b423ba;
+            border-width: 4px;
+}
+hr.main-color {
+            border-color: #b770ba;
+            border-width: 1px;
+}
+
+hr.main-color-hard {
+            border-color: #b423ba;
+            border-width: 3px;
+}
+
+.display-logo {
+  width: 80%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.display-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
