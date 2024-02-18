@@ -955,22 +955,6 @@
     margin-bottom: 40px;
   }
 
-  #Addresses {
-    margin-bottom: 0px;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  #Addresses > div {
-    border-radius: 3px;
-    background-color: #fff;
-
-    border: 1px solid #cccccc;
-    box-shadow: 0px 10px 7px -10px #b5b5b5;
-    box-sizing: border-box;
-    width: 100%;
-
-  }
 
 
   /*icons trofeus lista endereço*/

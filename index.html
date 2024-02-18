@@ -15,6 +15,8 @@
       <link rel='stylesheet'  href='style.css'>
       <link rel='stylesheet'  href='Responsive/mobileResponsive_view.css'>
       <link rel="stylesheet"  href='Responsive/tabletResponsive_view.css'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css">
    <!--  <link rel='stylesheet' type='text/css' href='Responsive/mobileResponsive_view.css'>--> 
  
       <script defer src="./assets/ocultarTextoTabMenu.js"></script>
@@ -32,7 +34,7 @@
 
                     <div class="card-info">
 
-                        <div class="card-body">
+                        <div class="card-body-my">
 
                             <div class="card-header">
                                 <span class="material-symbols-outlined">
@@ -172,7 +174,7 @@
 
                   <div class=" ">
 
-                     <div class="card-body" id="dados-sumarizados">
+                     <div class="card-body-my" id="dados-sumarizados">
 
                         <div class="main-card-info">
                             
@@ -281,7 +283,7 @@
 
                   <div class="agrupamento_geral-situacao_cadastral">
 
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header">
                            <div class="card-header" id="professional_data-id">
@@ -588,7 +590,7 @@
 
                   <div>
 
-                     <div class="card-body mostpcard">
+                     <div class="card-body-my mostpcard">
 
                         <div id="card-head-most_people">
                            <i class="bi bi-person-plus-fill"></i>
@@ -702,7 +704,7 @@
 
                   <div class="card_main-score">
 
-                     <div class="card-body-score">
+                     <div class="card-body-my-score">
 
                         <h4 class="" title="Score de Cr&#233;dito (D00)">
                            Score de Cr&#233;dito (D00)
@@ -733,7 +735,7 @@
                <!-- Score de Marketing -->
                <section class="Score" data-section-info id="MarketingScore" >
                   <div class="card_main-score">
-                     <div class="card-body-score">
+                     <div class="card-body-my-score">
                         <h4 class="" title="Score de Marketing (D00)">Score de Marketing (D00)</h4>
                         <div class="main-card-info-score">
                            <div class="thermometer-score">
@@ -756,7 +758,7 @@
                <!-- Resumo de processos Judiciais -->
                <section class="Score" data-section-info id="LawProcessSummary" >
                   <div class="card_main-score">
-                     <div class="card-body-score">
+                     <div class="card-body-my-score">
 
                         <div class="card-header-score">
                            <div class="sub_card-header-score">
@@ -822,7 +824,7 @@
 
                   <div>
 
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header-classe_social card-header">
                            <i class="bi bi-cash-stack"></i>
@@ -894,7 +896,7 @@
                <!--Este é um componente que apenas faz sentido para PJ, então se for PF, não carregar-->
                <section class="disabled" id="ClientIsPJ">
                   <div class="disabled" >
-                     <div class="disabled card-body">
+                     <div class="disabled card-body-my">
          
                      </div>
                   </div>   
@@ -907,7 +909,7 @@
 
                   <div class="card-info list-model-1">
 
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="head-boxPjPf">
                            <i class="bi bi-boxes"></i>
                            <h4 data-section-title title="Atividades / fun&#231;&#245;es">
@@ -927,7 +929,7 @@
                <!--Este é um componente que apenas faz sentido para PJ, então se for PF, não carregar-->
                <section class="disabled" id="ClientIsPJ">
                   <div class="disabled" >
-                     <div class="disabled card-body">
+                     <div class="disabled card-body-my">
          
                      </div>
                   </div>   
@@ -939,7 +941,7 @@
                <!-- Dados profissionais-->
                <section data-section-info id="ProfessionalData" class="" >
                   <div class="">
-                     <div class=" card-body">
+                     <div class=" card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-briefcase-fill"></i>
                            <h4 data-section-title title="Dados profissionais">
@@ -960,7 +962,7 @@
 
                   <div class="">
                      
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-head-contact_persons">
                            <i class="bi bi-people-fill"></i>
                            <h4 data-section-title title="Pessoas de contato">
@@ -1068,7 +1070,7 @@
                <section data-section-info id="InCommon" >
 
                   <div class="">
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
                            <div class="card-header" id="professional_data-id">
                               <i class="bi bi-shuffle"></i>
@@ -1114,7 +1116,7 @@
                <section data-section-info id="Addresses" >
 
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-heade-lista_enderecos">
                            <div class="card-header" id="professional_data-id">
                               <i class="bi bi-geo-alt-fill"></i>
@@ -1139,61 +1141,115 @@
                         </div>
 
                         <div class=" main-card-info-lista_enderecos">
-                           <div>
-                              <div class="responsive d-inline-block w-100">
-                                 <div class="textBox">
+                           <div class="">
+                              <div class="">
+                                 <div class="">
+                                    <table id="example" class="table table-striped" style="width:100%">
+                                       <thead>
+                                           <tr>
+                                                <th></th>
+                                                <th>CEP</th>
+                                                <th>Cidade</th>
+                                                <th>Logradouro</th>
+                                                <th>Rank</th>
+                                                <th>Telefone</th>
+                                                <th></th>
+                                           </tr>
+                                       </thead>
 
-                                    <div class="col-1-lista_enderecos" data-lat="" data-long="">
+                                       <tbody class="">
+                                           <tr>
+                                                <td>
+                                                   <div class="box-icon-lista_enderecos">
+                                                      <strong class="icon">
+                                                         <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                         </i>
+                                                         <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                      </strong>
+                                                   </div>         
+                                                </td>
 
-                                       <div class="top_container-lista_enderecos">
-                                          <div class="box-icon-lista_enderecos">
-                                             <strong class="icon">
-                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
-                                                </i>
-                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                             </strong>
-                                          </div>
+                                                <td>
+                                                   <strong>79002-550</strong>
+                                                </td>
+
+                                                <td>
+                                                   <strong>MS - CAMPO GRANDE</strong>
+                                                </td>
+                                                
+                                                <td>
+                                                   <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                                </td>
+                                                
+                                                <td>
+                                                   <strong>20231201</strong>
+                                                </td>
+
+                                                <td>
+                                                   <strong>
+                                                      --
+                                                   </strong>
+                                                </td>
+
+                                                <td>
+                                                   <div class="menu_dropdown_icon">
+                                                      <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                         <i class="bi bi-three-dots-vertical"></i>
+                                                      </button>
    
-                                          <div class="logradouro_box-lista_enderecos">
-                                             <small>
-                                                Logradouro
-                                                <i class="disabled bi bi-geo-alt"></i>
-                                             </small>
-                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                          </div>   
-                                       </div>
+                                                      <ul class="disabled dropdown-menu">
+                                                         <li class="show-neighbo "
+                                                            data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                            data-hasComplement="False"
+                                                            data-addressid="3401058614">
+                                                            <a>Ver vizinhos</a>
+                                                         </li>
+                                                         <li class="show-censu-sector"
+                                                            data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                            data-addressid="3401058614">
+                                                            <a>Setor censitario</a>
+                                                         </li>
+                                                      </ul>
+                                                   </div>      
+                                                </td>
+                                           </tr>
 
-                                       <div class="bottom_container-lista_endereços ">
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
 
-                                          <div class="div_top-bottom_container ">
-
-                                             <div class="cep-container-lista_enderecos textBox ">
-                                                <small>CEP</small>
+                                             <td>
                                                 <strong>79002-550</strong>
-                                             </div>
+                                             </td>
 
-                                             <div class="cidade-container-lista_enderecos textBox ">
-                                                <small title="">
-                                                   Cidade
-                                                </small>
+                                             <td>
                                                 <strong>MS - CAMPO GRANDE</strong>
-                                             </div>
-
-                                             <div class="rank-container-lista_enderecos  textBox ">
-                                                <small>RANK</small>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
                                                 <strong>20231201</strong>
-                                             </div>
+                                             </td>
 
-                                             <div class="telefone-container-lista_enderecos  textBox ">
-                                                <small>Telefone</small>
+                                             <td>
                                                 <strong>
-                                                --
+                                                   --
                                                 </strong>
-                                             </div>
+                                             </td>
 
-                                             <div class="menu_dropdown_icon">
-                                                <div class="dropdown-neighbor">
-                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                       <i class="bi bi-three-dots-vertical"></i>
                                                    </button>
 
@@ -1210,99 +1266,589 @@
                                                          <a>Setor censitario</a>
                                                       </li>
                                                    </ul>
-                                                </div>
-                                             </div>
+                                                </div>      
+                                             </td>
+                                           </tr>
 
-                                          </div>
-                                          
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
 
-                                       </div>
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
 
-
-                                    </div>
-
-                                    <div class="col-2-lista_enderecos" data-lat="" data-long="">
-
-                                       <div class="top_container-lista_enderecos ">
-                                          <div class="box-icon-lista_enderecos">
-                                             <strong class="icon">
-                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
-                                                </i>
-                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                             </strong>
-                                          </div>
-   
-                                          <div class="logradouro_box-lista_enderecos">
-                                             <small>
-                                                Logradouro
-                                                <i class="icon-gps-logradouro_box bi bi-geo-alt"></i>
-                                             </small>
-                                             <strong class="" title="R PORTO FRANCO, 167, PARQUE NOVOS ESTADOS">R PORTO FRANCO, 167, PARQUE NOVOS ESTADOS</strong>
-                                          </div>   
-                                       </div>
-
-                                       <div class="bottom_container-lista_endereços ">
-
-                                          <div class="div_top-bottom_container ">
-
-                                             <div class="cep-container-lista_enderecos textBox ">
-                                                <small>CEP</small>
-                                                <strong>89034-430</strong>
-                                             </div>
-
-                                             <div class="cidade-container-lista_enderecos textBox ">
-                                                <small title="">
-                                                   Cidade
-                                                </small>
+                                             <td>
                                                 <strong>MS - CAMPO GRANDE</strong>
-                                             </div>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
 
-                                             <div class="rank-container-lista_enderecos textBox ">
-                                                <small>RANK</small>
-                                                <strong>20170801</strong>
-                                             </div>
-
-                                             <div class="telefone-container-lista_enderecos textBox ">
-                                                <small>Telefone</small>
+                                             <td>
                                                 <strong>
-                                                --
+                                                   --
                                                 </strong>
-                                             </div>
+                                             </td>
 
-                                             <div class=" menu_dropdown_icon">
-                                                <div class="dropdown-neighbor">
-                                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                       <i class="bi bi-three-dots-vertical"></i>
                                                    </button>
 
                                                    <ul class="disabled dropdown-menu">
-                                                      <li class="show-neighbor"
+                                                      <li class="show-neighbo "
                                                          data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
                                                          data-hasComplement="False"
                                                          data-addressid="3401058614">
                                                          <a>Ver vizinhos</a>
                                                       </li>
-                                                      <li class="show-censu-sector disabled"
+                                                      <li class="show-censu-sector"
                                                          data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
                                                          data-addressid="3401058614">
                                                          <a>Setor censitario</a>
                                                       </li>
                                                    </ul>
-                                                </div>
-                                             </div>
+                                                </div>      
+                                             </td>
+                                           </tr>
 
-                                          </div>
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
 
-                                       </div>
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
 
+                                             <td>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
 
-                                    </div>
+                                             <td>
+                                                <strong>
+                                                   --
+                                                </strong>
+                                             </td>
+
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
+
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>
+                                                   --
+                                                </strong>
+                                             </td>
+
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>teste</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       </tbody>
+                                       <tfoot>
+                                           <tr>
+                                             <th></th>
+                                             <th>CEP</th>
+                                             <th>Cidade</th>
+                                             <th>Logradouro</th>
+                                             <th>Rank</th>
+                                             <th>Telefone</th>
+                                             <th></th>
+                                           </tr>
+                                       </tfoot>
+                                   </table>
+                                   <div class="paginacao">
+                                   </div>
+
                                  </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="other-card-info">
-                           <div id="addresses-map" class="addresses-map"></div>
                         </div>
                      </div>
                   </div>
@@ -1314,7 +1860,7 @@
                <!-- Lista de endereços comerciais-->
                <section data-section-info id="BusinessAddresses" >
                   <div class="">
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header">
                            <div class="card-header" id="professional_data-id">
@@ -1340,74 +1886,711 @@
                         </div> 
 
                         <div class="main-card-info-lista_enderecos">
-                           <div>
+                           <div class="">
                               <div class="">
-                                 <div class="textBox">
-                                    <div class="col-1-lista_enderecos-business" data-lat="" data-long="">
+                                 <div class="">
+                                    <table id="example-2" class="table table-striped" style="width:100%">
+                                       <thead>
+                                           <tr>
+                                                <th></th>
+                                                <th>CEP</th>
+                                                <th>Cidade</th>
+                                                <th>Logradouro</th>
+                                                <th>Rank</th>
+                                                <th>Telefone</th>
+                                                <th></th>
+                                           </tr>
+                                       </thead>
 
-                                       <div class="top_container-lista_enderecos-business">
-                                          <div class="box-icon-lista_enderecos-business">
-                                             <strong class="icon">
-                                                <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
-                                                </i>
-                                                <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                             </strong>
-                                          </div>
+                                       <tbody class="">
+                                           <tr>
+                                                <td>
+                                                   <div class="box-icon-lista_enderecos">
+                                                      <strong class="icon">
+                                                         <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                         </i>
+                                                         <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                      </strong>
+                                                   </div>         
+                                                </td>
 
-                                          <div class="logradouro_box-lista_enderecos-business">
-                                             <small class="">
-                                                Logradouro
-                                                <i class="" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                             </small>
-                                             <!--CONTACT ID-->
-                                             <a href="" target="_blank">
-                                                <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                             </a>
-                                             <!--CONTACT ID-->
-                                             <a href="" target="_blank">
-                                                <sub  sub class="ignore-text-with-dots" title="JOAO PEDRO BAZA GARCIA RODRIGUES">JOAO PEDRO BAZA GARCIA RODRIGUES</sub>
-                                             </a>
-                                          </div>
-                                       </div>
+                                                <td>
+                                                   <strong>79002-550</strong>
+                                                </td>
 
+                                                <td>
+                                                   <strong>MS - CAMPO GRANDE</strong>
+                                                </td>
+                                                
+                                                <td>
+                                                   <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                                </td>
+                                                
+                                                <td>
+                                                   <strong>20231201</strong>
+                                                </td>
 
-                                       <div class="bottom_container-lista_endereços ">
-                                          <div class="div_top-bottom_container ">
+                                                <td>
+                                                   <strong>
+                                                      --
+                                                   </strong>
+                                                </td>
 
-                                             <div class="cep-container-lista_enderecos texBox">
-                                                <small>CEP</small>
+                                                <td>
+                                                   <div class="menu_dropdown_icon">
+                                                      <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                         <i class="bi bi-three-dots-vertical"></i>
+                                                      </button>
+   
+                                                      <ul class="disabled dropdown-menu">
+                                                         <li class="show-neighbo "
+                                                            data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                            data-hasComplement="False"
+                                                            data-addressid="3401058614">
+                                                            <a>Ver vizinhos</a>
+                                                         </li>
+                                                         <li class="show-censu-sector"
+                                                            data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                            data-addressid="3401058614">
+                                                            <a>Setor censitario</a>
+                                                         </li>
+                                                      </ul>
+                                                   </div>      
+                                                </td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
+
+                                             <td>
                                                 <strong>79002-550</strong>
-                                             </div>
+                                             </td>
 
-                                             <div class="cidade-container-lista_enderecos texBox">
-                                                <small title="">
-                                                Cidade
-                                                </small>
+                                             <td>
                                                 <strong>MS - CAMPO GRANDE</strong>
-                                             </div>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
 
-                                             <div class="rank-container-lista_enderecos textBox">
-                                                <small>RANK</small>
-                                                <strong>20231101</strong>
-                                             </div>
-
-                                             <div class="telefone-container-lista_enderecos textBox">
-                                                <small>Telefone</small>
+                                             <td>
                                                 <strong>
-                                                --
+                                                   --
                                                 </strong>
-                                             </div>   
+                                             </td>
 
-                                          </div>
-                                       </div>
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
 
-                                    </div>
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
+
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>
+                                                   --
+                                                </strong>
+                                             </td>
+
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
+
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>
+                                                   --
+                                                </strong>
+                                             </td>
+
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                           </tr>
+
+                                           <tr>
+                                             <td>
+                                                <div class="box-icon-lista_enderecos">
+                                                   <strong class="icon">
+                                                      <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                      </i>
+                                                      <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                   </strong>
+                                                </div>         
+                                             </td>
+
+                                             <td>
+                                                <strong>79002-550</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>MS - CAMPO GRANDE</strong>
+                                             </td>
+                                             
+                                             <td>
+                                                <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                             </td>
+                                             
+                                             <td>
+                                                <strong>20231201</strong>
+                                             </td>
+
+                                             <td>
+                                                <strong>
+                                                   --
+                                                </strong>
+                                             </td>
+
+                                             <td>
+                                                <div class="menu_dropdown_icon">
+                                                   <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                      <i class="bi bi-three-dots-vertical"></i>
+                                                   </button>
+
+                                                   <ul class="disabled dropdown-menu">
+                                                      <li class="show-neighbo "
+                                                         data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-hasComplement="False"
+                                                         data-addressid="3401058614">
+                                                         <a>Ver vizinhos</a>
+                                                      </li>
+                                                      <li class="show-censu-sector"
+                                                         data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                         data-addressid="3401058614">
+                                                         <a>Setor censitario</a>
+                                                      </li>
+                                                   </ul>
+                                                </div>      
+                                             </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>teste</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                        </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       <tr>
+                                          <td>
+                                             <div class="box-icon-lista_enderecos">
+                                                <strong class="icon">
+                                                   <i class="icon-home-lista_enderecos bi bi-house-fill"></i>
+                                                   </i>
+                                                   <i class="icon-trophy-lista_enderecos bi bi-trophy-fill" title="Principal" data-toggle="tooltip" data-placement="top"></i>
+                                                </strong>
+                                             </div>         
+                                          </td>
+
+                                          <td>
+                                             <strong>79002-550</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </td>
+                                          
+                                          <td>
+                                             <strong class="" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>   
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20231201</strong>
+                                          </td>
+
+                                          <td>
+                                             <strong>
+                                                --
+                                             </strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="menu_dropdown_icon">
+                                                <button type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                   <i class="bi bi-three-dots-vertical"></i>
+                                                </button>
+
+                                                <ul class="disabled dropdown-menu">
+                                                   <li class="show-neighbo "
+                                                      data-title="Vizinhos - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-hasComplement="False"
+                                                      data-addressid="3401058614">
+                                                      <a>Ver vizinhos</a>
+                                                   </li>
+                                                   <li class="show-censu-sector"
+                                                      data-title="Setor censitario - R PIRATININGA, 19, CAMPO GRANDE - MS (CEP: 79002-550)"
+                                                      data-addressid="3401058614">
+                                                      <a>Setor censitario</a>
+                                                   </li>
+                                                </ul>
+                                             </div>      
+                                          </td>
+                                       </tr>
+
+                                       </tbody>
+                                       <tfoot>
+                                           <tr>
+                                             <th></th>
+                                             <th>CEP</th>
+                                             <th>Cidade</th>
+                                             <th>Logradouro</th>
+                                             <th>Rank</th>
+                                             <th>Telefone</th>
+                                             <th></th>
+                                           </tr>
+                                       </tfoot>
+                                   </table>
                                  </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="other-card-info">
-                           <div id="businessAddresses-map" class="addresses-map"></div>
                         </div>
                      </div>
                   </div>
@@ -1420,7 +2603,7 @@
 
                   <div>
 
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-heade-lista_telefones">
                            <i class="bi bi-telephone-fill"></i>
@@ -1429,62 +2612,558 @@
                            </h4>
                         </div>
 
-                        <div class=" main-card-info-lista_telefones">
+                        <div class="main-card-info-lista_telefones">
 
                            <div>
-                              <div class="top-box-historico">
-                                 <span class="title">hist&#243;rico</span>
-                              </div>
+                              <div class="">
+                                 <table id="example-3" class="table table-striped" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                             <th></th>
+                                             <th>Telefone</th>
+                                             <th>
+                                                <span class="title">Hist&#243;rico</span>
+                                             </th>
+                                             <th>Rank</th>
+                                        </tr>
+                                    </thead>
 
-                              <div class="bottom-box-telefones">
-                                 <div class="responsive-body">
+                                    <tbody class="">
+                                        <tr>
+                                             <td>
+                                                <div class="icon-box-lista_telefones">
+                                                   <strong class="icon">
+                                                      <i class="bi bi-telephone-forward-fill"></i>   
+                                                   </strong>
+                                                </div>       
+                                             </td>
 
-                                    <div class="main-container-lista_telefones">
-                                       <div class="icon-box-lista_telefones">
-                                          <strong class="icon">
-                                             <i class="bi bi-telephone-forward-fill"></i>   
-                                          </strong>
-                                       </div>
+                                             <td>
+                                                <strong>(67) 3028-1571</strong>
+                                             </td>
 
-                                       <div class="textBox telefone-box">
-                                          <small>
-                                          Telefone
-                                          </small>
-                                          <strong>
-                                          (67) 3028-1571
-                                          </strong>
-                                       </div>
-
-                                       <div class="telefone_list-group_box">
-                                          <div class="sub_container-group_box-telefone-list">
-
-                                             <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                             <td>
+                                                <div class="telefone_list-group_box">
+                                                   <div class="sub_container-group_box-telefone-list">
+         
+                                                      <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                      
+                                                      <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                         <i class="bi bi-exclamation-circle-fill"></i>
+                                                         <span class="">Procon</span>
+                                                      </span>
+                                                      
+                                                      <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                         <i class="bi bi-facebook"></i>
+                                                         <span class="">facebook</span>
+                                                      </span>
+                                                     
+                                                      <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                         <i class="bi bi-whatsapp"></i>
+                                                         <span class=" ">Whatsap</span>
+                                                      </span>
+                                                   
+                                                   </div>
+                                                </div>         
+                                             </td>
                                              
-                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
-                                                <i class="bi bi-exclamation-circle-fill"></i>
-                                                <span class="">Procon</span>
-                                             </span>
-                                             
-                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
-                                                <i class="bi bi-facebook"></i>
-                                                <span class="">facebook</span>
-                                             </span>
-                                            
-                                             <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
-                                                <i class="bi bi-whatsapp"></i>
-                                                <span class=" ">Whatsap</span>
-                                             </span>
+                                             <td>
+                                                <strong>20170801</strong>
+                                             </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
                                           
-                                          </div>
-                                       </div>
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
 
-                                       <div class="textBox rank-box">
-                                          <small>RANK</small>
-                                          <strong>20170801</strong>
-                                       </div>
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
 
-                                    </div>
-                                 </div>
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td>
+                                             <div class="telefone_list-group_box">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                          
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                          <th></th>
+                                          <th>Telefone</th>
+                                          <th>Historico</th>
+                                          <th>Rank</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <div class="paginacao">
+                                 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                                 <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+                                 <script src="https://cdn.datatables.net/2.0.0/js/dataTables.bootstrap5.js"></script>
+                                 <script src="./assets/tableScriptBootstrap.js"></script> 
+                                </div>
+
                               </div>
                            </div>
                         </div>
@@ -1497,7 +3176,7 @@
                <!-- Lista de e-mails-->
                <section data-section-info id="Emails" class="">
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-heade-lista_telefones">
                            <i class="bi bi-envelope-at-fill"></i>
@@ -1573,7 +3252,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo lista de veículos -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-car-front"></i>
                            <h4 data-section-title title="LISTA DE VEÍCULOS">
@@ -1691,7 +3370,7 @@
 
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-bank"></i>
                            <h4 data-section-title title="Restitui&#231;&#227;o de IRPF"><i class="fa fa-university fs16"></i> Restitui&#231;&#227;o de IRPF</h4>                        </div>
@@ -1706,7 +3385,7 @@
             <div class="main-card-lista_enderecos_comerciais"> <!-- Começo Container Sociedades-->
                <section data-section-info id="Companies" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-heade-lista_enderecos">
                            <i class="bi bi-building-fill"></i>   
@@ -1828,7 +3507,7 @@
 
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-building-fill"></i>
                            <h4 data-section-title title="Empresas relacionadas"><i class="fa fa-building-o fs16"></i> Empresas relacionadas</h4>
@@ -1844,7 +3523,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo imoveis  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
 
                            <div class="card-header" id="professional_data-id">
@@ -1879,7 +3558,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Lista de protestos  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
 
                            <div class="card-header" id="professional_data-id">
@@ -1917,7 +3596,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo situaçã de cobrança  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-bank2"></i>
                            <h4 data-section-title title="Imoveis">
@@ -1935,7 +3614,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo situaçã de Saúde  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-clipboard2-pulse"></i>
                            <h4 data-section-title title="Imoveis">
@@ -1953,7 +3632,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo CPF  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-card-text"></i>
                            <h4 data-section-title title="Imoveis">
@@ -1971,7 +3650,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Lista de processos  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
 
                            <div class="card-header" id="professional_data-id">
@@ -2012,7 +3691,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Mandatos de prisão  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-shield-fill-exclamation"></i>
                            <h4 data-section-title title="Imoveis">
@@ -2031,7 +3710,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Restrições  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-exclamation-triangle-fill"></i>
                            <h4 data-section-title title="Imoveis">
@@ -2050,7 +3729,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Assistências  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-cash"></i>
                            <h4 data-section-title title="Imoveis">
@@ -2068,7 +3747,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo Lista de dominios  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
 
                            <div class="card-header" id="professional_data-id">
@@ -2108,7 +3787,7 @@
                <!-- Comportamento Digital -->
                <section data-section-info id="DigitalBehavior" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header">
                            <div class="card-header" id="professional_data-id">
@@ -2233,7 +3912,7 @@
                <section data-section-info id="Queries" >
 
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header-lsta_telefone">
                            <i class="bi bi-person-lines-fill"></i>
@@ -2273,7 +3952,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo doação partidaria  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header" id="professional_data-id">
                            <i class="bi bi-cash"></i>
                            <h4 data-section-title title="Imoveis">
@@ -2292,7 +3971,7 @@
             <div class="main-card-dados_profissionais"> <!-- Começo local de votação  -->
                <section data-section-info id="ProfessionalData" >
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
                         <div class="card-header">
 
                            <div class="card-header" id="professional_data-id">
@@ -2332,7 +4011,7 @@
                <section data-section-info id="StatisticModels" >
 
                   <div>
-                     <div class="card-body">
+                     <div class="card-body-my">
 
                         <div class="card-header-modelos_estatisticos">
                            <i class="bi bi-tags"></i>
