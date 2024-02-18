@@ -2,6 +2,21 @@
 
 /*************** GENERAL CLASS ***************/
 
+.efect_selected {
+    border-bottom: 0;
+
+    background-color: #f5f5f5;
+    color: #888;
+
+    padding-bottom: 20px;
+    margin-bottom: -1px;
+    margin: 0 10px;
+
+    border: 1px solid;
+    border-color: rgba(0,0,0,.15);
+    
+}
+
 .text-center {
     text-align: center;
 }
@@ -649,52 +664,19 @@ body {
 }
 
 .elements-group-top_dados_contato {
-    display: table;
     width: 100%;
 
-    line-height: 1.231;
-    font-weight: 400;
-    font-size: 14px;
     color: #626262;
 
     box-sizing: border-box;
 }
 
-.elements-group-top_dados_contato > div {
-    margin-bottom: 0;
-    display: table-cell;
-    vertical-align: top;
-    max-width: 10px;;
-
-}
-
-.elements-group-top_dados_contato > div:first-of-type > div {
-    margin-left: 0;
-}
-
-.hot-email-1 {
-    background-color: #f5f5f5;
-    color: #888;
-
-    border-bottom: 0;
-    border-radius: 3px 3px 0 0;
-    
-    padding-bottom: 20px;
-    margin-bottom: -1px;
-    margin: 0 10px;
-
+.content-intern-email-tab {
     display: flex;
-    align-items: center;
-
-    cursor: pointer;
-    border: 1px solid;
-    border-color: rgba(0,0,0,.15);
-    max-width: 100%;
-    max-width: auto;
-
 }
 
-.icon-send-email_hot {
+.icon-send-email_hot, .icon-location-hot_address,
+.icon-location-hot_mobile_phone, .icon-location-hot_phone  {
     font-size: 39px;
     width: 35px;
     text-align: center;
@@ -703,11 +685,9 @@ body {
     transition: opacity .1s ease-in;
 
     font-size: normal;
-    margin-left: 5px;
-
 }
 
-.icon-trophy-email_hot {
+.icon-trophy-email_hot, .icon-trophy-hot_adress {
     position: relative;
     right: 63px;    
     bottom: 1px;
@@ -733,7 +713,8 @@ body {
 }
 
 
-.text_container-hot_email {
+.text_container-hot_email, .text_container-hot_address,
+.text_container-hot_mobile_phone, .text_container-hot_phone {
     display: flex;
     flex-direction: column;
     max-width: 80%;
@@ -745,7 +726,8 @@ body {
     overflow: hidden;
 }
 
-.text_container-hot_email > strong {
+.text_container-hot_email > strong, .text_container-hot_address > strong,
+.text_container-hot_mobile_phone > strong, .text_container-hot_phone > strong {
     font-size: 13.5px;
       
     text-overflow: ellipsis;
@@ -759,7 +741,8 @@ body {
     color: #888;
 }
 
-.text_container-hot_email > small {
+.text_container-hot_email > small, .text_container-hot_address > small,
+.text_container-hot_mobile_phone > small, .text_container-hot_phone > small {
     display: block;
     font-size: 11px;
     overflow: hidden;
@@ -774,8 +757,9 @@ body {
     text-align: left;
 }
 
+/*Conteudo da seção*/
 
-.hot-email-1-list {
+.hot-email-1-list, .hot-address-1 {
     background-color: #f5f5f5;
     border-color: #d7d7d7;
     width: 100%;
@@ -794,18 +778,18 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-.panel-body-email_list {
+.panel-body-email_list, .panel-body {
     padding: 15px;
     border: 0;
     clear: both;
 }
 
-.email-list {
+.email-list, .adress-list {
     width: 100%;
     display: inline-block;
 }
 
-.email-list-body {
+.email-list-body, .adress-list-body {
     margin-bottom: -10px;
     border: 0;
     padding: 5px 10px 7px;
@@ -816,10 +800,16 @@ body {
     min-height: 40px;
 }
 
-.email-group-info {
+.email-group-info, .adress-group-info {
     display: flex;
+    flex-wrap: wrap;
 }
-.icon-send-email_list {
+
+.adress-group-info {
+    gap: 20px;
+}
+
+.icon-send-email_list, .icon-location-hot_address-list {
     font-size: 33px;
     color: black;
     width: 35px;
@@ -855,14 +845,15 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.email-list-text {
+.email-list-text, .adress-list-text, .adress-list-text-2 {
     width: 35%;
     display: flex;
     flex-direction: column;
     color: #626262;
 }
 
-.email-list-text > small {
+.email-list-text > small, .adress-list-text > small,
+.adress-list-text-2 > small {
     padding-left: 2px;
     color: #424242;
 
@@ -870,7 +861,8 @@ body {
     display: block;
 }
 
-.email-list-text > strong {
+.email-list-text > strong, .adress-list-text > strong,
+.adress-list-text-2 > strong {
     font-size: 14px;
     font-weight: 600;
     text-overflow: ellipsis;
@@ -986,154 +978,6 @@ body {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 0.25em;
-}
-
-.hot-address-1 {
-    max-width: 100%;
-    width: auto;
-    background-color: #fdfdfd;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    padding: 5px 0;
-
-    border-color: rgba(0,0,0,.15);
-    margin: 0 10px;
-    color: #888;
-
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-}
-
-.icon-location-hot_address {
-    font-size: 29px;
-    width: 35px;
-    text-align: center;
-
-    vertical-align: middle;
-    transition: opacity .1s ease-in;
-
-    font-size: normal;
-}
-
-.icon-trophy-hot_adress {
-    position: relative;
-    right: 43px;    
-    bottom: 1px;
-
-    opacity: 1;
-    transition: opacity .1s ease-in;
-    text-align: center;
-    cursor: pointer;
-    color: #888;
-
-    color: #f6e442;
-    font-weight: bolder;
-
-    color: #eaa20e;
-    background-color: #fcecca;
-    padding: 3px;
-    border-radius: 50%;
-    font-size: small!important;
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-
-}
-
-.text_container-hot_address {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    width: auto;
-
-    justify-content: center;
-    gap: 3px;
-
-    overflow: hidden;
-}
-
-.hot-mobile-phone-1 {
-    max-width: 100%;
-    width: auto;
-    background-color: #fdfdfd;
-    
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px 0;
-
-    border-color: rgba(0,0,0,.15);
-    margin: 0 10px;
-    color: #888;
-
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-
-}
-
-.icon-location-hot_phone {
-    font-size: 29px;
-    width: 35px;
-    text-align: center;
-
-    vertical-align: middle;
-    transition: opacity .1s ease-in;
-
-    font-size: normal;
-}
-
-.text_container-hot_mobile_phone {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    width: auto;
-
-    gap: 3px;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-.hot-phone-1 {
-    max-width: 100%;
-    width: auto;
-    background-color: #fdfdfd;
-    
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px 0;
-
-    border-color: rgba(0,0,0,.15);
-    margin: 0 10px;
-    color: #888;
-
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 4px;
-
-}
-
-.text_container-hot_phone {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    width: auto;
-
-    gap: 3px;
-    justify-content: center;
-
-    overflow: hidden;
 }
 
 

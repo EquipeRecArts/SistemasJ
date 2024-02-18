@@ -14,14 +14,13 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <link rel='stylesheet'  href='style.css'>
       <link rel='stylesheet'  href='Responsive/mobileResponsive_view.css'>
-
       <link rel="stylesheet"  href='Responsive/tabletResponsive_view.css'>
-     
    <!--  <link rel='stylesheet' type='text/css' href='Responsive/mobileResponsive_view.css'>--> 
  
- 
+      <script defer src="./assets/ocultarTextoTabMenu.js"></script>
+
    </head>
-   <body class="dashboard-page sb-l-m admin-form theme-default theme-primary " data-spy="scroll" data-offset="190">
+   <body class=" " data-spy="scroll" data-offset="190">
       <!-- Fim: Cabeçalho da página -->
       <div class="render-body">
          <div class="new-container">
@@ -360,204 +359,219 @@
                            <section class="hot-contact-info " data-section-info id="TopContactInformation">
 
                               <div class="elements-group-top_dados_contato">
-                                 <div class="main-hot-email-1">
-                                    <div data-target="hot-email-1" class="hot-email-1 alert-default " data-toggle="tooltip" data-placement="top" title="Clique para ver e-mails">
-                                       <span class=" material-symbols-outlined icon-send-email_hot">
-                                          send
-                                          <span class="material-symbols-outlined icon-trophy-email_hot">
-                                             emoji_events
-                                          </span>
-                                       </span>
-                                       
-                                       <div class="text_container-hot_email">
-                                          <strong class="">joaopedrobazagarcia@gmail...</strong>
-                                          <small class="">Rank: 20231001</small>     
-                                       </div>
-                                    </div>
-                                 </div>
 
-                                 <div class="main_container-hot-address">
-                                    <div data-target="hot-address-1" class="hot-address-1" data-toggle="tooltip" data-placement="top" title="Clique para ver endereços">
-                                       <span class="material-symbols-outlined icon-location-hot_address">
-                                          location_on
-                                          <span class="material-symbols-outlined icon-trophy-hot_adress">
-                                             emoji_events
-                                          </span>
-                                       </span>
-                                          
-                                       <div class="text_container-hot_address">
-                                          <strong class="">PIRATININGA, 19</strong>
-                                          <small class="">79002-550, CAMPO GRA...</small>     
-                                       </div>
-                                    </div>
-                                 </div>
-
-                                 <div class="main_container-hot-mobile_phone" >
-                                    <div data-target="hot-mobile-phone-1" class="hot-mobile-phone-1" data-toggle="tooltip" data-placement="top" title="Clique para ver celulares">
-                                       <span class="material-symbols-outlined icon-location-hot_mobile_phone">
-                                          smartphone
-                                       </span>
-
-                                       <div class="text_container-hot_mobile_phone">
-                                          <strong class="">--</strong>
-                                          <small class="">Não há registros</small>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 
-                                 <div class="main_container-hot-phone">
-                                    <div data-target="hot-phone-1" class="hot-phone-1" data-toggle="tooltip" data-placement="top" title="Clique para ver telefones fixos">
-                                       <span class="material-symbols-outlined icon-location-hot_mobile_phone">
-                                          phone_enabled
-                                       </span>
-
-                                       <div class="text_container-hot_phone">
-                                          <strong class="">--</strong>
-                                          <small class="">Não há registros</small>     
-                                       </div>
-                                    </div>
-                                 </div>
-                                 
-                              </div>
-
-                           </section>
-
-                           <section class="main-container-hot_email-1-list ">
-                              <!-- Lista de e-mails-->
-                              <div id="hot-email-1-list" class="hot-email-1-list">
-
-                                 <div class="panel-body-email_list">
-
-                                    <div class="list">
-
-                                       <div class="email-list">
-                                          <div class="email-list-first-body">
-
-                                             <div class="email-list-body">
-
-                                                <div class="email-group-info ">
-                                                   <div class="email-list-icon_email_open">
-                                                      <span class="material-symbols-outlined icon-send-email_list">
-                                                         send
-                                                         <span class="material-symbols-outlined icon-trophy-email_list">
-                                                            emoji_events
-                                                         </span>
-                                                      </span>    
-                                                   </div>
-
-                                                   <div class="email-list-text">
-                                                      <small>
-                                                            E-mail
-                                                      </small>
-                                                      <strong class="">joaopedrobazagarcia@gmail.com</strong>
-                                                   </div>
-
-                                                </div>
-
-
-                                                <div class="email_list-group_box ">
-                                                   <div class="sub_container-group_box ">
-
-                                                      <span class="valided-box" data-toggle="tooltip" data-placement="top" title="Validado no provedor">
-                                                         <i class="bi bi-check-circle-fill"></i>
-                                                         <span class="">validado</span>
-                                                      </span>
-                                                      
-                                                      <span class="facebook-box " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
-                                                         <i class="bi bi-facebook"></i>
-                                                         <span class="">facebook</span>
-                                                      </span>
-                                                      
-                                                      <span class="linkedin-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn">
-                                                         <i class="bi bi-linkedin"></i>
-                                                         <span class="">linkedin</span>
-                                                      </span>
-                                                      
-                                                      <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Tem comportamento digital">
-                                                         <i class="bi bi-globe"></i>
-                                                         <span class=" ">digital</span>
-                                                      </span>
-                                                   
-                                                   </div>
-                                                </div>
-
-                                                <div class="textBox txtrank">
-                                                   <small>RANK</small>
-                                                   <strong>20231001</strong>
-                                                </div>
-
-                                             </div>
-
+                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link active" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" type="button" role="tab" aria-controls="email" aria-selected="true" title="Clique para ver e-mails">
+                                          <div class="content-intern-email-tab">
+                                             <span class="material-symbols-outlined icon-send-email_hot">
+                                                send
+                                                <span class="material-symbols-outlined icon-trophy-email_hot">
+                                                   emoji_events
+                                                </span>
+                                             </span>
+                                             <div class="text_container-hot_email">
+                                                <strong class="">joaopedrobazagarcia@gmail...</strong>
+                                                <small class="">Rank: 20231001</small>     
+                                             </div>   
                                           </div>
-                                       </div>
-
-                                    </div>
-
-                                 </div>
-
-                              </div>
-
-                              <!-- Lista de endereços-->
-                              <div id="hot-address-1" class="disabled ">
-                                 <div class="panel-body">
-                                    <div class="list">
-                                       <div class=" d-inline-block w-100">
-                                          <div class="responsive-body">
-                                             <div class="d-flex flex-wrap align-items-center row-line" data-lat="" data-long="">
-                                                <div class="d-none d-md-block mb-5 d-md-10 mb-xl-0 w-xl-5 text-center">
-                                                   <strong class="icon">
-                                                   <i class="fa fa-home best-info fs18">
-                                                   <i class="fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                                   </i>
-                                                   </strong>
-                                                </div>
-                                                <div class="mb-10 mb-xl-0 w-85 w-md-90 w-lg-95 w-xl-40">
-                                                   <small>
-                                                      Logradouro
-                                                      <i class="best-info-small d-inline-block d-md-none fa fa-trophy" title="Principal" data-toggle="tooltip" data-placement="top"></i>
-                                                   </small>
-                                                   <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                                </div>
-                                                <div class="mb-5 mb-md-0 w-35 w-md-20 w-xl-10">
-                                                   <small>CEP</small>
-                                                   <strong>79002-550</strong>
-                                                </div>
-                                                <div class="mb-5 mb-md-0 w-65 w-md-40 w-xl-15">
-                                                   <small title="">
-                                                      Cidade
-                                                   </small>
-                                                   <strong>MS - CAMPO GRANDE</strong>
-                                                </div>
-                                                <div class="w-30 w-md-15 w-xl-10">
-                                                   <small>RANK</small>
-                                                   <strong>20231201</strong>
-                                                </div>
-                                                <div class="mb-5 mb-sm-0 w-60 w-md-25 w-xl-15">
-                                                   <small>Telefone</small>
-                                                   <strong>
-                                                      --
-                                                   </strong>
-                                                </div>
+                                      </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="adress-tab" data-bs-toggle="tab" data-bs-target="#adress" type="button" role="tab" aria-controls="adress" aria-selected="false" title="Clique para ver endereços">
+                                          <div class="content-intern-email-tab">
+                                             <span class="material-symbols-outlined icon-location-hot_address">
+                                                location_on
+                                                <span class="material-symbols-outlined icon-trophy-hot_adress">
+                                                   emoji_events
+                                                </span>
+                                             </span>
+                                                
+                                             <div class="text_container-hot_address">
+                                                <strong class="">PIRATININGA, 19</strong>
+                                                <small class="">79002-550, CAMPO GRA...</small>     
+                                             </div>   
+                                          </div>
+                                      </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="mobile-phone-tab" data-bs-toggle="tab" data-bs-target="#mobile-phone" type="button" role="tab" aria-controls="mobile-phone" aria-selected="false" title="Clique para ver celulares">
+                                          <div class="content-intern-email-tab">
+                                             <span class="material-symbols-outlined icon-location-hot_mobile_phone">
+                                                smartphone
+                                             </span>
+      
+                                             <div class="text_container-hot_mobile_phone">
+                                                <strong class="">--</strong>
+                                                <small class="">Não há registros</small>
                                              </div>
                                           </div>
+                                      </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link" id="phone-tab" data-bs-toggle="tab" data-bs-target="#phone" type="button" role="tab" aria-controls="phone" aria-selected="false" title="Clique para ver telefones">
+                                          <div class="content-intern-email-tab">
+                                             <span class="material-symbols-outlined icon-location-hot_mobile_phone">
+                                                phone_enabled
+                                             </span>
+      
+                                             <div class="text_container-hot_phone">
+                                                <strong class="">--</strong>
+                                                <small class="">Não há registros</small>     
+                                             </div>
+                                          </div>
+                                       </button>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="email" role="tabpanel" aria-labelledby="email-tab">
+                                       <div id="hot-email-1-list" class="hot-email-1-list">
+
+                                          <div class="panel-body-email_list">
+         
+                                             <div class="list">
+         
+                                                <div class="email-list">
+                                                   <div class="email-list-first-body">
+         
+                                                      <div class="email-list-body">
+         
+                                                         <div class="email-group-info ">
+                                                            <div class="email-list-icon_email_open">
+                                                               <span class="material-symbols-outlined icon-send-email_list">
+                                                                  send
+                                                                  <span class="material-symbols-outlined icon-trophy-email_list">
+                                                                     emoji_events
+                                                                  </span>
+                                                               </span>    
+                                                            </div>
+         
+                                                            <div class="email-list-text">
+                                                               <small>
+                                                                     E-mail
+                                                               </small>
+                                                               <strong class="">joaopedrobazagarcia@gmail.com</strong>
+                                                            </div>
+         
+                                                         </div>
+         
+         
+                                                         <div class="email_list-group_box ">
+                                                            <div class="sub_container-group_box ">
+         
+                                                               <span class="valided-box" data-toggle="tooltip" data-placement="top" title="Validado no provedor">
+                                                                  <i class="bi bi-check-circle-fill"></i>
+                                                                  <span class="">validado</span>
+                                                               </span>
+                                                               
+                                                               <span class="facebook-box " data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                                  <i class="bi bi-facebook"></i>
+                                                                  <span class="">facebook</span>
+                                                               </span>
+                                                               
+                                                               <span class="linkedin-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o LinkedIn">
+                                                                  <i class="bi bi-linkedin"></i>
+                                                                  <span class="">linkedin</span>
+                                                               </span>
+                                                               
+                                                               <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Tem comportamento digital">
+                                                                  <i class="bi bi-globe"></i>
+                                                                  <span class=" ">digital</span>
+                                                               </span>
+                                                            
+                                                            </div>
+                                                         </div>
+         
+                                                         <div class="textBox txtrank">
+                                                            <small>RANK</small>
+                                                            <strong>20231001</strong>
+                                                         </div>
+         
+                                                      </div>
+         
+                                                   </div>
+                                                </div>
+         
+                                             </div>
+         
+                                          </div>
+         
+                                       </div>
+
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="adress" role="tabpanel" aria-labelledby="adress-tab">
+                                       <div id="hot-address-1" class="hot-address-1">
+                                          <div class="panel-body">
+                                             <div class="list">
+                                                <div class="adress-list">
+                                                   <div class="adress-list-body">
+                                                      <div class="adress-group-info" data-lat="" data-long="">
+                                                         <div class="email-list-icon_email_open">
+                                                            <span class="material-symbols-outlined icon-location-hot_address-list">
+                                                               location_on
+                                                               <span class="material-symbols-outlined icon-trophy-email_list">
+                                                                  emoji_events
+                                                               </span>
+                                                            </span>    
+                                                         </div>
+
+                                                         <div class="adress-list-text">
+                                                            <small>
+                                                               Logradouro
+                                                            </small>
+                                                            <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
+                                                         </div>
+
+                                                         <div class="adress-list-text-2">
+                                                            <small>CEP</small>
+                                                            <strong>79002-550</strong>
+                                                         </div>
+                                                         <div class="adress-list-text">
+                                                            <small title="">
+                                                               Cidade
+                                                            </small>
+                                                            <strong>MS - CAMPO GRANDE</strong>
+                                                         </div>
+
+                                                         <div class="adress-list-text">
+                                                            <small>RANK</small>
+                                                            <strong>20231201</strong>
+                                                         </div>
+
+                                                         <div class="adress-list-text">
+                                                            <small>Telefone</small>
+                                                            <strong>
+                                                               --
+                                                            </strong>
+                                                         </div>
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
                                        </div>
                                     </div>
-                                 </div>
+                                    
+                                    <div class="tab-pane fade" id="mobile-phone" role="mobile-phone" aria-labelledby="mobile-phone">
+                                       <div id="hot-mobile-phone-list" class="hot-email-1-list">
+                                          <div class="adress-list-body">
+                                             <h3>NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="phone" role="phone" aria-labelledby="phone">
+                                       <div id="hot-phone-list" class="hot-email-1-list">
+                                          <div class="adress-list-body">
+                                             <h3>NÃO HÁ RESULTADO EM NOSSA BASE</h3>
+                                          </div>
+                                       </div>
+                                    </div>
+
                               </div>
 
-                              <!-- Lista de celulares-->
-                              <div id="hot-mobile-phone-1" class="disabled ">
-                                 <div class="panel-body">
-                                    <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
-                                 </div>
-                              </div>
-
-                              <!-- Lista de telefones fixos-->
-                              <div id="hot-phone-1" class="disabled list-model-1 panel panel-tile mbn ">
-                                 <div class="panel-body">
-                                    <h3 class="text-center fw200 upperCase mn pt5 pb6">NÃO HÁ RESULTADO EM NOSSA BASE</h3>
-                                 </div>
-                              </div>
                            </section>
 
                         </div>
@@ -2640,6 +2654,9 @@
                </section>
             </div> <!-- Final lista de modelos estatisticos -->
 
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+         
          </div>
       </div>
    </body>
