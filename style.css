@@ -888,11 +888,10 @@ body {
 .sub_container-group_box {
     display: flex;
     align-items: center;
-
+    gap: 5px;
     justify-content: space-between;
-    margin-left: 8rem;
 
-    width: 70%;
+    width: auto;
 }
 
 .valided-box {
@@ -921,7 +920,7 @@ body {
     font-weight: bolder;
 
     line-height: 16px;
-    transition: opacit .1s ease-in;
+    transition: opacity .1s ease-in;
 
 
 }
@@ -3213,9 +3212,7 @@ body {
 
 .lista_email-group_box {
     margin-top: 0;
-    width: 40%;
     display: flex;
-    margin-right: 55px;
 }
 
 /*************** Containers de lista de Veículos *******************/
