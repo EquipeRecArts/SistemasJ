@@ -17,9 +17,9 @@
       <link rel="stylesheet"  href='Responsive/tabletResponsive_view.css'>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.css">
-   <!--  <link rel='stylesheet' type='text/css' href='Responsive/mobileResponsive_view.css'>--> 
  
       <script defer src="./assets/ocultarTextoTabMenu.js"></script>
+      <script defer src="./assets/ocultarTrofeuIconTablet.js"></script>
 
    </head>
    <body class=" " data-spy="scroll" data-offset="190">
@@ -33,7 +33,7 @@
                <section class="main-info_container" data-section-info id="MainInfo" >
                   <div class="card-info">
 
-                     <div class="card-body-my">
+                     <div class="card-body-my card-body-my_dados-pessoais">
 
                            <div class="card-header">
                               <span class="material-symbols-outlined">
@@ -284,7 +284,7 @@
                   <div class="agrupamento_geral-situacao_cadastral">
 
                      <div class="card-body-my">
-
+                        
                         <div class="card-header">
                            <div class="card-header" id="professional_data-id">
                               <span class="material-symbols-outlined">
@@ -302,7 +302,7 @@
                               data-timeout="120000"
                               data-info=""
                               data-line="false">
-                              <i class="bi bi-armain_container-cols-clockwise icon-button"></i> 
+                              <i class="bi bi-arrow-clockwise"></i>
                            </button>
                         </div>
 
@@ -504,54 +504,43 @@
                                     
                                     <div class="tab-pane fade" id="adress" role="tabpanel" aria-labelledby="adress-tab">
                                        <div id="hot-address-1" class="hot-address-1">
-                                          <div class="panel-body">
-                                             <div class="list">
-                                                <div class="adress-list">
-                                                   <div class="adress-list-body">
-                                                      <div class="adress-group-info" data-lat="" data-long="">
-                                                         <div class="email-list-icon_email_open">
-                                                            <span class="material-symbols-outlined icon-location-hot_address-list">
-                                                               location_on
-                                                               <span class="material-symbols-outlined icon-trophy-email_list">
-                                                                  emoji_events
-                                                               </span>
-                                                            </span>    
-                                                         </div>
+                                          <div class="email-list-icon_email_open">
+                                             <span class="material-symbols-outlined icon-location-hot_address-list">
+                                                location_on
+                                                <span class="material-symbols-outlined icon-trophy-email_list">
+                                                   emoji_events
+                                                </span>
+                                             </span>    
+                                          </div>
 
-                                                         <div class="adress-list-text">
-                                                            <small>
-                                                               Logradouro
-                                                            </small>
-                                                            <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
-                                                         </div>
+                                          <div class="adress-list-text">
+                                             <small>
+                                                Logradouro
+                                             </small>
+                                             <strong class="address-name ignore-text-with-dots" title="R PIRATININGA, 19, JARDIM DOS ESTADOS">R PIRATININGA, 19, JARDIM DOS ESTADOS</strong>
+                                          </div>
 
-                                                         <div class="adress-list-text-2">
-                                                            <small>CEP</small>
-                                                            <strong>79002-550</strong>
-                                                         </div>
-                                                         <div class="adress-list-text">
-                                                            <small title="">
-                                                               Cidade
-                                                            </small>
-                                                            <strong>MS - CAMPO GRANDE</strong>
-                                                         </div>
+                                          <div class="adress-list-text-2">
+                                             <small>CEP</small>
+                                             <strong>79002-550</strong>
+                                          </div>
+                                          <div class="adress-list-text">
+                                             <small title="">
+                                                Cidade
+                                             </small>
+                                             <strong>MS - CAMPO GRANDE</strong>
+                                          </div>
 
-                                                         <div class="adress-list-text">
-                                                            <small>RANK</small>
-                                                            <strong>20231201</strong>
-                                                         </div>
+                                          <div class="adress-list-text">
+                                             <small>RANK</small>
+                                             <strong>20231201</strong>
+                                          </div>
 
-                                                         <div class="adress-list-text">
-                                                            <small>Telefone</small>
-                                                            <strong>
-                                                               --
-                                                            </strong>
-                                                         </div>
-
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
+                                          <div class="adress-list-text">
+                                             <small>Telefone</small>
+                                             <strong>
+                                                --
+                                             </strong>
                                           </div>
                                        </div>
                                     </div>
@@ -583,7 +572,7 @@
                </section>
             </div> <!-- final top dados de contato - container princiapal -->
 
-            <div class="container_pai-pessoas_relevantes teste">  <!--Começo Pessoas mais relevantes - container princiapal -->
+            <div class="container_pai-pessoas_relevantes">  <!--Começo Pessoas mais relevantes - container princiapal -->
                <!-- Pessoas mais relevantes-->
 
                <section data-section-info id="MostRelevantPeople" >
@@ -775,7 +764,7 @@
                               data-timeout="120000"
                               data-info=""
                               data-line="false">
-                              <i class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                              <i class="bi bi-arrow-clockwise"></i>
                            </button>
                         </div>
 
@@ -1028,7 +1017,7 @@
                </section>
             </div> <!-- Final lista de dados profissionais-->
 
-            <div class="main-card-contact_persons teste"> <!-- Começo container de contato  -->
+            <div class="main-card-contact_persons"> <!-- Começo container de contato  -->
 
                <section class="w-100 p-relative is-printable" data-section-info id="ContactPersons" >
 
@@ -1183,13 +1172,13 @@
                               data-timeout="120000"
                               data-info=""
                               data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                               <button type="button" class="button-box">
                                  <i class="bi bi-camera-fill"></i>
                               </button>
                               <button type="button" class="button-box">
-                                 <i class="bi bi-armain_container-colss-angle-expand"></i>
+                                 <i class="bi bi-arrows-angle-expand"></i>
                               </button>
                            </div>
                         </div>
@@ -1599,7 +1588,7 @@
                                           </td>
 
                                           <td>
-                                             <strong>teste</strong>
+                                             <strong></strong>
                                           </td>
 
                                           <td>
@@ -2344,7 +2333,7 @@
                                           </td>
 
                                           <td>
-                                             <strong>teste</strong>
+                                             <strong></strong>
                                           </td>
 
                                           <td>
@@ -2735,8 +2724,8 @@
                                                 <strong>(67) 3028-1571</strong>
                                              </td>
 
-                                             <td>
-                                                <div class="telefone_list-group_box">
+                                             <td class="">
+                                                <div class="">
                                                    <div class="sub_container-group_box-telefone-list">
          
                                                       <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -2778,8 +2767,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -2802,7 +2791,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -2821,8 +2810,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -2845,7 +2834,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -2864,8 +2853,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -2888,7 +2877,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -2907,94 +2896,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
-                                                <div class="sub_container-group_box-telefone-list">
-      
-                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
-                                                   
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
-                                                      <i class="bi bi-exclamation-circle-fill"></i>
-                                                      <span class="">Procon</span>
-                                                   </span>
-                                                   
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
-                                                      <i class="bi bi-facebook"></i>
-                                                      <span class="">facebook</span>
-                                                   </span>
-                                                
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
-                                                      <i class="bi bi-whatsapp"></i>
-                                                      <span class=" ">Whatsap</span>
-                                                   </span>
-                                                
-                                                </div>
-                                             </div>         
-                                          </td>
-                                          
-                                          <td>
-                                             <strong>20170801</strong>
-                                          </td>
-                                        </tr>
-
-                                        <tr>
-                                          <td>
-                                             <div class="icon-box-lista_telefones">
-                                                <strong class="icon">
-                                                   <i class="bi bi-telephone-forward-fill"></i>   
-                                                </strong>
-                                             </div>       
-                                          </td>
-
-                                          <td>
-                                             <strong>(67) 3028-1571</strong>
-                                          </td>
-
-                                          <td>
-                                             <div class="telefone_list-group_box">
-                                                <div class="sub_container-group_box-telefone-list">
-      
-                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
-                                                   
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
-                                                      <i class="bi bi-exclamation-circle-fill"></i>
-                                                      <span class="">Procon</span>
-                                                   </span>
-                                                   
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
-                                                      <i class="bi bi-facebook"></i>
-                                                      <span class="">facebook</span>
-                                                   </span>
-                                                
-                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
-                                                      <i class="bi bi-whatsapp"></i>
-                                                      <span class=" ">Whatsap</span>
-                                                   </span>
-                                                
-                                                </div>
-                                             </div>         
-                                          </td>
-                                          
-                                          <td>
-                                             <strong>20170801</strong>
-                                          </td>
-                                        </tr>
-
-                                        <tr>
-                                          <td>
-                                             <div class="icon-box-lista_telefones">
-                                                <strong class="icon">
-                                                   <i class="bi bi-telephone-forward-fill"></i>   
-                                                </strong>
-                                             </div>       
-                                          </td>
-
-                                          <td>
-                                             <strong>(67) 3028-1571</strong>
-                                          </td>
-
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3017,7 +2920,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3036,8 +2939,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3051,7 +2954,7 @@
                                                       <i class="bi bi-facebook"></i>
                                                       <span class="">facebook</span>
                                                    </span>
-                                                
+                                                  
                                                    <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
                                                       <i class="bi bi-whatsapp"></i>
                                                       <span class=" ">Whatsap</span>
@@ -3060,7 +2963,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3079,8 +2982,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3094,7 +2997,7 @@
                                                       <i class="bi bi-facebook"></i>
                                                       <span class="">facebook</span>
                                                    </span>
-                                                
+                                                  
                                                    <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
                                                       <i class="bi bi-whatsapp"></i>
                                                       <span class=" ">Whatsap</span>
@@ -3103,7 +3006,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3122,8 +3025,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3137,7 +3040,7 @@
                                                       <i class="bi bi-facebook"></i>
                                                       <span class="">facebook</span>
                                                    </span>
-                                                
+                                                  
                                                    <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
                                                       <i class="bi bi-whatsapp"></i>
                                                       <span class=" ">Whatsap</span>
@@ -3146,7 +3049,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3165,8 +3068,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3180,7 +3083,7 @@
                                                       <i class="bi bi-facebook"></i>
                                                       <span class="">facebook</span>
                                                    </span>
-                                                
+                                                  
                                                    <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
                                                       <i class="bi bi-whatsapp"></i>
                                                       <span class=" ">Whatsap</span>
@@ -3189,7 +3092,7 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3208,8 +3111,8 @@
                                              <strong>(67) 3028-1571</strong>
                                           </td>
 
-                                          <td>
-                                             <div class="telefone_list-group_box">
+                                          <td class="">
+                                             <div class="">
                                                 <div class="sub_container-group_box-telefone-list">
       
                                                    <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
@@ -3223,7 +3126,7 @@
                                                       <i class="bi bi-facebook"></i>
                                                       <span class="">facebook</span>
                                                    </span>
-                                                
+                                                  
                                                    <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
                                                       <i class="bi bi-whatsapp"></i>
                                                       <span class=" ">Whatsap</span>
@@ -3232,7 +3135,93 @@
                                                 </div>
                                              </div>         
                                           </td>
-                                          
+                                       
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td class="">
+                                             <div class="">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                       
+                                          <td>
+                                             <strong>20170801</strong>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td>
+                                             <div class="icon-box-lista_telefones">
+                                                <strong class="icon">
+                                                   <i class="bi bi-telephone-forward-fill"></i>   
+                                                </strong>
+                                             </div>       
+                                          </td>
+
+                                          <td>
+                                             <strong>(67) 3028-1571</strong>
+                                          </td>
+
+                                          <td class="">
+                                             <div class="">
+                                                <div class="sub_container-group_box-telefone-list">
+      
+                                                   <i data-toggle="tooltip" data-placement="top" title="TELECOMUNICACAOES DE SAO PAULO S.A - TELESP - REGIOES I E II" class="bi bi-headset"></i>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Bloqueado no PROCON">
+                                                      <i class="bi bi-exclamation-circle-fill"></i>
+                                                      <span class="">Procon</span>
+                                                   </span>
+                                                   
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Facebook">
+                                                      <i class="bi bi-facebook"></i>
+                                                      <span class="">facebook</span>
+                                                   </span>
+                                                  
+                                                   <span class="digital-box" data-toggle="tooltip" data-placement="top" title="Vinculado com o Whatsapp">
+                                                      <i class="bi bi-whatsapp"></i>
+                                                      <span class=" ">Whatsap</span>
+                                                   </span>
+                                                
+                                                </div>
+                                             </div>         
+                                          </td>
+                                       
                                           <td>
                                              <strong>20170801</strong>
                                           </td>
@@ -3917,7 +3906,7 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                            </div>
 
@@ -4197,7 +4186,7 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                            </div>
 
@@ -4483,7 +4472,7 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                            </div>
 
@@ -4568,7 +4557,7 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                            </div>
                         </div>
@@ -4804,7 +4793,7 @@
                                  data-timeout="120000"
                                  data-info=""
                                  data-line="false">
-                                 <i style="font-size: 14px;" class="bi bi-armain_container-cols-clockwise icon-button"></i>
+                                 <i class="bi bi-arrow-clockwise"></i>
                               </button>
                            </div>
 

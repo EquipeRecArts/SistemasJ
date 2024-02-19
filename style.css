@@ -28,6 +28,7 @@
 
 .card-body-my {
     padding: 15px;
+    height: auto;
 }
 
 .bt-default.active {
@@ -95,8 +96,7 @@
     box-sizing: border-box;
     font-weight: bold;
 
-    opacity: 1;
-    transition: opacity .1s ease-in;
+    transition: opacit .1s ease-in;
 
     color: #626262;
     text-align: center;
@@ -105,7 +105,6 @@
     user-select: none;
 
     text-transform: none;
-
 }
 
 /*********** BODY ****************/
@@ -180,6 +179,7 @@ body {
     background-color: #fff;
     border: 1px solid #cccccc;
     box-shadow: 0px 10px 7px -10px #b5b5b5;
+    height: auto;
 
 }
 
@@ -758,10 +758,11 @@ body {
 
 /*Conteudo da seção*/
 
-.hot-email-1-list, .hot-address-1 {
+.hot-email-1-list {
     background-color: #f5f5f5;
     border-color: #d7d7d7;
     width: 100%;
+    height: auto;
 
     overflow: initial;
     border: 1px solid #ddd;
@@ -777,6 +778,36 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+#adress {
+    width: auto;
+    height: auto;
+}
+
+.hot-address-1 {
+    background-color: #f5f5f5;
+    border-color: #d7d7d7;
+    color: #888;
+    border: 1px solid #ddd;
+
+
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+
+    padding-bottom: 20px;
+    margin-bottom: -1px;
+    margin: 0 2px;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
 .panel-body-email_list, .panel-body {
     padding: 15px;
     border: 0;
@@ -788,7 +819,7 @@ body {
     display: inline-block;
 }
 
-.email-list-body, .adress-list-body {
+.email-list-body {
     margin-bottom: -10px;
     border: 0;
     padding: 5px 10px 7px;
@@ -799,13 +830,9 @@ body {
     min-height: 40px;
 }
 
-.email-group-info, .adress-group-info {
+.email-group-info {
     display: flex;
     flex-wrap: wrap;
-}
-
-.adress-group-info {
-    gap: 20px;
 }
 
 .icon-send-email_list, .icon-location-hot_address-list {
@@ -844,11 +871,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.email-list-text, .adress-list-text, .adress-list-text-2 {
+.email-list-text {
     width: 35%;
     display: flex;
     flex-direction: column;
     color: #626262;
+    height: auto;
+}
+
+.adress-list-text, .adress-list-text-2 {
+    color: #626262;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 .email-list-text > small, .adress-list-text > small,
@@ -1770,6 +1807,8 @@ body {
     line-height: 1.231;
     font-weight: 400;
     font-size: 14px;
+    height: 100%;
+    overflow: scroll;
 }
 .divseparar {
     width: 100%;
@@ -1850,6 +1889,7 @@ body {
     text-transform: uppercase;
     font-weight: 100;
     font-weight: bold;
+    flex-wrap: wrap;
 }
 
 #professional_data-id {
@@ -1862,6 +1902,7 @@ body {
 .main-card-info-professional_data {
     line-height: 1.231;
     font-weight: 400;
+    overflow: scroll;
     font-size: 14px;
 }
 
@@ -2443,7 +2484,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #626262;
-
+    overflow: scroll;
     box-sizing: border-box;
     display: block;
 }
@@ -2527,7 +2568,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #626262;
-    width: 5%;
+    width: auto;
 }
 
 .dropdown-neighbor {
@@ -2828,6 +2869,7 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #626262;
+    overflow: scroll;
 
     box-sizing: border-box;
     display: block;
@@ -3886,7 +3928,6 @@ width: auto;
 }
 
 .main-card-content-ultimas_consultas {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
 
