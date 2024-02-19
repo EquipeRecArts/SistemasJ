@@ -2070,7 +2070,7 @@ body {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    max-width: 22px;
+    max-width: 20%;
     border-radius: 3px;
 }
 
@@ -2101,18 +2101,21 @@ body {
     background-color: #777;
 
     font-size: 10px;
-    display: inline;
-    padding: 0.3em 0.7em 0.4em;
+    display: block;
 
     font-weight: 600;
     line-height: 16px;
     color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
     border-radius: 0.25em;
+    width: auto;
+    height: auto;
+}
 
-    max-width: 22px;
+
+.div-status_box-contact_persons > span > strong {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
 }
 
 .cpf_box-contact_persons-1, .cpf_box-contact_persons-2 {
