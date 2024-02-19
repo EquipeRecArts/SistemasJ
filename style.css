@@ -172,6 +172,7 @@ body {
 .contact-fields {
     display: flex;
     justify-content: center;
+    width: auto;
 }
 
 .card-info {
@@ -196,22 +197,14 @@ body {
     
 }
 
-.row {
+.main_container-cols {
+    margin-top: 10px;
     margin-left: -11px;
     margin-right: -11px;
     display: flex;
 }
 
-.row::after {
-    content: " ";
-    display: table;
-}
-
-.row::before {
-    box-sizing: border-box;
-}
-
-.col-1 {
+.coluna-1 {
     min-height: 1px;
 
     padding-left: 11px;
@@ -221,6 +214,12 @@ body {
     margin-left: 11px;
 
 }
+
+.experimental-1 {
+    width: 100%;
+}
+
+
 
 .person-photo {
     width: 60px;
@@ -256,7 +255,7 @@ body {
     font-size: 16px!important;
 }
 
-.col-2 {
+.coluna-2 {
 
     line-height: 1.231;
     font-weight: 400;
@@ -2060,18 +2059,29 @@ body {
 }
 
 
-.vinculo_box-contact_persons-1 > span, .vinculo_box-contact_persons-2 > span {
+.box-vinculo {
+    display: flex;
+    gap: 5px;
+}
+
+.box-vinculo > span {
     background-color: #70ca63;
+
     font-size: 10px;
-    display: inline;
-    padding: 0.3em 0.7em 0.4em;
+    display: block;
+
     font-weight: 600;
     line-height: 16px;
     color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    max-width: 20%;
-    border-radius: 3px;
+    border-radius: 0.25em;
+    width: auto;
+    height: auto;
+}
+
+.box-vinculo > span > strong {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
 }
 
 .status_box-contact_persons-1, .status_box-contact_persons-2 {

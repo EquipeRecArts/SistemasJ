@@ -19,12 +19,11 @@
     box-shadow: 0px 10px 7px -10px #b5b5b5;
   }
 
-  .col-1 {
+  .coluna-1 {
     width: 100%;
     display: flex;
     margin: 0px!important;
     padding: 0!important;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -57,24 +56,26 @@
 
   }
 
-  .row {
-    width: 60%;
+  .main_container-cols {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px!important;
+    gap: 20px;
   }
 
-  .col-2 {
+  .coluna-2 {
+    width: 100%;
     display: flex;
     gap: 15px;
     flex-direction: row;
+    margin: 0px;
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 
   #nome-dados-basicos {
-    width: auto;
+    min-width: 50%;
     max-width: 60%;
   }
 
@@ -390,7 +391,7 @@
 
   #nome-situacao_cadastral{
     max-width: 60%;
-    width: auto;
+    min-width: 50%;
   }
 
   #codigo_controle-situacao_cadastral {
@@ -706,7 +707,7 @@
     width: auto;
     flex-wrap: wrap;
     max-width: 50%;
-  }
+}
 
   .vinculo_box-most_people {
     width: auto;
@@ -907,16 +908,22 @@
   }
 
   .name_box-contact_persons-1, .name_box-contact_persons-2 {
-    width: auto;
+    width: 40%;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
     flex-wrap: wrap;
-    max-width: 50%;
+    color: #626262;
   }
 
 
   .vinculo_box-contact_persons-1, .vinculo_box-contact_persons-2 {
-    width: auto;
-    flex-wrap: wrap;
-    max-width: 10%;
+    margin-top: 0;
+    width: 20%;
+    line-height: 1.231;
+    font-weight: 400;
+    font-size: 14px;
+    color: #626262;
   }
 
   .status_box-contact_persons-1, .status_box-contact_persons-2 {
